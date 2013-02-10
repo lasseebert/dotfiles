@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ln -s ~/dotfiles/oh-my-zsh/themes/lasseebert.zsh-theme ~/.oh-my-zsh/themes/lasseebert.zsh-theme
+ln -s ~/dotfiles/zshrc ~/.zshrc
