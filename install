@@ -2,3 +2,4 @@
 
 ln -s ~/dotfiles/oh-my-zsh/themes/lasseebert.zsh-theme ~/.oh-my-zsh/themes/lasseebert.zsh-theme
 ln -s ~/dotfiles/zshrc ~/.zshrc
+ln -s ~/dotfiles/vimrc ~/.vimrc
