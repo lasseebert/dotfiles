@@ -34,7 +34,7 @@ PROMPT='
 ZSH_THEME_GIT_PROMPT_PREFIX=" (%{$fg[magenta]%}branch: "
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[red]%}?"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[orange]%}!"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}!"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%})"
 
 local return_status="%{$fg[red]%}%(?..✘)%{$reset_color%}"
