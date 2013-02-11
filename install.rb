@@ -21,11 +21,11 @@ def symlink_all_files
 
   files.each do |file|
     link = File.join Dir.home, ".#{file}"
-    link_path = File.dirname(link)
+    link_dir = File.dirname(link)
     file_path = File.absolute_path file
 
-    if link =~ /\// && !File.exists?(link_path)
-      FileUtils.mkdir_p(link_path, verbose: true)
+    if link =~ /\// && !File.exists?(link_dir)
+      FileUtils.mkdir_p(link_dir, verbose: true)
     end
 
     if File.exists?(link) || File.symlink?(link)
