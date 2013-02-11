@@ -11,17 +11,13 @@ def run
 end
 
 def git_pull
-  puts 'git pull'
   system %Q{git pull}
   system %Q{git submodule init}
   system %Q{git submodule update}
 end
 
 def symlink_all_files
-  files = Dir['**/*'].reject{|file| File.directory? file }
-  files -= %w[install.rb]
-
-  files.each do |file|
+  get_file_roots.each do |file|
     link = File.join Dir.home, ".#{file}"
     link_dir = File.dirname(link)
     file_path = File.absolute_path file
@@ -32,13 +28,26 @@ def symlink_all_files
 
     if File.exists?(link) || File.symlink?(link)
       unless File.symlink?(link) && File.readlink(link) == file_path
-        FileUtils.rm link, force: true, verbose: true
+        FileUtils.rm_r link, force: true, verbose: true
         FileUtils.ln_s file_path, link, verbose: true
       end
     else
       FileUtils.ln_s file_path, link, verbose: true
     end
   end
+end
+
+def get_file_roots
+
+  # All files except special files like this script
+  files = Dir['**/*'].reject{|file| File.directory? file }
+  files -= %w[install.rb]
+
+  # vim/bundle should just be linked with one link
+  files = files.reject{|file| file =~ /^vim\/bundle\// }
+  files += %w[vim/bundle]
+
+  files
 end
 
 def install_oh_my_zsh
