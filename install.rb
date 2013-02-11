@@ -13,6 +13,8 @@ end
 def git_pull
   puts 'git pull'
   system %Q{git pull}
+  system %Q{git submodule init}
+  system %Q{git submodule update}
 end
 
 def symlink_all_files
