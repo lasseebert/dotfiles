@@ -34,7 +34,7 @@ def symlink_all_files
         FileUtils.ln_s file_path, link, verbose: true
       end
     else
-      FileUtils.ln_s file, link, verbose: true
+      FileUtils.ln_s file_path, link, verbose: true
     end
   end
 end
