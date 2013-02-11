@@ -24,7 +24,7 @@ def symlink_all_files
     link_dir = File.dirname(link)
     file_path = File.absolute_path file
 
-    if link =~ /\// && !File.exists?(link_dir)
+    unless File.exists?(link_dir)
       FileUtils.mkdir_p(link_dir, verbose: true)
     end
 
