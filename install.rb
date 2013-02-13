@@ -43,9 +43,11 @@ def get_file_roots
   files = Dir['**/*'].reject{|file| File.directory? file }
   files -= %w[install.rb]
 
-  # vim/bundle should just be linked with one link
-  files = files.reject{|file| file =~ /^vim\/bundle\// }
-  files += %w[vim/bundle]
+  # vim/bundle and vim/UltiSnips should just be linked with one link
+  %w[vim/bundle vim/UltiSnips].each do |dir|
+    files = files.reject{|file| file =~ /^#{dir}\// }
+    files << dir
+  end
 
   files
 end
