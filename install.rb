@@ -4,7 +4,7 @@ require 'fileutils'
 
 def run
   Dir.chdir File.dirname __FILE__
-  #git_pull
+  git_pull
   install_oh_my_zsh
   switch_to_zsh
   symlink_all_files
@@ -17,8 +17,7 @@ def git_pull
 end
 
 def symlink_all_files
-  get_all_files.each do |file|
-    puts file
+  get_file_roots.each do |file|
     link = File.join Dir.home, ".#{file}"
     link_dir = File.dirname(link)
     file_path = File.absolute_path file
@@ -28,9 +27,7 @@ def symlink_all_files
     end
 
     if File.exists?(link) || File.symlink?(link)
-      if File.symlink?(link) && File.readlink(link) == file_path
-        puts "#{link} is up-to-date"
-      else
+      unless File.symlink?(link) && File.readlink(link) == file_path
         FileUtils.rm_r link, force: true, verbose: true
         FileUtils.ln_s file_path, link, verbose: true
       end
@@ -40,22 +37,17 @@ def symlink_all_files
   end
 end
 
-def get_all_files
-  get_files(nil) - %w[install.rb]
-end
+def get_file_roots
 
-def get_files(dir)
-  Dir["#{dir && "#{dir}/"}*"].map do |file|
-    if File.directory? file
-      if file =~ /^(.*)__full$/
-        $1
-      else
-        get_files file
-      end
-    else
-      file
-    end
-  end.flatten
+  # All files except special files like this script
+  files = Dir['**/*'].reject{|file| File.directory? file }
+  files -= %w[install.rb]
+
+  # vim/bundle should just be linked with one link
+  files = files.reject{|file| file =~ /^vim\/bundle\// }
+  files += %w[vim/bundle]
+
+  files
 end
 
 def install_oh_my_zsh
