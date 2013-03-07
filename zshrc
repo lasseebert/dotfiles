@@ -12,6 +12,7 @@ ZSH_THEME="lasseebert"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias o="xdg-open"
+alias ow="/home/pulver/bin/open_workspace.sh"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -43,5 +44,9 @@ bindkey '^[OB' history-beginning-search-forward
 # Customize to your needs...
 export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/pulver/bin
 
+# rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - zsh)"
+
+# RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"

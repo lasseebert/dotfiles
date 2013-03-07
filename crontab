@@ -17,7 +17,6 @@
 # 
 # m h  dom mon dow   command
 
-#0  *  *  *  *  /home/pulver/bin/inc_backup
 0   * * * * /bin/bash -c 'export PATH="$HOME/.rbenv/bin:$PATH" ; eval "$(rbenv init -)"; /home/pulver/bin/incremental_backup/backup_task.rb'
-*/5 * * * * /home/pulver/bin/check_battery
+18  * * * * /bin/bash -c 'export PATH="$HOME/.rbenv/bin:$PATH" ; eval "$(rbenv init -)"; /home/pulver/bin/holepicker_alarm.sh'
 30  * * * * /home/pulver/bin/s3_backup
