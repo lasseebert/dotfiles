@@ -39,3 +39,6 @@ set foldlevel=1         "this is just what i use
 
 " Use incremental search
 set incsearch
+
+" Use system clipboard
+set clipboard=unnamedplus
