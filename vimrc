@@ -4,6 +4,12 @@ call pathogen#helptags()
 " Give a shortcut key to NERD Tree
 map <F2> :NERDTreeToggle<CR>
 
+" Tab shortcuts
+nnoremap <C-S-k> :tabp<CR>
+nnoremap <C-S-j> :tabn<CR>
+inoremap <C-S-k> <Esc>:tabp<CR>i
+inoremap <C-S-j> <Esc>:tabn<CR>i
+
 " Tabs
 set expandtab
 set shiftwidth=2
