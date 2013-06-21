@@ -44,6 +44,8 @@ unsetopt correct_all
 # Customize to your needs...
 export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/pulver/bin:/home/pulver/bin/terminals
 
+export PATH="$PATH:$HOME/bin/AWS-ElasticBeanstalk-CLI-2.4.0/eb/linux/python2.7/"
+
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - zsh)"
