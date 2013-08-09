@@ -48,7 +48,3 @@ set incsearch
 
 " Use system clipboard
 set clipboard=unnamedplus
-
-" Highlight anything beyond 80th line
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
