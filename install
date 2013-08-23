@@ -1,0 +1,45 @@
+#!/bin/bash
+
+run()
+{
+  echo
+  echo "*******************************"
+  echo "* Starting dotfiles installer *"
+  echo "*******************************"
+  echo
+
+  # Change to scripts dir
+  cd `dirname $0`
+
+  # Install essentials
+  install_essentials
+
+  echo "********************************"
+  echo "* Done with dotfiles installer *"
+  echo "********************************"
+}
+
+install_essentials()
+{
+  packages=( git zsh vim-gnome libffi-dev libssl-dev zlib1g-dev libreadline-dev libxslt1-dev libxml2-dev libmysql-ruby libmysqlclient-dev libmagickwand-dev libsqlite3-dev )
+  echo "Checking for essential packages..."
+  for package in "${packages[@]}"
+  do
+    install_package $package
+  done
+  echo
+}
+
+install_package()
+{
+  package=$1
+  PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $package|grep "install ok installed")
+  if [ "" == "$PKG_OK" ]; then
+    echo "$package not installed. Installing now."
+    sudo apt-get --force-yes --yes install $package
+  else
+    echo " [ OK ] $package"
+  fi
+}
+
+run
