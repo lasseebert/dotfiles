@@ -12,10 +12,25 @@ run()
   install_essentials
   git_pull
   install_ohmyzsh
+  switch_to_zsh
 
   echo "********************************"
   echo "* Done with dotfiles installer *"
   echo "********************************"
+}
+
+switch_to_zsh() {
+  echo "Checking if zsh is used"
+  result=$(cat /etc/passwd | grep `whoami` | grep `which zsh`)
+  if [ "$result" = "" ]
+  then
+    echo " [ NO ]"
+    chsh -s `which zsh`
+    echo " Changed shell to `which zsh`"
+  else
+    echo " [ OK ] `which zsh`"
+  fi
+  echo
 }
 
 install_ohmyzsh() {
