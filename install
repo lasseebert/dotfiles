@@ -14,10 +14,30 @@ run()
   # Install essentials
   install_essentials
 
+  # Git pull
+  git_pull
+
   echo "********************************"
   echo "* Done with dotfiles installer *"
   echo "********************************"
 }
+
+git_pull()
+{
+  echo "Updating repo..."
+
+  echo " git pull"
+  git pull
+
+  echo " git submodule init"
+  git submodule init
+
+  echo " git submodule update"
+  git submodule update
+
+  echo
+}
+
 
 install_essentials()
 {
