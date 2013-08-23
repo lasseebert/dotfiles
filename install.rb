@@ -41,7 +41,7 @@ def get_file_roots
 
   # All files except special files like this script
   files = Dir['**/*'].reject{|file| File.directory? file }
-  files -= %w[install.rb]
+  files -= %w[install.rb install]
 
   # vim/bundle and vim/UltiSnips should just be linked with one link
   %w[vim/bundle vim/UltiSnips].each do |dir|

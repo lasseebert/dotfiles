@@ -8,18 +8,26 @@ run()
   echo "*******************************"
   echo
 
-  # Change to scripts dir
   cd `dirname $0`
-
-  # Install essentials
   install_essentials
-
-  # Git pull
   git_pull
+  install_ohmyzsh
 
   echo "********************************"
   echo "* Done with dotfiles installer *"
   echo "********************************"
+}
+
+install_ohmyzsh() {
+  echo Checking for oh-my-zsh...
+  if [ ! -d ~/.oh-my-zsh ]
+  then
+    echo " Installing oh-my-zsh..."
+    curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+  else
+    echo " [ OK ] Installed"
+  fi
+  echo
 }
 
 git_pull()
