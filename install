@@ -1,0 +1,131 @@
+#!/bin/bash
+
+run()
+{
+  echo
+  echo "*******************************"
+  echo "* Starting dotfiles installer *"
+  echo "*******************************"
+  echo
+
+  cd `dirname $0`
+  install_essentials
+  git_pull
+  install_ohmyzsh
+  switch_to_zsh
+  symlink_files
+
+  echo "********************************"
+  echo "* Done with dotfiles installer *"
+  echo "********************************"
+}
+
+symlink_files() {
+  echo "Symlinking dotfiles..."
+  files=(gitconfig irbrc profile tmux.conf vimrc Xmodmap zshrc config/awesome/rc.lua oh-my-zsh/themes/lasseebert.zsh-theme vim/autoload/pathogen.vim vim/bundle)
+  for file in "${files[@]}"
+  do
+    symlink $file
+  done
+
+  echo
+}
+
+symlink() {
+  file=$1
+  file_path="`pwd`/$file"
+  link_path="$HOME/.$file"
+  link_dir=`dirname $link_path`
+
+  if [ ! -d $link_dir ]
+  then
+    mkdir -pv $link_dir
+  fi
+
+  if [ -e $link_path ]
+  then
+    if [ -L $link_path ]
+    then
+      if [ "`readlink $link_path`" != "$file_path" ]
+      then
+        rm -rfv $link_path
+        ln -sv $file_path $link_path
+      else
+        echo " [ OK ] $link_path"
+      fi
+    else
+      rm -rfv $link_path
+      ln -sv $file_path $link_path
+    fi
+  else
+    ln -sv $file_path $link_path
+  fi
+}
+
+switch_to_zsh() {
+  echo "Checking if zsh is used"
+  result=$(cat /etc/passwd | grep `whoami` | grep `which zsh`)
+  if [ "$result" = "" ]
+  then
+    echo " [ NO ]"
+    chsh -s `which zsh`
+    echo " Changed shell to `which zsh`"
+  else
+    echo " [ OK ] `which zsh`"
+  fi
+  echo
+}
+
+install_ohmyzsh() {
+  echo Checking for oh-my-zsh...
+  if [ ! -d ~/.oh-my-zsh ]
+  then
+    echo " Installing oh-my-zsh..."
+    curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+  else
+    echo " [ OK ] Installed"
+  fi
+  echo
+}
+
+git_pull()
+{
+  echo "Updating repo..."
+
+  echo " git pull"
+  git pull
+
+  echo " git submodule init"
+  git submodule init
+
+  echo " git submodule update"
+  git submodule update
+
+  echo
+}
+
+
+install_essentials()
+{
+  packages=( git zsh vim-gnome libffi-dev libssl-dev zlib1g-dev libreadline-dev libxslt1-dev libxml2-dev libmysql-ruby libmysqlclient-dev libmagickwand-dev libsqlite3-dev )
+  echo "Checking for essential packages..."
+  for package in "${packages[@]}"
+  do
+    install_package $package
+  done
+  echo
+}
+
+install_package()
+{
+  package=$1
+  PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $package|grep "install ok installed")
+  if [ "" == "$PKG_OK" ]; then
+    echo "$package not installed. Installing now."
+    sudo apt-get --force-yes --yes install $package
+  else
+    echo " [ OK ] $package"
+  fi
+}
+
+run

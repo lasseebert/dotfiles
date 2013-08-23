@@ -40,3 +40,4 @@
 [submodule "vim/bundle/greplace.vim"]
 	path = vim/bundle/greplace.vim
 	url = https://github.com/vim-scripts/greplace.vim.git
+        ignore = dirty
