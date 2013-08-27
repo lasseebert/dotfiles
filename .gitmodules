@@ -41,3 +41,6 @@
 	path = vim/bundle/greplace.vim
 	url = https://github.com/vim-scripts/greplace.vim.git
         ignore = dirty
+[submodule "vim/bundle/loremipsum"]
+	path = vim/bundle/loremipsum
+	url = https://github.com/vim-scripts/loremipsum.git
