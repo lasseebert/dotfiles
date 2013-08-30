@@ -32,7 +32,7 @@ alias ow="/home/pulver/bin/open_workspace.sh"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bundler rails3 gem rake web-search)
+plugins=(git bundler rails3 gem rake web-search lasseebert-git)
 
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
