@@ -22,7 +22,7 @@ run()
 
 symlink_files() {
   echo "Symlinking dotfiles..."
-  files=(gitconfig irbrc profile pryrc tmux.conf vimrc Xmodmap zshrc config/awesome/rc.lua oh-my-zsh/themes/lasseebert.zsh-theme vim/autoload/pathogen.vim vim/bundle)
+  files=(gitconfig irbrc profile pryrc tmux.conf vimrc Xmodmap zshrc config/awesome/rc.lua oh-my-zsh/themes/lasseebert.zsh-theme vim/autoload/pathogen.vim vim/bundle oh-my-zsh/plugins/lasseebert-git)
   for file in "${files[@]}"
   do
     symlink $file
