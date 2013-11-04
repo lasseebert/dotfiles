@@ -45,3 +45,6 @@
 	path = vim/bundle/loremipsum
 	url = https://github.com/vim-scripts/loremipsum.git
         ignore = dirty
+[submodule "vim/bundle/vim-less"]
+	path = vim/bundle/vim-less
+	url = https://github.com/groenewege/vim-less.git
