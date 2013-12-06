@@ -1,8 +1,14 @@
 call pathogen#infect()
 call pathogen#helptags()
 
+let mapleader = ","
+
 " Give a shortcut key to NERD Tree
 map <F2> :NERDTreeToggle<CR>
+
+" Tabularize
+vmap <Leader>a= :Tabularize /=<CR>
+vmap <Leader>a: :Tabularize /:\zs<CR>
 
 " Tab shortcuts
 nnoremap <C-S-k> :tabp<CR>
