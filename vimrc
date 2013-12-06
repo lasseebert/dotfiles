@@ -25,6 +25,7 @@ set smartindent
 set autoindent
 set expandtab
 set cinkeys=0{,0},:,0#,!^F
+
 " Move tabs to left or right
 map <C-H> :execute "tabmove" tabpagenr() - 2 <CR>
 map <C-L> :execute "tabmove" tabpagenr() <CR>
@@ -34,7 +35,7 @@ set nocompatible
 syntax on
 filetype plugin indent on
 
-"set listchars=tab:▷⋅,trail:·,eol:$
+" Show invisible chars
 set listchars=tab:▷⋅,trail:·
 set list
 
