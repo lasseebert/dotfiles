@@ -18,6 +18,7 @@ inoremap <C-S-j> <Esc>:tabn<CR>i
 
 " Line numbers
 set number
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=Black guibg=#589A5D
 
 " Tabs
 set expandtab
