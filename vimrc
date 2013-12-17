@@ -16,6 +16,9 @@ nnoremap <C-S-j> :tabn<CR>
 inoremap <C-S-k> <Esc>:tabp<CR>i
 inoremap <C-S-j> <Esc>:tabn<CR>i
 
+" Line numbers
+set number
+
 " Tabs
 set expandtab
 set shiftwidth=2
