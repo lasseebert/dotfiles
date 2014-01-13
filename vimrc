@@ -62,3 +62,9 @@ set incsearch
 
 " Use system clipboard
 set clipboard=unnamedplus
+
+" Use Google Calendar for calendar plugin
+let g:calendar_google_calendar = 1
+let g:calendar_google_task = 1
+command Cal Calendar -first_day=monday
+command Clock Calendar -view=clock
