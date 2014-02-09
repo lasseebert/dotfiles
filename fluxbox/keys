@@ -1,3 +1,9 @@
+# Close windoe
+Control + W :Close
+
+# Restart Fluxbox
+Control + Shift + Q :Restart
+
 # click on the desktop to get menus
 OnDesktop Mouse1 :HideMenus
 OnDesktop Mouse2 :WorkspaceMenu
