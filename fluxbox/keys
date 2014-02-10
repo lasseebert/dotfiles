@@ -1,6 +1,9 @@
 # Windows
-Control W :Close
+Control Q :Close
 Mod4 F    :Fullscreen
+Control Mod1 1 :Exec top_left.sh
+Control Mod1 2 :Exec bottom_right.sh
+Control Mod1 3 :Exec center.sh
 
 # Fluxbox
 Mod4 X :Restart
