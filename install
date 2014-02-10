@@ -107,7 +107,7 @@ git_pull()
 
 install_essentials()
 {
-  packages=( git zsh vim-gnome libffi-dev libssl-dev zlib1g-dev libreadline-dev libxslt1-dev libxml2-dev libmysql-ruby libmysqlclient-dev libmagickwand-dev libsqlite3-dev postgresql postgresql-server-dev-9.1 libqtwebkit-dev curl fluxbox )
+  packages=( git zsh vim-gnome libffi-dev libssl-dev zlib1g-dev libreadline-dev libxslt1-dev libxml2-dev libmysql-ruby libmysqlclient-dev libmagickwand-dev libsqlite3-dev postgresql postgresql-server-dev-9.1 libqtwebkit-dev curl fluxbox nodejs )
   echo "Checking for essential packages..."
   for package in "${packages[@]}"
   do
