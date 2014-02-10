@@ -55,9 +55,9 @@ Control Mod1 T  :Exec x-terminal-emulator
 
 # volume settings, using common keycodes
 # if these don't work, use xev to find out your real keycodes
-176 :Exec amixer sset Master,0 1+
-174 :Exec amixer sset Master,0 1-
-160 :Exec amixer sset Master,0 toggle
+122 :Exec amixer set Master,0 5-
+123 :Exec amixer set Master,0 5+
+121 :Exec amixer -D pulse set Master toggle
 
 # change to previous/next workspace
 Mod1 Mod4 Left  :PrevWorkspace
