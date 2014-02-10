@@ -7,7 +7,7 @@ Control Mod1 3 :Exec center.sh
 
 # Fluxbox
 Mod4 X :Restart
-Mod4 Q :Exit
+Control Mod4 Mod1 Q :Exit
 
 # click on the desktop to get menus
 OnDesktop Mouse1 :HideMenus
