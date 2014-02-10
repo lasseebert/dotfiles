@@ -31,6 +31,9 @@ synclient TapButton3=0
 synclient VertTwoFingerScroll=1
 synclient HorizTwoFingerScroll=1
 
+# Start sound
+gnome-sound-applet&
+
 # And last but not least we start fluxbox.
 # Because it is the last app you have to run it with ''exec'' before it.
 
