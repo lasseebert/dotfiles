@@ -1,6 +1,6 @@
 # Windows
 Control Q :Close
-Mod4 F    :Fullscreen
+Mod4 F    :Maximize
 Control Mod1 1 :Exec top_left.sh
 Control Mod1 2 :Exec bottom_right.sh
 Control Mod1 3 :Exec center.sh
@@ -39,22 +39,10 @@ Mod1 Shift Tab :PrevWindow {groups} (workspace=[current])
 Mod4 Tab :NextTab
 Mod4 Shift Tab :PrevTab
 
-# go to a specific tab in the current window
-Mod4 1 :Tab 1
-Mod4 2 :Tab 2
-Mod4 3 :Tab 3
-Mod4 4 :Tab 4
-Mod4 5 :Tab 5
-Mod4 6 :Tab 6
-Mod4 7 :Tab 7
-Mod4 8 :Tab 8
-Mod4 9 :Tab 9
-
 # open a terminal
 Control Mod1 T  :Exec x-terminal-emulator
 
-# volume settings, using common keycodes
-# if these don't work, use xev to find out your real keycodes
+# Volume
 122 :Exec amixer set Master,0 5-
 123 :Exec amixer set Master,0 5+
 121 :Exec amixer -D pulse set Master toggle
