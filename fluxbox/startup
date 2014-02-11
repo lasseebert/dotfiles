@@ -12,7 +12,7 @@ xmodmap "/home/pulver/.Xmodmap"
 #
 unclutter -idle 2 &
 # wmnd &
-# wmsmixer -w &
+wmsmixer -w &
 # idesk &
 #
 # Debian-local change:
@@ -28,7 +28,7 @@ fi
 /home/pulver/bin/setup_touchpad.sh
 
 # Start sound
-gnome-sound-applet&
+#gnome-sound-applet&
 
 # Network applet
 nm-applet&
