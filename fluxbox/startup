@@ -28,7 +28,7 @@ fi
 /home/pulver/bin/setup_touchpad.sh
 
 # Start sound
-#gnome-sound-applet&
+gnome-sound-applet&
 
 # Network applet
 nm-applet&
