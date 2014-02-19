@@ -73,3 +73,6 @@ function _completemarks {
 }
 compctl -K _completemarks jump
 compctl -K _completemarks unmark
+
+
+export EDITOR=$(which vim)
