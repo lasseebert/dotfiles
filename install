@@ -1,10 +1,10 @@
 #!/bin/bash
 
-if [ $1 = "--simple" ]
+if [ $1 = "--full" ]
 then
-  simple=true
+  full=true
 else
-  simple=false
+  full=false
 fi
 
 run()
@@ -117,11 +117,11 @@ install_essentials()
 
   echo "Checking for essential packages..."
 
-  if $simple
+  if $full
   then
-    packages=( git zsh curl )
-  else
     packages=( git zsh vim-gnome libffi-dev libssl-dev zlib1g-dev libreadline-dev libxslt1-dev libxml2-dev libmagickwand-dev libsqlite3-dev libqtwebkit-dev curl fluxbox nodejs )
+  else
+    packages=( git zsh curl )
   fi
 
   for package in "${packages[@]}"
