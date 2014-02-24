@@ -1,5 +1,12 @@
 #!/bin/bash
 
+if [ $1 = "--simple" ]
+then
+  simple=true
+else
+  simple=false
+fi
+
 run()
 {
   echo
@@ -107,8 +114,16 @@ git_pull()
 
 install_essentials()
 {
-  packages=( git zsh vim-gnome libffi-dev libssl-dev zlib1g-dev libreadline-dev libxslt1-dev libxml2-dev libmagickwand-dev libsqlite3-dev libqtwebkit-dev curl fluxbox nodejs )
+
   echo "Checking for essential packages..."
+
+  if $simple
+  then
+    packages=( git zsh curl )
+  else
+    packages=( git zsh vim-gnome libffi-dev libssl-dev zlib1g-dev libreadline-dev libxslt1-dev libxml2-dev libmagickwand-dev libsqlite3-dev libqtwebkit-dev curl fluxbox nodejs )
+  fi
+
   for package in "${packages[@]}"
   do
     install_package $package
