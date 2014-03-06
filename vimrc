@@ -10,6 +10,9 @@ map <F2> :NERDTreeToggle<CR>
 vmap <Leader>a= :Tabularize /=<CR>
 vmap <Leader>a: :Tabularize /:\zs<CR>
 
+" Application commands
+nnoremap <Leader>oc :silent !google-chrome %<CR>:redraw!<CR>
+
 " Tab shortcuts
 nnoremap <C-S-k> :tabp<CR>
 nnoremap <C-S-j> :tabn<CR>
