@@ -1,11 +1,11 @@
 # Windows
 Control Q :Close
 Mod4 F    :Maximize
-Control Mod1 1 :Exec swm resize --x 0 --y 0 --width 60 --height 60 --bottom 50
-Control Mod1 2 :Exec swm resize --x 40 --y 0 --width 60 --height 60 --bottom 50
-Control Mod1 3 :Exec swm resize --x 0 --y 40 --width 60 --height 60 --bottom 50
-Control Mod1 4 :Exec swm resize --x 40 --y 40 --width 60 --height 60 --bottom 50
-Control Mod1 5 :Exec swm resize --x 10 --y 10 --width 80 --height 80 --bottom 50
+Control Mod1 1 :Exec swm resize --x 0 --y 0 --width 60 --height 60 --bottom 60
+Control Mod1 2 :Exec swm resize --x 40 --y 0 --width 60 --height 60 --bottom 60
+Control Mod1 3 :Exec swm resize --x 0 --y 40 --width 60 --height 60 --bottom 60
+Control Mod1 4 :Exec swm resize --x 40 --y 40 --width 60 --height 60 --bottom 60
+Control Mod1 5 :Exec swm resize --x 10 --y 10 --width 80 --height 80 --bottom 60
 
 # Fluxbox
 Mod4 X :Restart
