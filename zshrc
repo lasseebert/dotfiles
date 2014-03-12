@@ -78,4 +78,5 @@ compctl -K _completemarks unmark
 export EDITOR=$(which vim)
 
 # Show doge image on startup
+# https://github.com/thiderman/doge
 which doge > /dev/null && doge
