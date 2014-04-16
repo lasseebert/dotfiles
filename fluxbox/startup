@@ -34,7 +34,7 @@ gnome-sound-applet&
 nm-applet&
 
 # Battery applet
-xfce4-power-manager&
+xfce4-power-manager --no-daemon&
 
 # And last but not least we start fluxbox.
 # Because it is the last app you have to run it with ''exec'' before it.
