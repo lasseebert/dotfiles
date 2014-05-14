@@ -13,6 +13,7 @@ ZSH_THEME="lasseebert"
 
 alias o="xdg-open"
 alias ow="/home/pulver/bin/open_workspace.sh"
+alias bower='noglob bower'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
