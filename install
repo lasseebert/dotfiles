@@ -29,7 +29,7 @@ run()
 
 symlink_files() {
   echo "Symlinking dotfiles..."
-  files=(gemrc gitconfig irbrc profile pryrc tmux.conf vimrc Xmodmap zshrc config/awesome/rc.lua oh-my-zsh/themes/lasseebert.zsh-theme vim/autoload/pathogen.vim vim/bundle oh-my-zsh/plugins/lasseebert-git oh-my-zsh/plugins/lasseebert-common fluxbox )
+  files=(gemrc gitconfig irbrc profile pryrc tmux.conf vimrc Xmodmap zshrc config/awesome/rc.lua oh-my-zsh/themes/lasseebert.zsh-theme vim/autoload/pathogen.vim vim/bundle oh-my-zsh/plugins/lasseebert-git oh-my-zsh/plugins/lasseebert-common fluxbox xbindkeysrc )
   for file in "${files[@]}"
   do
     symlink $file
@@ -119,7 +119,7 @@ install_essentials()
 
   if $full
   then
-    packages=( git zsh vim-gnome libffi-dev libssl-dev zlib1g-dev libreadline-dev libxslt1-dev libxml2-dev libmagickwand-dev libsqlite3-dev libqtwebkit-dev curl fluxbox nodejs build-essential )
+    packages=( git zsh vim-gnome libffi-dev libssl-dev zlib1g-dev libreadline-dev libxslt1-dev libxml2-dev libmagickwand-dev libsqlite3-dev libqtwebkit-dev curl fluxbox nodejs build-essential xfce4-power-manager )
   else
     packages=( git zsh curl )
   fi
