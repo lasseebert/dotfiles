@@ -119,7 +119,7 @@ install_essentials()
 
   if $full
   then
-    packages=( git zsh vim-gnome libffi-dev libssl-dev zlib1g-dev libreadline-dev libxslt1-dev libxml2-dev libmagickwand-dev libsqlite3-dev libqtwebkit-dev curl fluxbox nodejs build-essential xfce4-power-manager )
+    packages=( git zsh vim-gnome libffi-dev libssl-dev zlib1g-dev libreadline-dev libxslt1-dev libxml2-dev libmagickwand-dev libsqlite3-dev libqtwebkit-dev curl fluxbox nodejs build-essential xfce4-power-manager nethogs )
   else
     packages=( git zsh curl )
   fi
