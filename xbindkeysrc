@@ -37,11 +37,6 @@
 #keystate_capslock = enable
 #keystate_scrolllock= enable
 
-# Examples of commands:
-
-"xbindkeys_show" 
-  control+shift + q
-
 "swm resize --x 0 --y 0 --width 60 --height 60"
   control+alt + 1
 "swm resize --x 40 --y 0 --width 60 --height 60"
