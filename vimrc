@@ -71,3 +71,6 @@ let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
 command Cal Calendar -first_day=monday
 command Clock Calendar -view=clock
+
+" Ignore these paths when searching in project
+set wildignore+=*/node_modules/*
