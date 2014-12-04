@@ -23,6 +23,10 @@ inoremap <C-S-j> <Esc>:tabn<CR>i
 set number
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=Black guibg=#589A5D
 
+" 80 column marker
+set colorcolumn=81
+highlight ColorColumn ctermbg=darkgrey ctermfg=white
+
 " Tabs
 set expandtab
 set shiftwidth=2
