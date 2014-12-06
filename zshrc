@@ -82,3 +82,6 @@ export EDITOR=$(which vim)
 # Wow. Such doge. Very zsh. Many terminal. Wow
 # https://github.com/thiderman/doge
 which doge > /dev/null && doge
+
+# For tmux
+export TERM="xterm-256color"
