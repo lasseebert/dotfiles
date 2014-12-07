@@ -21,6 +21,7 @@ inoremap <C-S-j> <Esc>:tabn<CR>i
 
 " Line numbers
 set number
+set relativenumber " Use line numbers relative to current line
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=Black guibg=#589A5D
 
 " 80 column marker
@@ -61,7 +62,9 @@ set nowrap
 " Folding settings
 let g:vim_markdown_initial_foldlevel=99 " Don't start folded for markdown
 set nofoldenable        " Dont fold from start
-set foldmethod=syntax   " Fold based on syntax plugin
+" Using syntax folding seems to be very slow when CtrlP'ing from ruby files
+"set foldmethod=syntax   " Fold based on syntax plugin
+set foldmethod=indent    " Fold based on indent
 set foldlevelstart=99   " Don't fold anything when foldenable is set
 set foldignore=         " Don't ignore # when folding (which is default)
 set foldtext=getline(v:foldstart) " Show first line of fold as fold text
