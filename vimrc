@@ -86,14 +86,12 @@ command Clock Calendar -view=clock
 " Ignore these paths when searching in project
 set wildignore+=*/node_modules/*
 
-
-
-
-
-
-
-
-
+" Highlight the current line http://usevim.com/2014/12/03/conoline/
+set cursorline
+hi cursorline cterm=none term=none
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+highlight CursorLine guibg=#303000 ctermbg=234
 
 " Rcodetools
 
