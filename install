@@ -102,11 +102,8 @@ git_pull()
   echo " git pull"
   git pull
 
-  echo " git submodule init"
-  git submodule init
-
-  echo " git submodule update"
-  git submodule update
+  echo " fetch from peru"
+  (cd vim && peru sync)
 
   echo
 }
@@ -124,6 +121,7 @@ install_essentials()
     packages=( git zsh curl )
   fi
 
+  install_peru
   for package in "${packages[@]}"
   do
     install_package $package
@@ -138,6 +136,19 @@ install_package()
   if [ "" == "$PKG_OK" ]; then
     echo "$package not installed. Installing now."
     sudo apt-get --force-yes --yes install $package
+  else
+    echo " [ OK ] $package"
+  fi
+}
+
+install_peru()
+{
+  PKG_OK=$(dpkg-query -W --showformat='${Status}\n' peru|grep "install ok installed")
+  if [ "" == "$PKG_OK" ]; then
+    echo "peru not installed. Installing now."
+    sudo add-apt-repository ppa:buildinspace/peru
+    sudo apt-get update
+    sudo apt-get --force-yes --yes install peru
   else
     echo " [ OK ] $package"
   fi

@@ -1,4 +1,4 @@
-call pathogen#infect()
+execute pathogen#infect()
 call pathogen#helptags()
 
 let mapleader = ","
