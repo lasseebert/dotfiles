@@ -19,6 +19,7 @@ imports:
   vim-repeat:               bundle/vim-repeat
   vim-mustache-handlebars:  bundle/vim-mustache-handlebars
   Dockerfile:               bundle/Dockerfile
+  vim-fugitive:             bundle/vim-fugitive
 
 git module pathogen:
   url: https://github.com/tpope/vim-pathogen.git
@@ -79,5 +80,8 @@ git module vim-mustache-handlebars:
   url: git://github.com/mustache/vim-mustache-handlebars.git
   rev: 291e49908af86f2805d1a93b6a476f04906e28e1
 git module Dockerfile:
-  url: https://github.com/ekalinin/Dockerfile.vim.git
+  url: https://github.com/ekalinin/dockerfile.vim.git
   rev: 5497d84f7769e91c8e5295837d25e7f1fa2d2a0f
+git module vim-fugitive:
+  url: https://github.com/tpope/vim-fugitive.git
+  rev: 2c8461db084d205903a792a23163faa546f143c9
