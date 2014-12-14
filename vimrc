@@ -21,8 +21,10 @@ inoremap <C-S-j> <Esc>:tabn<CR>i
 
 " Line numbers
 set number
-set relativenumber " Use line numbers relative to current line
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=Black guibg=#589A5D
+
+" Show 5 lines of context around the cursor.
+set scrolloff=5
 
 " 80 column marker
 set colorcolumn=81
