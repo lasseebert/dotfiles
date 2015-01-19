@@ -29,7 +29,7 @@ run()
 
 symlink_files() {
   echo "Symlinking dotfiles..."
-  files=(gemrc gitconfig irbrc profile pryrc tmux.conf vimrc Xmodmap zshrc config/awesome/rc.lua oh-my-zsh/themes/lasseebert.zsh-theme vim/autoload/pathogen.vim vim/bundle oh-my-zsh/plugins/lasseebert-git oh-my-zsh/plugins/lasseebert-common fluxbox xbindkeysrc )
+  files=(gemrc gitconfig irbrc profile pryrc tmux.conf vimrc Xmodmap zshrc config/awesome/rc.lua oh-my-zsh/themes/lasseebert.zsh-theme vim/autoload/pathogen.vim vim/bundle oh-my-zsh/plugins/lasseebert-git oh-my-zsh/plugins/lasseebert-common oh-my-zsh/plugins/lasseebert-get-shit-done fluxbox xbindkeysrc )
   for file in "${files[@]}"
   do
     symlink $file
