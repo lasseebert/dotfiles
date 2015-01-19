@@ -1,6 +1,8 @@
 # Install into /etc/sudoers:
 # user host = (root) nopasswd: /path/to/get-shit-done.sh play
 # user host = (root) nopasswd: /path/to/get-shit-done.sh work
+#
+# get-shit-done can be cloned from https://github.com/leftnode/get-shit-done
 
 GET_SHIT_DONE_BIN=/home/pulver/bin/get-shit-done/get-shit-done.sh
 GET_SHIT_DONE_PID=/home/pulver/bin/get-shit-done/get-shit-done.pid
