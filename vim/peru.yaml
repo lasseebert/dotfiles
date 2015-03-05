@@ -39,16 +39,16 @@ git module vim-coffee-script:
   rev: 827e4a38b07479433b619091469a7495a392df8a
 git module vim-markdown:
   url: https://github.com/plasticboy/vim-markdown.git
-  rev: 8f2eaa4169d8e15d69c30ce01b7065fc8259ae9d
+  rev: a0ef80e296de45f1a9ce5794bffb80fe79efc3ac
 git module vim-rails:
   url: git://github.com/tpope/vim-rails.git
-  rev: f7d264fc27b3dfcbc54f8b16f3ae6aea4f92ee4c
+  rev: 6d21bd0d90ab4b27581cbe834397f503ea115565
 git module vim-ruby:
   url: git://github.com/vim-ruby/vim-ruby.git
-  rev: 243d021449115235505350764bff00859ce4224f
+  rev: c298d2f352559f0c690d5e75f7ed6ce0c61ff474
 git module vim-surround:
   url: git://github.com/tpope/vim-surround.git
-  rev: fa433e0b7330753688f715f3be5d10dc480f20e5
+  rev: ec579a50478758ee6cebe265cf536f9a2f6c4e34
 git module vim-slim:
   url: git://github.com/slim-template/vim-slim.git
   rev: 0daaa8581f9a9968cebbc7d14ae9acf1625c0389
@@ -57,7 +57,7 @@ git module vim-rspec:
   rev: cf7eb2fe54d5adf5dcc0a13d680ab4820765d520
 git module vim-javascript:
   url: https://github.com/pangloss/vim-javascript.git
-  rev: 977e220b371938b81acb728eee36987c6fe4034a
+  rev: e9709a9fb29ed0739eb244b5e70211c1ab647535
 git module tabular:
   url: https://github.com/godlygeek/tabular.git
   rev: 60f25648814f0695eeb6c1040d97adca93c4e0bb
@@ -72,16 +72,16 @@ git module vim-less:
   rev: 940a8defa0576385dee1ad177bab0b34738540aa
 git module vim-multiple-cursors:
   url: https://github.com/terryma/vim-multiple-cursors.git
-  rev: a95edcdffd98c5961f067796fbc2a1a82e0f6a83
+  rev: 9abea1b01b368698cb8035d0e54bf69094f7b512
 git module vim-repeat:
   url: git://github.com/tpope/vim-repeat.git
-  rev: 5eba0f19c87402643eb8a7e7d20d9d5338fd6d71
+  rev: d9fbf5a137773c3737cf5f0cdfc3e155c393b96d
 git module vim-mustache-handlebars:
   url: git://github.com/mustache/vim-mustache-handlebars.git
   rev: 291e49908af86f2805d1a93b6a476f04906e28e1
 git module Dockerfile:
   url: https://github.com/ekalinin/dockerfile.vim.git
-  rev: 5497d84f7769e91c8e5295837d25e7f1fa2d2a0f
+  rev: 1292b57c2373c616555b6fcb139ae44931cd8474
 git module vim-fugitive:
   url: https://github.com/tpope/vim-fugitive.git
-  rev: 2c8461db084d205903a792a23163faa546f143c9
+  rev: 0095769029709b531d2505ee6ad9907dd9bd72a0
