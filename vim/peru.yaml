@@ -39,16 +39,16 @@ git module vim-coffee-script:
   rev: 827e4a38b07479433b619091469a7495a392df8a
 git module vim-markdown:
   url: https://github.com/plasticboy/vim-markdown.git
-  rev: a0ef80e296de45f1a9ce5794bffb80fe79efc3ac
+  rev: 0da5ba9d719b818909d85bacdad2ce5d860c9e94
 git module vim-rails:
   url: git://github.com/tpope/vim-rails.git
-  rev: 6d21bd0d90ab4b27581cbe834397f503ea115565
+  rev: 981f8d790cbecd5bbbb907aa30a94f63b6aee041
 git module vim-ruby:
   url: git://github.com/vim-ruby/vim-ruby.git
   rev: c298d2f352559f0c690d5e75f7ed6ce0c61ff474
 git module vim-surround:
   url: git://github.com/tpope/vim-surround.git
-  rev: ec579a50478758ee6cebe265cf536f9a2f6c4e34
+  rev: 772ab9587b7d1e2c3bae75395c9123803059ba8a
 git module vim-slim:
   url: git://github.com/slim-template/vim-slim.git
   rev: 0daaa8581f9a9968cebbc7d14ae9acf1625c0389
@@ -69,19 +69,19 @@ git module loremipsum:
   rev: 39354ae1c86c89bf36a4af7c6d4b9ca0c0a9eedf
 git module vim-less:
   url: https://github.com/groenewege/vim-less.git
-  rev: 940a8defa0576385dee1ad177bab0b34738540aa
+  rev: 902870b38df5f22803532141f11a82c74bed5ab5
 git module vim-multiple-cursors:
   url: https://github.com/terryma/vim-multiple-cursors.git
-  rev: 9abea1b01b368698cb8035d0e54bf69094f7b512
+  rev: 6863d6b8045b92be7abe1bbdd5152eff80da0c19
 git module vim-repeat:
   url: git://github.com/tpope/vim-repeat.git
-  rev: d9fbf5a137773c3737cf5f0cdfc3e155c393b96d
+  rev: b01aafbd8d44573abf0ad36afb2df66e92f1a680
 git module vim-mustache-handlebars:
   url: git://github.com/mustache/vim-mustache-handlebars.git
   rev: 291e49908af86f2805d1a93b6a476f04906e28e1
 git module Dockerfile:
   url: https://github.com/ekalinin/dockerfile.vim.git
-  rev: 1292b57c2373c616555b6fcb139ae44931cd8474
+  rev: 41e89842cb55a34759d23a146b748a5c4c2b7984
 git module vim-fugitive:
   url: https://github.com/tpope/vim-fugitive.git
   rev: 0095769029709b531d2505ee6ad9907dd9bd72a0
