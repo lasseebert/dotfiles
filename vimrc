@@ -13,11 +13,16 @@ vmap <Leader>a: :Tabularize /:\zs<CR>
 " Application commands
 nnoremap <Leader>oc :silent !google-chrome %<CR>:redraw!<CR>
 
+" Trying out buffers instead of tabs
+nnoremap <C-S-k> :bp<CR>
+nnoremap <C-S-j> :bn<CR>
+inoremap <C-S-k> <Esc>:bp<CR>i
+inoremap <C-S-j> <Esc>:bn<CR>i
 " Tab shortcuts
-nnoremap <C-S-k> :tabp<CR>
-nnoremap <C-S-j> :tabn<CR>
-inoremap <C-S-k> <Esc>:tabp<CR>i
-inoremap <C-S-j> <Esc>:tabn<CR>i
+"nnoremap <C-S-k> :tabp<CR>
+"nnoremap <C-S-j> :tabn<CR>
+"inoremap <C-S-k> <Esc>:tabp<CR>i
+"inoremap <C-S-j> <Esc>:tabn<CR>i
 
 " Line numbers
 set number

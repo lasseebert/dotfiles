@@ -20,6 +20,7 @@ imports:
   vim-mustache-handlebars:  bundle/vim-mustache-handlebars
   Dockerfile:               bundle/Dockerfile
   vim-fugitive:             bundle/vim-fugitive
+  vim-buffergator:          bundle/vim-buffergator
 
 git module pathogen:
   url: https://github.com/tpope/vim-pathogen.git
@@ -85,3 +86,6 @@ git module Dockerfile:
 git module vim-fugitive:
   url: https://github.com/tpope/vim-fugitive.git
   rev: 0095769029709b531d2505ee6ad9907dd9bd72a0
+git module vim-buffergator:
+  url: https://github.com/jeetsukumaran/vim-buffergator.git
+  rev: 77cfdd127fcf026ea2d5e8f5aaf85502286b16b7
