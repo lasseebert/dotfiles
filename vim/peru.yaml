@@ -21,6 +21,7 @@ imports:
   Dockerfile:               bundle/Dockerfile
   vim-fugitive:             bundle/vim-fugitive
   vim-buffergator:          bundle/vim-buffergator
+  vim-elixir:               bundle/vim-elixir
 
 git module pathogen:
   url: https://github.com/tpope/vim-pathogen.git
@@ -89,3 +90,6 @@ git module vim-fugitive:
 git module vim-buffergator:
   url: https://github.com/jeetsukumaran/vim-buffergator.git
   rev: 77cfdd127fcf026ea2d5e8f5aaf85502286b16b7
+git module vim-elixir:
+  url: https://github.com/elixir-lang/vim-elixir.git
+  rev: f2c747da5edd92c8430b9f1fdfe117467cf1551e
