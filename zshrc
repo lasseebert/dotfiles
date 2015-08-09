@@ -34,7 +34,7 @@ alias time="/usr/bin/time"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bundler rails gem rake web-search lasseebert-git lasseebert-common lasseebert-get-shit-done docker vagrant tmux)
+plugins=(git bundler rails gem rake web-search lasseebert-git lasseebert-common lasseebert-get-shit-done docker vagrant tmux mix)
 
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all

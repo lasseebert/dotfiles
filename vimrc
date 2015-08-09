@@ -8,6 +8,7 @@ map <F2> :NERDTreeToggle<CR>
 
 " Tabularize
 vmap <Leader>a= :Tabularize /=<CR>
+vmap <Leader>a, :Tabularize /,\zs<CR>
 vmap <Leader>a: :Tabularize /:\zs<CR>
 
 " Application commands
@@ -90,6 +91,7 @@ command Clock Calendar -view=clock
 
 " Ignore these paths when searching in project
 set wildignore+=*/node_modules/*
+set wildignore+=*/deps/*
 
 " Highlight the current line http://usevim.com/2014/12/03/conoline/
 set cursorline
