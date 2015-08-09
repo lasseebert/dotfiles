@@ -168,6 +168,7 @@ install_peru()
     echo "peru not installed. Installing now."
     sudo add-apt-repository ppa:buildinspace/peru
     sudo apt-get update
+    sudo apt-get --force-yes --yes install python3-setuptools
     sudo apt-get --force-yes --yes install peru
   else
     echo " [ OK ] $package"
