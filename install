@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $1 = "--full" ]
+if [[ $1 = "--full" ]]
 then
   full=true
 else
@@ -38,7 +38,6 @@ symlink_files() {
   iex.exs
   irbrc
   oh-my-zsh/plugins/lasseebert-common
-  oh-my-zsh/plugins/lasseebert-get-shit-done
   oh-my-zsh/plugins/lasseebert-git
   oh-my-zsh/themes/lasseebert.zsh-theme
   profile
