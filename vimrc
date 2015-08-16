@@ -1,17 +1,16 @@
-execute pathogen#infect()
-call pathogen#helptags()
+source ~/.vim/config/pathogen
 
 let mapleader = ","
 
 " Give a shortcut key to NERD Tree
 map <F2> :NERDTreeToggle<CR>
 
-" Tabularize
+" Tabularize - align lines
 vmap <Leader>a= :Tabularize /=<CR>
 vmap <Leader>a, :Tabularize /,\zs<CR>
 vmap <Leader>a: :Tabularize /:\zs<CR>
 
-" Application commands
+" Open file in Chrome
 nnoremap <Leader>oc :silent !google-chrome %<CR>:redraw!<CR>
 
 " Trying out buffers instead of tabs
@@ -19,11 +18,6 @@ nnoremap <C-S-k> :bp<CR>
 nnoremap <C-S-j> :bn<CR>
 inoremap <C-S-k> <Esc>:bp<CR>i
 inoremap <C-S-j> <Esc>:bn<CR>i
-" Tab shortcuts
-"nnoremap <C-S-k> :tabp<CR>
-"nnoremap <C-S-j> :tabn<CR>
-"inoremap <C-S-k> <Esc>:tabp<CR>i
-"inoremap <C-S-j> <Esc>:tabn<CR>i
 
 " Line numbers
 set number
@@ -83,12 +77,6 @@ set incsearch
 " Use system clipboard
 set clipboard=unnamedplus
 
-" Use Google Calendar for calendar plugin
-let g:calendar_google_calendar = 1
-let g:calendar_google_task = 1
-command Cal Calendar -first_day=monday
-command Clock Calendar -view=clock
-
 " Ignore these paths when searching in project
 set wildignore+=*/node_modules/*
 set wildignore+=*/deps/*
@@ -99,53 +87,3 @@ hi cursorline cterm=none term=none
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 highlight CursorLine guibg=#303000 ctermbg=234
-
-"rebind my favorite commands from Git.vim for Fugitive
-nmap <leader>gs :Gstatus<cr>
-nmap <leader>gc :Gcommit<cr>
-nmap <leader>ga :Gwrite<cr>
-nmap <leader>gl :Glog<cr>
-nmap <leader>gd :Gdiff<cr>
-
-" Rcodetools
-
-" plain annotations
-map <silent> <F10> !xmpfilter -a<cr>
-nmap <silent> <F10> V<F10>
-imap <silent> <F10> <ESC><F10>a
-
-" Test::Unit assertions; use -s to generate RSpec expectations instead
-map <silent> <S-F10> !xmpfilter -u<cr>
-nmap <silent> <S-F10> V<S-F10>
-imap <silent> <S-F10> <ESC><S-F10>a
-
-" Annotate the full buffer
-" I actually prefer ggVG to %; it's a sort of poor man's visual bell 
-nmap <silent> <F9> mzggVG!xmpfilter -a<cr>'z
-imap <silent> <F9> <ESC><F11>
-
-" assertions
-nmap <silent> <S-F9> mzggVG!xmpfilter -u<cr>'z
-imap <silent> <S-F9> <ESC><S-F11>a
-
-" Add # => markers
-vmap <silent> <F12> !xmpfilter -m<cr>
-nmap <silent> <F12> V<F12>
-imap <silent> <F12> <ESC><F12>a
-
-" Remove # => markers
-vmap <silent> <S-F12> ms:call RemoveRubyEval()<CR>
-nmap <silent> <S-F12> V<S-F12>
-imap <silent> <S-F12> <ESC><S-F12>a
-
-
-function! RemoveRubyEval() range
-  let begv = a:firstline
-  let endv = a:lastline
-  normal Hmt
-  set lz
-  execute ":" . begv . "," . endv . 's/\s*# \(=>\|!!\).*$//e'
-  normal 'tzt`s
-  set nolz
-  redraw
-endfunction

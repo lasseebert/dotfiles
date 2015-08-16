@@ -44,7 +44,9 @@ symlink_files() {
   pryrc
   tmux.conf
   vim/autoload/pathogen.vim
+  vim/autoload/plug.vim
   vim/bundle
+  vim/config
   vimrc
   xbindkeysrc
   zshrc
@@ -130,8 +132,9 @@ git_pull()
 
 install_essentials()
 {
-
   echo "Checking for essential packages..."
+
+  install_peru
 
   if $full
   then
@@ -140,7 +143,6 @@ install_essentials()
     packages=( git zsh curl )
   fi
 
-  install_peru
   for package in "${packages[@]}"
   do
     install_package $package
