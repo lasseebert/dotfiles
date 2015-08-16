@@ -44,7 +44,6 @@ symlink_files() {
   pryrc
   tmux.conf
   vim/autoload/plug.vim
-  vim/bundle
   vim/config
   vimrc
   xbindkeysrc
