@@ -1,4 +1,4 @@
-source ~/.vim/config/pathogen
+source ~/.vim/config/plug.vim
 
 let mapleader = ","
 

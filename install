@@ -43,7 +43,6 @@ symlink_files() {
   profile
   pryrc
   tmux.conf
-  vim/autoload/pathogen.vim
   vim/autoload/plug.vim
   vim/bundle
   vim/config
@@ -123,9 +122,6 @@ git_pull()
   echo " git pull"
   git pull
 
-  echo " fetch from peru"
-  (cd vim && peru sync)
-
   echo
 }
 
@@ -133,8 +129,6 @@ git_pull()
 install_essentials()
 {
   echo "Checking for essential packages..."
-
-  install_peru
 
   if $full
   then
@@ -157,20 +151,6 @@ install_package()
   if [ "" == "$PKG_OK" ]; then
     echo "$package not installed. Installing now."
     sudo apt-get --force-yes --yes install $package
-  else
-    echo " [ OK ] $package"
-  fi
-}
-
-install_peru()
-{
-  PKG_OK=$(dpkg-query -W --showformat='${Status}\n' peru|grep "install ok installed")
-  if [ "" == "$PKG_OK" ]; then
-    echo "peru not installed. Installing now."
-    sudo add-apt-repository ppa:buildinspace/peru
-    sudo apt-get update
-    sudo apt-get --force-yes --yes install python3-setuptools
-    sudo apt-get --force-yes --yes install peru
   else
     echo " [ OK ] $package"
   fi
