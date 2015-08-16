@@ -84,9 +84,8 @@ symlink() {
     if [ -a $link_path ]
     then
       mv $link_path $link_path.bak
-    else
-      ln -sv $file_path $link_path
     fi
+    ln -sv $file_path $link_path
   fi
 }
 
