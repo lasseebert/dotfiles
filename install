@@ -52,16 +52,17 @@ symlink_files() {
   )
   for file in "${files[@]}"
   do
-    symlink $file
+    symlink "`pwd`/$file" "$HOME/.$file"
   done
+
+  symlink "$HOME/.vim" "$HOME/.nvim"
 
   echo
 }
 
 symlink() {
-  file=$1
-  file_path="`pwd`/$file"
-  link_path="$HOME/.$file"
+  file_path=$1
+  link_path=$2
   link_dir=`dirname $link_path`
 
   if [ ! -d $link_dir ]
@@ -69,23 +70,23 @@ symlink() {
     mkdir -pv $link_dir
   fi
 
-  if [ -e $link_path ]
+  if [ -L $link_path ]
   then
-    if [ -L $link_path ]
+    if [ "`readlink $link_path`" != "$file_path" ]
     then
-      if [ "`readlink $link_path`" != "$file_path" ]
-      then
-        rm -rfv $link_path
-        ln -sv $file_path $link_path
-      else
-        echo " [ OK ] $link_path"
-      fi
-    else
       rm -rfv $link_path
       ln -sv $file_path $link_path
+    else
+      echo " [ OK ] $link_path"
     fi
   else
-    ln -sv $file_path $link_path
+    echo "3"
+    if [ -a $link_path ]
+    then
+      mv $link_path $link_path.bak
+    else
+      ln -sv $file_path $link_path
+    fi
   fi
 }
 
