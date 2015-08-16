@@ -56,6 +56,7 @@ symlink_files() {
   done
 
   symlink "$HOME/.vim" "$HOME/.nvim"
+  symlink "$HOME/.vimrc" "$HOME/.nvimrc"
 
   echo
 }
