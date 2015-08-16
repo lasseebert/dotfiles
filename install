@@ -81,7 +81,6 @@ symlink() {
       echo " [ OK ] $link_path"
     fi
   else
-    echo "3"
     if [ -a $link_path ]
     then
       mv $link_path $link_path.bak
