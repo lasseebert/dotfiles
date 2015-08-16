@@ -73,6 +73,8 @@ set foldtext=getline(v:foldstart) " Show first line of fold as fold text
 
 " Use incremental search
 set incsearch
+" Disable hlsearch after incsearch
+nmap // :nohlsearch <CR>
 
 " Use system clipboard
 set clipboard=unnamedplus

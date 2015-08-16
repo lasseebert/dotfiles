@@ -44,4 +44,7 @@ Plug 'jeetsukumaran/vim-buffergator'
 Plug 'tpope/vim-rails'
 Plug 'skwp/vim-rspec'
 
+" Trying out
+Plug 'benekastah/neomake'
+
 call plug#end()
