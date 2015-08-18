@@ -14,6 +14,7 @@ ZSH_THEME="lasseebert"
 alias o="xdg-open"
 alias bower='noglob bower'
 alias time="/usr/bin/time"
+alias vim="which nvim && nvim || vim"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
