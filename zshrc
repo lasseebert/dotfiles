@@ -14,7 +14,10 @@ ZSH_THEME="lasseebert"
 alias o="xdg-open"
 alias bower='noglob bower'
 alias time="/usr/bin/time"
-alias vim="which nvim && nvim || vim"
+
+REAL_VIM=$(which nvim || which vim)
+export EDITOR=$REAL_VIM
+alias vim=$REAL_VIM
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -77,7 +80,6 @@ compctl -K _completemarks jump
 compctl -K _completemarks unmark
 
 
-export EDITOR=$(which vim)
 
 # Wow. Such doge. Very zsh. Many terminal. Wow
 # https://github.com/thiderman/doge
