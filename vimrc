@@ -19,6 +19,9 @@ nnoremap <C-S-j> :bn<CR>
 inoremap <C-S-k> <Esc>:bp<CR>i
 inoremap <C-S-j> <Esc>:bn<CR>i
 
+" Fast escape from insert mode
+inoremap kj <Esc>
+
 " Line numbers
 set number
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=Black guibg=#589A5D
