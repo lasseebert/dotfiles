@@ -47,4 +47,12 @@ Plug 'skwp/vim-rspec'
 " Trying out
 Plug 'benekastah/neomake'
 
+" Color scheme
+Plug 'nanotech/jellybeans.vim'
+Plug 'chriskempson/base16-vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'w0ng/vim-hybrid'
+Plug 'ajh17/Spacegray.vim'
+Plug 'zanloy/vim-colors-sunburst'
+
 call plug#end()

@@ -2,6 +2,12 @@ source ~/.vim/config/plug.vim
 
 let mapleader = ","
 
+" Color scheme
+set background=dark
+syntax on
+colorscheme sunburst
+hi Search cterm=NONE ctermfg=black ctermbg=lightyellow
+
 " Give a shortcut key to NERD Tree
 map <F2> :NERDTreeToggle<CR>
 
@@ -52,7 +58,6 @@ map <C-L> :execute "tabmove" tabpagenr() <CR>
 
 " be 'modern'
 set nocompatible
-syntax on
 filetype plugin indent on
 
 " Show invisible chars
