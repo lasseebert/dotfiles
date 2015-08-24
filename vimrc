@@ -8,6 +8,8 @@ syntax on
 colorscheme sunburst
 hi Search cterm=NONE ctermfg=black ctermbg=lightyellow
 
+set laststatus=2
+
 " Give a shortcut key to NERD Tree
 map <F2> :NERDTreeToggle<CR>
 
