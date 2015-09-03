@@ -54,5 +54,6 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'w0ng/vim-hybrid'
 Plug 'ajh17/Spacegray.vim'
 Plug 'zanloy/vim-colors-sunburst'
+Plug 'christophermca/meta5'
 
 call plug#end()
