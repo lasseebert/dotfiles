@@ -109,4 +109,5 @@ highlight CursorLine guibg=#303000 ctermbg=234
 :inoremap [ []<Esc>i
 :inoremap " ""<Esc>i
 :inoremap ' ''<Esc>i
-:inoremap <C-j> <Esc>/[)}"'\]]<CR>:nohl<CR>a
+:inoremap <C-j> <Esc>:set nohls<CR>/[\)}\"'\]]<CR>:let @/ = ""<CR>:set hls<CR>a
+:inoremap <C-k> <Esc>:set nohls<CR>?[\({\"'\[]<CR>:let @/ = ""<CR>:set hls<CR>a
