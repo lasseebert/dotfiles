@@ -15,7 +15,11 @@ alias o="xdg-open"
 alias bower='noglob bower'
 alias time="/usr/bin/time"
 
-REAL_VIM=$(which nvim || which vim)
+if which nvim > /dev/null; then
+  REAL_VIM=$(which nvim)
+else
+  REAL_VIM=$(which vim)
+fi
 export EDITOR=$REAL_VIM
 alias vim=$REAL_VIM
 
