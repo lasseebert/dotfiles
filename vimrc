@@ -58,6 +58,12 @@ set cinkeys=0{,0},:,0#,!^F
 map <C-H> :execute "tabmove" tabpagenr() - 2 <CR>
 map <C-L> :execute "tabmove" tabpagenr() <CR>
 
+" Swicth tabs
+map <C-Up> :tabp<CR>
+map <C-Down> :tabn<CR>
+imap <C-Up> <ESC>:tabp<CR>a
+imap <C-Down> <ESC>:tabn<CR>a
+
 " be 'modern'
 set nocompatible
 filetype plugin indent on
