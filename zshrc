@@ -41,7 +41,7 @@ alias vim=$REAL_VIM
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bundler rails gem rake lasseebert-git lasseebert-common vagrant tmux mix)
+plugins=(git bundler rails gem rake lasseebert-git lasseebert-common vagrant mix)
 
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
