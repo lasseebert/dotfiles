@@ -55,8 +55,9 @@ symlink_files() {
     symlink "`pwd`/$file" "$HOME/.$file"
   done
 
-  symlink "$HOME/.vim" "$HOME/.nvim"
-  symlink "$HOME/.vimrc" "$HOME/.nvimrc"
+  mkdir -p "$HOME/.config"
+  symlink "$HOME/.vim" "$HOME/.config/nvim"
+  symlink "$HOME/.vimrc" "$HOME/.config/nvim/init.vim"
 
   echo
 }
