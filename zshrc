@@ -15,6 +15,15 @@ alias o="xdg-open"
 alias bower='noglob bower'
 alias time="/usr/bin/time"
 
+# Vim like commands
+alias :q="exit"
+
+# Vagrant
+alias vssh="vagrant ssh"
+alias vussh="vagrant up && vagrant ssh"
+alias vhussh="vagrant halt && vagrant up && vagrant ssh"
+
+# Use Neovim over Vim if available
 if which nvim > /dev/null; then
   REAL_VIM=$(which nvim)
 else
