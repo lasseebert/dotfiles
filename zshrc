@@ -13,6 +13,7 @@ ZSH_THEME="lasseebert"
 
 alias o="xdg-open"
 alias bower='noglob bower'
+alias rake="noglob rake"
 alias time="/usr/bin/time"
 
 # Vim like commands
