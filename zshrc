@@ -20,6 +20,8 @@ alias time="/usr/bin/time"
 alias :q="exit"
 
 # Vagrant
+alias vh="vagrant halt"
+alias vu="vagrant up"
 alias vssh="vagrant ssh"
 alias vussh="vagrant up && vagrant ssh"
 alias vhussh="vagrant halt && vagrant up && vagrant ssh"
