@@ -10,3 +10,11 @@ if defined?(PryByebug)
   Pry.commands.alias_command 'n', 'next'
   Pry.commands.alias_command 'f', 'finish'
 end
+
+# Use awesome print by default
+begin
+  require "awesome_print"
+  AwesomePrint.pry!
+rescue LoadError
+  puts "Could not load awesome_print"
+end

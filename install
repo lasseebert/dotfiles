@@ -32,6 +32,7 @@ symlink_files() {
   echo "Symlinking dotfiles..."
   files=(
   Xmodmap
+  aprc
   config/awesome/rc.lua
   fluxbox
   gemrc
