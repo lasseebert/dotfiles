@@ -103,3 +103,6 @@ which doge > /dev/null && doge
 
 # For tmux
 export TERM="xterm-256color"
+
+# Map carriage return to newline
+stty icrnl
