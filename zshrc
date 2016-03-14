@@ -26,6 +26,13 @@ alias vssh="vagrant ssh"
 alias vussh="vagrant up && vagrant ssh"
 alias vhussh="vagrant halt && vagrant up && vagrant ssh"
 
+# Window manager
+alias w1="swm resize --x 0 --y 0 --width 60 --height 60"
+alias w2="swm resize --x 65 --y 0 --width 35 --height 40"
+alias w3="swm resize --x 0 --y 60 --width 35 --height 40"
+alias w4="swm resize --x 40 --y 40 --width 60 --height 60"
+alias w5="swm resize --x 10 --y 10 --width 80 --height 80"
+
 # Use Neovim over Vim if available
 if which nvim > /dev/null; then
   REAL_VIM=$(which nvim)
