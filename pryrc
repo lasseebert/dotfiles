@@ -11,6 +11,22 @@ if defined?(PryByebug)
   Pry.commands.alias_command 'f', 'finish'
 end
 
+module ToHashRecursive
+  module_function
+  def call(obj)
+    case
+    when obj.nil?
+      nil
+    when Array === obj
+      obj.map{|item| ToHashRecursive.call(item) }
+    when obj.respond_to?(:to_h)
+      obj.to_h.map{|k, v| [k, ToHashRecursive.call(v)]}.to_h
+    else
+      obj
+    end
+  end
+end
+
 # Use awesome print by default
 begin
   require "awesome_print"
