@@ -110,10 +110,11 @@ autocmd WinLeave * setlocal nocursorline
 highlight CursorLine guibg=#303000 ctermbg=234
 
 " Auto parenthesis and more
-:inoremap ( ()<Esc>i
-:inoremap { {}<Esc>i
-:inoremap [ []<Esc>i
-:inoremap " ""<Esc>i
-:inoremap ' ''<Esc>i
-:inoremap <C-j> <Esc>:set nohls<CR>/[\)}\"'\]]<CR>:let @/ = ""<CR>:set hls<CR>a
-:inoremap <C-k> <Esc>:set nohls<CR>?[\({\"'\[]<CR>:let @/ = ""<CR>:set hls<CR>a
+" Disabled for now
+":inoremap ( ()<Esc>i
+":inoremap { {}<Esc>i
+":inoremap [ []<Esc>i
+":inoremap " ""<Esc>i
+":inoremap ' ''<Esc>i
+":inoremap <C-j> <Esc>:set nohls<CR>/[\)}\"'\]]<CR>:let @/ = ""<CR>:set hls<CR>a
+":inoremap <C-k> <Esc>:set nohls<CR>?[\({\"'\[]<CR>:let @/ = ""<CR>:set hls<CR>a
