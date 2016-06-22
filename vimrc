@@ -118,3 +118,7 @@ highlight CursorLine guibg=#303000 ctermbg=234
 ":inoremap ' ''<Esc>i
 ":inoremap <C-j> <Esc>:set nohls<CR>/[\)}\"'\]]<CR>:let @/ = ""<CR>:set hls<CR>a
 ":inoremap <C-k> <Esc>:set nohls<CR>?[\({\"'\[]<CR>:let @/ = ""<CR>:set hls<CR>a
+
+" Linediff (https://github.com/AndrewRadev/linediff.vim)
+vmap <Leader>dd :Linediff<CR>
+map <Leader>dr :LinediffReset<CR>

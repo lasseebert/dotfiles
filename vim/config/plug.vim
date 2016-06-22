@@ -55,4 +55,7 @@ Plug 'ajh17/Spacegray.vim'
 Plug 'zanloy/vim-colors-sunburst'
 Plug 'christophermca/meta5'
 
+" Diff within same file
+Plug 'AndrewRadev/linediff.vim'
+
 call plug#end()
