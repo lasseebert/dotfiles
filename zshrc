@@ -89,6 +89,9 @@ fi
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
+# asdf - manage versions of different programming languages
+[[ -d $HOME/.asdf ]] && . $HOME/.asdf/asdf.sh
+#. $HOME/.asdf/completions/asdf.bash
 
 # Jumps
 export MARKPATH=$HOME/.marks
