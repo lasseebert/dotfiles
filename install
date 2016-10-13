@@ -49,6 +49,7 @@ symlink_files() {
   vim/config
   vimrc
   xbindkeysrc
+  zshenv
   zshrc
   )
   for file in "${files[@]}"
