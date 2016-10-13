@@ -2,13 +2,13 @@ source ~/.vim/config/plug.vim
 
 let mapleader = ","
 
+set laststatus=2
+
 " Color scheme
 set background=dark
-syntax on
 colorscheme sunburst
 hi Search cterm=NONE ctermfg=black ctermbg=lightyellow
-
-set laststatus=2
+syntax on
 
 " Give a shortcut key to NERD Tree
 map <F2> :NERDTreeToggle<CR>
@@ -40,8 +40,8 @@ highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE gui
 " Show 5 lines of context around the cursor.
 set scrolloff=5
 
-" 80 column marker
-set colorcolumn=81
+" 120 column marker
+set colorcolumn=121
 highlight ColorColumn ctermbg=darkgrey ctermfg=white
 
 " Tabs
@@ -101,6 +101,8 @@ set clipboard=unnamedplus
 " Ignore these paths when searching in project
 set wildignore+=*/node_modules/*
 set wildignore+=*/deps/*
+set wildignore+=*/rel/*
+set wildignore+=*/bower_components/*
 
 " Highlight the current line http://usevim.com/2014/12/03/conoline/
 set cursorline
