@@ -90,7 +90,7 @@ fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # asdf - manage versions of different programming languages
-# Moved to .zshenv
+[[ -d $HOME/.asdf ]] && . $HOME/.asdf/asdf.sh
 
 # Jumps
 export MARKPATH=$HOME/.marks
