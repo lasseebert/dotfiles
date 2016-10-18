@@ -58,4 +58,8 @@ Plug 'christophermca/meta5'
 " Diff within same file
 Plug 'AndrewRadev/linediff.vim'
 
+" Gist
+Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
+
 call plug#end()
