@@ -50,11 +50,11 @@
 
 # Volume control
 "amixer -D pulse sset Master 5%-"
-  control+shift + Page_Down
+  control+shift + F5
 "amixer -D pulse sset Master 5%+"
-  control+shift + Page_Up
+  control+shift + F6
 "amixer -D pulse sset Master toggle"
-  control+shift + End
+  control+shift + F4
 
 
 
