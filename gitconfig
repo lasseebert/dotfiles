@@ -38,3 +38,5 @@
   ign = ls-files -o -i --exclude-standard
 [push]
   default = simple
+[github]
+	user = lasseebert
