@@ -124,3 +124,6 @@ highlight CursorLine guibg=#303000 ctermbg=234
 " Linediff (https://github.com/AndrewRadev/linediff.vim)
 vmap <Leader>dd :Linediff<CR>
 map <Leader>dr :LinediffReset<CR>
+
+" Disable Ex mode
+:map Q <Nop>
