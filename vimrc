@@ -40,8 +40,8 @@ highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE gui
 " Show 5 lines of context around the cursor.
 set scrolloff=5
 
-" 120 column marker
-set colorcolumn=121
+" 119 column marker (this is the amount of columns GitHub shows)
+set colorcolumn=120
 highlight ColorColumn ctermbg=darkgrey ctermfg=white
 
 " Tabs

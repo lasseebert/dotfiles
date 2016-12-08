@@ -19,6 +19,8 @@ Plug 'groenewege/vim-less'
 Plug 'elixir-lang/vim-elixir'
 Plug 'ekalinin/dockerfile.vim'
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'slashmili/alchemist.vim'
+Plug 'Matt-Deacalion/vim-systemd-syntax'
 
 " Global find and replace
 Plug 'vim-scripts/greplace.vim'
@@ -37,6 +39,7 @@ Plug 'tpope/vim-repeat'
 
 " Git tools
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 " Buffer tools
 Plug 'jeetsukumaran/vim-buffergator'
