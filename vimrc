@@ -101,7 +101,6 @@ set clipboard=unnamedplus
 " Ignore these paths when searching in project
 set wildignore+=*/node_modules/*
 set wildignore+=*/deps/*
-set wildignore+=*/rel/*
 set wildignore+=*/bower_components/*
 
 " Highlight the current line http://usevim.com/2014/12/03/conoline/
