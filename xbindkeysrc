@@ -56,6 +56,9 @@
 "amixer -D pulse sset Master toggle"
   control+shift + F4
 
+# Start a Terminal
+"gnome-terminal"
+  control+alt + T
 
 
 # set directly keycode (here control + f with my keyboard)
