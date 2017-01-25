@@ -126,3 +126,6 @@ map <Leader>dr :LinediffReset<CR>
 
 " Disable Ex mode
 :map Q <Nop>
+
+" Show hidden files with CtrlP
+let g:ctrlp_show_hidden=1
