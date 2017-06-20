@@ -21,6 +21,7 @@ Plug 'ekalinin/dockerfile.vim'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'slashmili/alchemist.vim'
 Plug 'Matt-Deacalion/vim-systemd-syntax'
+Plug 'martinda/Jenkinsfile-vim-syntax'
 
 " Global find and replace
 Plug 'vim-scripts/greplace.vim'
