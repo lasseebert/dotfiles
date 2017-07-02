@@ -42,9 +42,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
-" Buffer tools
-Plug 'jeetsukumaran/vim-buffergator'
-
 Plug 'tpope/vim-rails'
 
 " Trying out

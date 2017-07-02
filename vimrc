@@ -21,12 +21,6 @@ vmap <Leader>a: :Tabularize /:\zs<CR>
 " Open file in Chrome
 nnoremap <Leader>oc :silent !google-chrome %<CR>:redraw!<CR>
 
-" Trying out buffers instead of tabs
-nnoremap <C-S-k> :bp<CR>
-nnoremap <C-S-j> :bn<CR>
-inoremap <C-S-k> <Esc>:bp<CR>i
-inoremap <C-S-j> <Esc>:bn<CR>i
-
 " Fast escape from insert mode
 inoremap kj <Esc>
 
@@ -129,3 +123,6 @@ map <Leader>dr :LinediffReset<CR>
 
 " Show hidden files with CtrlP
 let g:ctrlp_show_hidden=1
+
+" Select last paste in visual mode
+nnoremap <expr> gb '`[' . strpart(getregtype(), 0, 1) . '`]'
