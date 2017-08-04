@@ -45,6 +45,7 @@ symlink_files() {
   profile
   pryrc
   tmux.conf
+  tool-versions
   vim/autoload/plug.vim
   vim/config
   vimrc
