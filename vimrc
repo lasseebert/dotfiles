@@ -4,12 +4,6 @@ let mapleader = ","
 
 set laststatus=2
 
-" Color scheme
-set background=dark
-colorscheme sunburst
-hi Search cterm=NONE ctermfg=black ctermbg=lightyellow
-syntax on
-
 " Give a shortcut key to NERD Tree
 map <F2> :NERDTreeToggle<CR>
 
@@ -126,3 +120,9 @@ let g:ctrlp_show_hidden=1
 
 " Select last paste in visual mode
 nnoremap <expr> gb '`[' . strpart(getregtype(), 0, 1) . '`]'
+
+" Color scheme
+set background=dark
+colorscheme sunburst
+hi Search cterm=NONE ctermfg=black ctermbg=lightyellow
+syntax on
