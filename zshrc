@@ -123,3 +123,6 @@ export TERM="xterm-256color"
 
 # Map carriage return to newline
 stty icrnl
+
+# Enable history in erlang and elixir
+export ERL_AFLAGS="-kernel shell_history enabled"
