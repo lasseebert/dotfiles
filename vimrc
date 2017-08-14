@@ -91,13 +91,6 @@ set wildignore+=*/node_modules/*
 set wildignore+=*/deps/*
 set wildignore+=*/bower_components/*
 
-" Highlight the current line http://usevim.com/2014/12/03/conoline/
-set cursorline
-hi cursorline cterm=none term=none
-autocmd WinEnter * setlocal cursorline
-autocmd WinLeave * setlocal nocursorline
-highlight CursorLine guibg=#303000 ctermbg=234
-
 " Auto parenthesis and more
 " Disabled for now
 ":inoremap ( ()<Esc>i
@@ -124,5 +117,14 @@ nnoremap <expr> gb '`[' . strpart(getregtype(), 0, 1) . '`]'
 " Color scheme
 set background=dark
 colorscheme sunburst
-hi Search cterm=NONE ctermfg=black ctermbg=lightyellow
 syntax on
+
+" Highlight the current line http://usevim.com/2014/12/03/conoline/
+set cursorline
+hi cursorline cterm=none term=none
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+highlight CursorLine guibg=#303000 ctermbg=black
+
+" Highlight search
+hi Search cterm=NONE ctermfg=black ctermbg=yellow
