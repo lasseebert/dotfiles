@@ -128,3 +128,6 @@ highlight CursorLine guibg=#303000 ctermbg=black
 
 " Highlight search
 hi Search cterm=NONE ctermfg=black ctermbg=yellow
+
+" Copy current file name to clipboard
+map <leader>n :let @+ = expand("%")<cr>
