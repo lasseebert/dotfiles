@@ -11,7 +11,7 @@ ZSH_THEME="lasseebert"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias o="xdg-open"
+alias o="gio open"
 alias bower='noglob bower'
 alias rake="noglob rake"
 alias time="/usr/bin/time"
