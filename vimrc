@@ -13,7 +13,7 @@ vmap <Leader>a, :Tabularize /,\zs<CR>
 vmap <Leader>a: :Tabularize /:\zs<CR>
 
 " Open file in Chrome
-nnoremap <Leader>oc :silent !google-chrome %<CR>:redraw!<CR>
+nnoremap <Leader>oc :silent !google-chrome-beta %<CR>:redraw!<CR>
 
 " Fast escape from insert mode
 inoremap kj <Esc>
