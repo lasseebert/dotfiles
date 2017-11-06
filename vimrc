@@ -2,24 +2,8 @@ source ~/.vim/config/plug.vim
 
 let mapleader = ","
 
-set laststatus=2
-
-" Give a shortcut key to NERD Tree
-map <F2> :NERDTreeToggle<CR>
-
-" Tabularize - align lines
-vmap <Leader>a= :Tabularize /=<CR>
-vmap <Leader>a, :Tabularize /,\zs<CR>
-vmap <Leader>a: :Tabularize /:\zs<CR>
-
-" Open file in Chrome
-nnoremap <Leader>oc :silent !google-chrome-beta %<CR>:redraw!<CR>
-
 " Fast escape from insert mode
 inoremap kj <Esc>
-
-" Show statusline with file name and more
-set statusline=%<%f\ %h%m%r%y%=%-14.(%l,%c%V%)\ %P
 
 " Line numbers
 set number
@@ -78,11 +62,6 @@ set foldlevelstart=99   " Don't fold anything when foldenable is set
 set foldignore=         " Don't ignore # when folding (which is default)
 set foldtext=getline(v:foldstart) " Show first line of fold as fold text
 
-" Use incremental search
-set incsearch
-" Disable hlsearch after incsearch
-nmap // :nohlsearch <CR>
-
 " Use system clipboard
 set clipboard=unnamedplus
 
@@ -90,16 +69,6 @@ set clipboard=unnamedplus
 set wildignore+=*/node_modules/*
 set wildignore+=*/deps/*
 set wildignore+=*/bower_components/*
-
-" Auto parenthesis and more
-" Disabled for now
-":inoremap ( ()<Esc>i
-":inoremap { {}<Esc>i
-":inoremap [ []<Esc>i
-":inoremap " ""<Esc>i
-":inoremap ' ''<Esc>i
-":inoremap <C-j> <Esc>:set nohls<CR>/[\)}\"'\]]<CR>:let @/ = ""<CR>:set hls<CR>a
-":inoremap <C-k> <Esc>:set nohls<CR>?[\({\"'\[]<CR>:let @/ = ""<CR>:set hls<CR>a
 
 " Linediff (https://github.com/AndrewRadev/linediff.vim)
 vmap <Leader>dd :Linediff<CR>
@@ -131,3 +100,8 @@ hi Search cterm=NONE ctermfg=black ctermbg=yellow
 
 " Copy current file name to clipboard
 map <leader>n :let @+ = expand("%")<cr>
+
+source ~/.vim/config/chrome.vim
+source ~/.vim/config/nerdtree.vim
+source ~/.vim/config/search.vim
+source ~/.vim/config/statusline.vim

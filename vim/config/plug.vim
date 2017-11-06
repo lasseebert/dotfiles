@@ -29,9 +29,6 @@ Plug 'vim-scripts/greplace.vim'
 " Change surrounding chars
 Plug 'tpope/vim-surround'
 
-" Align lines
-Plug 'godlygeek/tabular'
-
 " Dummy word generaion
 Plug 'vim-scripts/loremipsum'
 
