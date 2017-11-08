@@ -1,6 +1,6 @@
 [user]
-	name = Lasse Skindstad Ebert
-	email = lasse@lasseebert.dk
+  name = Lasse Skindstad Ebert
+  email = lasse@lasseebert.dk
 
 [color]
   ui = auto
@@ -39,4 +39,4 @@
 [push]
   default = simple
 [github]
-	user = lasseebert
+  user = lasseebert
