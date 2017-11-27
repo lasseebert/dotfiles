@@ -7,9 +7,12 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="lasseebert"
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+if [ "$HOME" = "/home/pulver" ]
+then
+  local_computer=true
+else
+  local_computer=false
+fi
 
 alias o="gio open"
 alias bower='noglob bower'
@@ -60,7 +63,27 @@ alias vim=$REAL_VIM
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bundler rails gem rake lasseebert-git lasseebert-common vagrant mix ssh-agent zsh-syntax-highlighting)
+if [ local_computer ]
+then
+  plugins=(
+    bundler
+    git
+    lasseebert-common
+    mix
+    rake
+    ssh-agent
+    vagrant
+    zsh-syntax-highlighting
+  )
+else
+  plugins=(
+    bundler
+    git
+    lasseebert-common
+    mix
+    rake
+  )
+fi
 
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
@@ -91,28 +114,6 @@ fi
 
 # asdf - manage versions of different programming languages
 [[ -d $HOME/.asdf ]] && . $HOME/.asdf/asdf.sh
-
-# Jumps
-export MARKPATH=$HOME/.marks
-function jump {
-    cd -P "$MARKPATH/$1" 2>/dev/null || echo "No such mark: $1"
-}
-function mark {
-    mkdir -p "$MARKPATH"; ln -s "$(pwd)" "$MARKPATH/$1"
-}
-function unmark {
-    rm -i "$MARKPATH/$1"
-}
-function marks {
-    ls -l "$MARKPATH" | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
-}
-function _completemarks {
-  reply=($(ls $MARKPATH))
-}
-compctl -K _completemarks jump
-compctl -K _completemarks unmark
-
-
 
 # Wow. Such doge. Very zsh. Many terminal. Wow
 # https://github.com/thiderman/doge
