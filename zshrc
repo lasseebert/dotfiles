@@ -39,11 +39,11 @@ alias w5="swm resize --x 10 --y 10 --width 80 --height 80"
 # Use Neovim over Vim if available
 if which nvim > /dev/null; then
   REAL_VIM=$(which nvim)
+  alias vim=$REAL_VIM
 else
   REAL_VIM=$(which vim)
 fi
 export EDITOR=$REAL_VIM
-alias vim=$REAL_VIM
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -63,7 +63,7 @@ alias vim=$REAL_VIM
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-if [ local_computer ]
+if [ "$local_computer" = true ]
 then
   plugins=(
     bundler
