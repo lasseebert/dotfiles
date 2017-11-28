@@ -39,8 +39,8 @@ symlink_files() {
   gitconfig
   iex.exs
   irbrc
+  oh-my-zsh/custom/plugins/zsh-syntax-highlighting
   oh-my-zsh/plugins/lasseebert-common
-  oh-my-zsh/plugins/lasseebert-git
   oh-my-zsh/themes/lasseebert.zsh-theme
   profile
   pryrc
