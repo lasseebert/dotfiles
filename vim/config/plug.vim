@@ -9,10 +9,12 @@ Plug 'scrooloose/nerdtree'
 " Rename file in current buffer
 Plug 'danro/rename.vim'
 
-" Languages, mostly syntax
+" Syntax for many languages
 Plug 'sheerun/vim-polyglot'
-Plug 'mustache/vim-mustache-handlebars'
+
+" Elixir
 Plug 'slashmili/alchemist.vim'
+Plug 'neomake/neomake'
 
 " Global find and replace
 Plug 'vim-scripts/greplace.vim'
@@ -28,12 +30,11 @@ Plug 'tpope/vim-repeat'
 
 " Git tools
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
+"Plug 'airblade/vim-gitgutter'
 
 Plug 'tpope/vim-rails'
 
 " Trying out
-Plug 'benekastah/neomake'
 
 " Color scheme
 Plug 'nanotech/jellybeans.vim'

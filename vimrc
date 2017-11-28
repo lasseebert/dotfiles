@@ -105,3 +105,4 @@ source ~/.vim/config/chrome.vim
 source ~/.vim/config/nerdtree.vim
 source ~/.vim/config/search.vim
 source ~/.vim/config/statusline.vim
+source ~/.vim/config/neomake.vim
