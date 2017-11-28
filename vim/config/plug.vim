@@ -10,18 +10,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'danro/rename.vim'
 
 " Languages, mostly syntax
-Plug 'kchmck/vim-coffee-script'
-Plug 'plasticboy/vim-markdown'
-Plug 'vim-ruby/vim-ruby'
-Plug 'slim-template/vim-slim'
-Plug 'pangloss/vim-javascript'
-Plug 'groenewege/vim-less'
-Plug 'elixir-lang/vim-elixir'
-Plug 'ekalinin/dockerfile.vim'
+Plug 'sheerun/vim-polyglot'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'slashmili/alchemist.vim'
-Plug 'Matt-Deacalion/vim-systemd-syntax'
-Plug 'martinda/Jenkinsfile-vim-syntax'
 
 " Global find and replace
 Plug 'vim-scripts/greplace.vim'
