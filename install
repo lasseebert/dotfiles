@@ -41,6 +41,7 @@ symlink_files() {
   irbrc
   oh-my-zsh/custom/plugins/zsh-syntax-highlighting
   oh-my-zsh/plugins/lasseebert-common
+  oh-my-zsh/themes/lasseebert-remote.zsh-theme
   oh-my-zsh/themes/lasseebert.zsh-theme
   profile
   pryrc

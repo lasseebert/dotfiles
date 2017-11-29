@@ -1,18 +1,24 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="lasseebert"
-
 if [ "$HOME" = "/home/pulver" ]
 then
   local_computer=true
 else
   local_computer=false
 fi
+
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+if [ "$local_computer" = true ]
+then
+  ZSH_THEME="lasseebert"
+else
+  ZSH_THEME="lasseebert-remote"
+fi
+
 
 alias o="gio open"
 alias bower='noglob bower'
