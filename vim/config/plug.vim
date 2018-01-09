@@ -6,9 +6,6 @@ Plug 'kien/ctrlp.vim'
 " File navigation
 Plug 'scrooloose/nerdtree'
 
-" Rename file in current buffer
-Plug 'danro/rename.vim'
-
 " Syntax for many languages
 Plug 'sheerun/vim-polyglot'
 
