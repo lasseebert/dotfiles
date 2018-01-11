@@ -12,7 +12,7 @@ Plug 'sheerun/vim-polyglot'
 " Elixir
 Plug 'slashmili/alchemist.vim'
 Plug 'neomake/neomake'
-Plug 'mhinz/vim-mix-format'
+Plug 'sbdchd/neoformat'
 
 " Global find and replace
 Plug 'vim-scripts/greplace.vim'

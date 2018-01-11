@@ -1,5 +1,5 @@
-" Autoformat Elixir on save
-let g:mix_format_on_save = 1
+" Format
+map <leader>f :Neoformat<CR>
 
 " Autorun Neomake on read and write
 call neomake#configure#automake('rw', 1000)
