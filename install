@@ -31,6 +31,7 @@ run()
 symlink_files() {
   echo "Symlinking dotfiles..."
   files=(
+  XCompose
   Xmodmap
   aprc
   config/awesome/rc.lua
