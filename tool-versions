@@ -1,5 +1,5 @@
-elixir 1.6.0-rc.0
+elixir 1.6.3
 ruby 2.5.0
-erlang 20.2
+erlang 20.3
 nodejs 7.4.0
 java 9.0.1
