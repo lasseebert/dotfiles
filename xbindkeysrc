@@ -37,28 +37,28 @@
 #keystate_scrolllock= enable
 
 # Resize and position windows
-"swm resize --x 0 --y 0 --width 60 --height 60"
-  control+alt + 1
-"swm resize --x 65 --y 0 --width 35 --height 40"
-  control+alt + 2
-"swm resize --x 0 --y 60 --width 35 --height 40"
-  control+alt + 3
-"swm resize --x 40 --y 40 --width 60 --height 60"
-  control+alt + 4
-"swm resize --x 10 --y 10 --width 80 --height 80"
-  control+alt + 5
+#"swm resize --x 0 --y 0 --width 60 --height 60"
+#  control+alt + 1
+#"swm resize --x 65 --y 0 --width 35 --height 40"
+#  control+alt + 2
+#"swm resize --x 0 --y 60 --width 35 --height 40"
+#  control+alt + 3
+#"swm resize --x 40 --y 40 --width 60 --height 60"
+#  control+alt + 4
+#"swm resize --x 10 --y 10 --width 80 --height 80"
+#  control+alt + 5
 
 # Volume control
-"amixer -D pulse sset Master 5%-"
+"amixer -D pulse sset Master 10%-"
   control+shift + F5
-"amixer -D pulse sset Master 5%+"
+"amixer -D pulse sset Master 10%+"
   control+shift + F6
 "amixer -D pulse sset Master toggle"
   control+shift + F4
 
 # Start a Terminal
-"gnome-terminal"
-  control+alt + T
+#"gnome-terminal"
+#  control+alt + T
 
 
 # set directly keycode (here control + f with my keyboard)
