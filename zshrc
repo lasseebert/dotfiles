@@ -35,6 +35,8 @@ alias vssh="vagrant ssh"
 alias vussh="vagrant up && vagrant ssh"
 alias vhussh="vagrant halt && vagrant up && vagrant ssh"
 
+# ag, the silver searcher
+alias ag="ag --skip-vcs-ignores"
 
 # Use Neovim over Vim if available
 if which nvim > /dev/null; then
