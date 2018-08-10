@@ -11,7 +11,6 @@ Plug 'sheerun/vim-polyglot'
 
 " Elixir
 Plug 'slashmili/alchemist.vim'
-Plug 'neomake/neomake'
 Plug 'sbdchd/neoformat'
 
 " Global find and replace
@@ -20,19 +19,8 @@ Plug 'vim-scripts/greplace.vim'
 " Change surrounding chars
 Plug 'tpope/vim-surround'
 
-" Dummy word generaion
-Plug 'vim-scripts/loremipsum'
-
 " Enable repeating plugin map with "."
 Plug 'tpope/vim-repeat'
-
-" Git tools
-Plug 'tpope/vim-fugitive'
-"Plug 'airblade/vim-gitgutter'
-
-Plug 'tpope/vim-rails'
-
-" Trying out
 
 " Color scheme
 Plug 'nanotech/jellybeans.vim'
