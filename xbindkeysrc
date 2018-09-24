@@ -2,12 +2,6 @@
 # xbindkeys configuration #
 ###########################
 #
-# Version: 1.8.6
-#
-# If you edit this file, do not forget to uncomment any lines
-# that you change.
-# The pound(#) symbol may be used anywhere for comments.
-#
 # To specify a key, you can use 'xbindkeys --key' or
 # 'xbindkeys --multikey' and put one of the two lines in this file.
 #
@@ -36,18 +30,6 @@
 #keystate_capslock = enable
 #keystate_scrolllock= enable
 
-# Resize and position windows
-#"swm resize --x 0 --y 0 --width 60 --height 60"
-#  control+alt + 1
-#"swm resize --x 65 --y 0 --width 35 --height 40"
-#  control+alt + 2
-#"swm resize --x 0 --y 60 --width 35 --height 40"
-#  control+alt + 3
-#"swm resize --x 40 --y 40 --width 60 --height 60"
-#  control+alt + 4
-#"swm resize --x 10 --y 10 --width 80 --height 80"
-#  control+alt + 5
-
 # Volume control
 "amixer -D pulse sset Master 10%-"
   control+shift + F5
@@ -55,34 +37,6 @@
   control+shift + F6
 "amixer -D pulse sset Master toggle"
   control+shift + F4
-
-# Start a Terminal
-#"gnome-terminal"
-#  control+alt + T
-
-
-# set directly keycode (here control + f with my keyboard)
-#"xterm"
-#  c:41 + m:0x4
-
-# specify a mouse button
-#"xterm"
-#  control + b:2
-
-#"xterm -geom 50x20+20+20"
-#   Shift+Mod2+alt + s
-#
-## set directly keycode (here control+alt+mod2 + f with my keyboard)
-#"xterm"
-#  alt + c:0x29 + m:4 + mod2
-#
-## Control+Shift+a  release event starts rxvt
-#"rxvt"
-#  release+control+shift + a
-#
-## Control + mouse button 2 release event starts rxvt
-#"rxvt"
-#  Control + b:2 + Release
 
 ##################################
 # End of xbindkeys configuration #
