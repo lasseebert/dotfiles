@@ -22,7 +22,6 @@ fi
 
 alias o="gio open"
 alias bower='noglob bower'
-alias rake="noglob rake"
 alias time="/usr/bin/time"
 
 # Vim like commands
@@ -98,21 +97,6 @@ unsetopt correct_all
 export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/pulver/bin:/home/pulver/bin/terminals
 
 export PATH="$PATH:$HOME/bin/AWS-ElasticBeanstalk-CLI-2.4.0/eb/linux/python2.7/"
-
-# chruby
-if [[ -d /usr/local/share/chruby ]]; then
-  source /usr/local/share/chruby/chruby.sh
-  source /usr/local/share/chruby/auto.sh
-fi
-
-# rbenv
-if [[ -d "$HOME/.rbenv/bin" ]]; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  eval "$(rbenv init - zsh)"
-fi
-
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # asdf - manage versions of different programming languages
 [[ -d $HOME/.asdf ]] && . $HOME/.asdf/asdf.sh
