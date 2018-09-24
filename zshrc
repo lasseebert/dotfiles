@@ -86,6 +86,8 @@ else
   )
 fi
 
+zstyle :omz:plugins:ssh-agent agent-forwarding on
+
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
