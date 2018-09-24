@@ -115,3 +115,6 @@ stty icrnl
 
 # Enable history in erlang and elixir
 export ERL_AFLAGS="-kernel shell_history enabled"
+
+# Include dotfiles in globs (wilscards)
+setopt GLOB_DOTS
