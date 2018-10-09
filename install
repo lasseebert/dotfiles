@@ -35,6 +35,7 @@ symlink_files() {
   Xmodmap
   aprc
   config/awesome/rc.lua
+  config/youtube-dl/config
   fluxbox
   gemrc
   gitconfig

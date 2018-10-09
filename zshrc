@@ -37,6 +37,9 @@ alias vhussh="vagrant halt && vagrant up && vagrant ssh"
 # ag, the silver searcher
 alias ag="ag --skip-vcs-ignores"
 
+# youtube downloader
+alias yt="youtube-dl"
+
 # Use Neovim over Vim if available
 if which nvim > /dev/null; then
   REAL_VIM=$(which nvim)
