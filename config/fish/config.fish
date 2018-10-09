@@ -2,4 +2,7 @@
 set fish_greeting "SHIP IT!!!"
 
 # Editor used in various programs
-set EDITOR vim
+set -x EDITOR vim
+
+# Set up asdf
+source ~/.asdf/asdf.fish

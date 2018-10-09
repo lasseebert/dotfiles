@@ -1,4 +1,4 @@
-# Defined in - @ line 0
-function vussh --description 'alias vussh=vagrant up and vagrant ssh'
-	vagrant up and vagrant ssh $argv;
+# Defined in /tmp/fish.KznSON/vussh.fish @ line 2
+function vussh --description 'alias vussh=vagrant up ;and vagrant ssh'
+	vagrant up ;and vagrant ssh $argv;
 end
