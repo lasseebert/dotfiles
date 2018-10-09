@@ -70,7 +70,6 @@ export EDITOR=$REAL_VIM
 if [ "$local_computer" = true ]
 then
   plugins=(
-    bundler
     git
     lasseebert-common
     mix
@@ -81,7 +80,6 @@ then
   )
 else
   plugins=(
-    bundler
     git
     lasseebert-common
     mix
