@@ -6,9 +6,8 @@
 
 Will do a lot of good stuff:
 
-* Essential libs like git, zsh and vim
-* Install oh-my-zsh
-* Switch to zsh shell
+* Essential libs like git, fish and vim
+* Switch to fish shell
 * Symlink all dotfiles
 
 ## How

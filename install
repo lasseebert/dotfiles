@@ -18,8 +18,7 @@ run()
   cd `dirname $0`
   install_essentials
   git_pull
-  install_ohmyzsh
-  switch_to_zsh
+  switch_to_fish
   symlink_files
   install_vim_plug
 
@@ -36,15 +35,12 @@ symlink_files() {
   aprc
   config/awesome/rc.lua
   config/youtube-dl/config
+  config/fish
   fluxbox
   gemrc
   gitconfig
   iex.exs
   irbrc
-  oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-  oh-my-zsh/plugins/lasseebert-common
-  oh-my-zsh/themes/lasseebert-remote.zsh-theme
-  oh-my-zsh/themes/lasseebert.zsh-theme
   profile
   pryrc
   tmux.conf
@@ -53,8 +49,6 @@ symlink_files() {
   vim/config
   vimrc
   xbindkeysrc
-  zshenv
-  zshrc
   )
   for file in "${files[@]}"
   do
@@ -96,28 +90,16 @@ symlink() {
   fi
 }
 
-switch_to_zsh() {
-  echo "Checking if zsh is used"
-  result=$(cat /etc/passwd | grep `whoami` | grep `which zsh`)
+switch_to_fish() {
+  echo "Checking if fish is used"
+  result=$(cat /etc/passwd | grep `whoami` | grep `which fish`)
   if [ "$result" = "" ]
   then
     echo " [ NO ]"
-    chsh -s `which zsh`
-    echo " Changed shell to `which zsh`"
+    chsh -s `which fish`
+    echo " Changed shell to `which fish`. Log out and in for changes to take effect"
   else
-    echo " [ OK ] `which zsh`"
-  fi
-  echo
-}
-
-install_ohmyzsh() {
-  echo Checking for oh-my-zsh...
-  if [ ! -f ~/.oh-my-zsh/oh-my-zsh.sh ]
-  then
-    echo " Installing oh-my-zsh..."
-    curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
-  else
-    echo " [ OK ] Installed"
+    echo " [ OK ] `which fish`"
   fi
   echo
 }
@@ -139,9 +121,9 @@ install_essentials()
 
   if $full
   then
-    packages=( git zsh vim-gnome libffi-dev libssl-dev zlib1g-dev libreadline-dev libxslt1-dev libxml2-dev libmagickwand-dev libsqlite3-dev libqtwebkit-dev curl fluxbox nodejs build-essential xfce4-power-manager nethogs )
+    packages=( git fish vim-gnome libffi-dev libssl-dev zlib1g-dev libreadline-dev libxslt1-dev libxml2-dev libmagickwand-dev libsqlite3-dev libqtwebkit-dev curl fluxbox nodejs build-essential xfce4-power-manager nethogs )
   else
-    packages=( git zsh curl )
+    packages=( git fish curl )
   fi
 
   for package in "${packages[@]}"
