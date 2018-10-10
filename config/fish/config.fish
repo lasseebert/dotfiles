@@ -10,7 +10,7 @@ set fish_prompt_pwd_dir_length 100
 set -x EDITOR vim
 
 # Enable iex history
-set -x ERL_AFLAGS $ERL_AFLAGS "-kernel shell_history enabled"
+set -x ERL_AFLAGS "-kernel shell_history enabled"
 
 # Set up asdf
 source ~/.asdf/asdf.fish
