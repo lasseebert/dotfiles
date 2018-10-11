@@ -14,7 +14,3 @@ set -x ERL_AFLAGS "-kernel shell_history enabled"
 
 # Set up asdf
 source ~/.asdf/asdf.fish
-
-# Wow. Such doge. Very zsh. Many terminal. Wow
-# https://github.com/thiderman/doge
-which doge > /dev/null ;and doge
