@@ -1,12 +1,5 @@
 #!/bin/bash
 
-if [[ $1 = "--full" ]]
-then
-  full=true
-else
-  full=false
-fi
-
 run()
 {
   echo
@@ -118,12 +111,7 @@ install_essentials()
 {
   echo "Checking for essential packages..."
 
-  if $full
-  then
-    packages=( git fish vim-gnome libffi-dev libssl-dev zlib1g-dev libreadline-dev libxslt1-dev libxml2-dev libmagickwand-dev libsqlite3-dev libqtwebkit-dev curl fluxbox nodejs build-essential xfce4-power-manager nethogs )
-  else
-    packages=( git fish curl )
-  fi
+  packages=( git fish curl )
 
   for package in "${packages[@]}"
   do
@@ -135,6 +123,7 @@ install_essentials()
 install_package()
 {
   package=$1
+  echo "Install $package"
   PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $package|grep "install ok installed")
   if [ "" == "$PKG_OK" ]; then
     echo "$package not installed. Installing now."
