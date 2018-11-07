@@ -12,5 +12,10 @@ set -x EDITOR vim
 # Enable iex history
 set -x ERL_AFLAGS "-kernel shell_history enabled"
 
+# Add personal bin folder to PATH
+set -x PATH "$HOME/bin" $PATH
+
 # Set up asdf
-source ~/.asdf/asdf.fish
+if test -d ~/.asdf
+  source ~/.asdf/asdf.fish
+end
