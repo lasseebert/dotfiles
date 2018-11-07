@@ -36,7 +36,6 @@ symlink_files() {
   config/awesome/rc.lua
   config/youtube-dl/config
   config/fish
-  fluxbox
   gemrc
   gitconfig
   iex.exs
