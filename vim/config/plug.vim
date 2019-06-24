@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 " Fuzzy search
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " File navigation
 Plug 'scrooloose/nerdtree'
