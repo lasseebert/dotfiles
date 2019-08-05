@@ -19,3 +19,6 @@ set -x PATH "$HOME/bin" $PATH
 if test -d ~/.asdf
   source ~/.asdf/asdf.fish
 end
+
+# Setup fzf
+fzf_key_bindings
