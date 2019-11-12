@@ -26,8 +26,9 @@ set autoindent
 set cinkeys=0{,0},:,0#,!^F
 
 " Move tabs to left or right
-map <C-H> :execute "tabmove" tabpagenr() - 2 <CR>
-map <C-L> :execute "tabmove" tabpagenr() <CR>
+
+map <C-H> :tabmove -1<CR>
+map <C-L> :tabmove +1<CR>
 
 " Swicth tabs
 map <C-Up> :tabp<CR>
