@@ -100,6 +100,26 @@ hi Search cterm=NONE ctermfg=black ctermbg=yellow
 " Copy current file name to clipboard
 map <leader>n :let @+ = expand("%")<cr>
 
+" Disable arrow keys
+nnoremap <Left> :echo "No Left for you!"<CR>
+vnoremap <Left> :<C-u>echo "No Left for you!"<CR>
+inoremap <Left> <C-o>:echo "No Left for you!"<CR>
+nnoremap <Right> :echo "No Right for you!"<CR>
+vnoremap <Right> :<C-u>echo "No Right for you!"<CR>
+inoremap <Right> <C-o>:echo "No Right for you!"<CR>
+nnoremap <Up> :echo "No Up for you!"<CR>
+vnoremap <Up> :<C-u>echo "No Up for you!"<CR>
+inoremap <Up> <C-o>:echo "No Up for you!"<CR>
+nnoremap <Down> :echo "No Down for you!"<CR>
+vnoremap <Down> :<C-u>echo "No Down for you!"<CR>
+inoremap <Down> <C-o>:echo "No Down for you!"<CR>
+nnoremap <PageUp> :echo "No PageUp for you!"<CR>
+vnoremap <PageUp> :<C-u>echo "No PageUp for you!"<CR>
+inoremap <PageUp> <C-o>:echo "No PageUp for you!"<CR>
+nnoremap <PageDown> :echo "No PageDown for you!"<CR>
+vnoremap <PageDown> :<C-u>echo "No PageDown for you!"<CR>
+inoremap <PageDown> <C-o>:echo "No PageDown for you!"<CR>
+
 source ~/.vim/config/chrome.vim
 source ~/.vim/config/nerdtree.vim
 source ~/.vim/config/search.vim
