@@ -23,7 +23,6 @@ set softtabstop=2
 set cindent
 set smartindent
 set autoindent
-set expandtab
 set cinkeys=0{,0},:,0#,!^F
 
 " Move tabs to left or right
