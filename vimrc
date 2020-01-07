@@ -26,7 +26,6 @@ set autoindent
 set cinkeys=0{,0},:,0#,!^F
 
 " Move tabs to left or right
-
 map <C-H> :tabmove -1<CR>
 map <C-L> :tabmove +1<CR>
 
@@ -120,6 +119,14 @@ inoremap <PageUp> <C-o>:echo "No PageUp for you!"<CR>
 nnoremap <PageDown> :echo "No PageDown for you!"<CR>
 vnoremap <PageDown> :<C-u>echo "No PageDown for you!"<CR>
 inoremap <PageDown> <C-o>:echo "No PageDown for you!"<CR>
+
+" Autoreload files when changing buffer of coming back to Vim.
+" This does two things:
+" - Load newest file if it was updated on disk
+" - Do not warn about changed file after e.g. rebase if the file was not
+"   changed, but only touched.
+set autoread
+au FocusGained,BufEnter * :silent! !
 
 source ~/.vim/config/chrome.vim
 source ~/.vim/config/nerdtree.vim
