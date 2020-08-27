@@ -22,3 +22,6 @@ end
 
 # Setup fzf
 fzf_key_bindings
+
+# GPG
+set -x GPG_TTY (tty)
