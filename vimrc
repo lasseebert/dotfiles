@@ -125,8 +125,10 @@ inoremap <PageDown> <C-o>:echo "No PageDown for you!"<CR>
 " - Load newest file if it was updated on disk
 " - Do not warn about changed file after e.g. rebase if the file was not
 "   changed, but only touched.
-set autoread
-au FocusGained,BufEnter * :silent! !
+" EDIT: Disabled this again, since it does not do a good job when some open
+" tabs contain files that are now deleted.
+" set autoread
+" au FocusGained,BufEnter * :silent! checktime
 
 source ~/.vim/config/chrome.vim
 source ~/.vim/config/nerdtree.vim
