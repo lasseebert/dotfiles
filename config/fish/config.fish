@@ -12,6 +12,9 @@ set -x EDITOR vim
 # Enable iex history
 set -x ERL_AFLAGS "-kernel shell_history enabled"
 
+# Add .local/bin to PATH. This is typically where pip installs to
+set -x PATH "$HOME/.local/bin" $PATH
+
 # Add personal bin folder to PATH
 set -x PATH "$HOME/bin" $PATH
 
