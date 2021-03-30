@@ -9,8 +9,9 @@ set fish_prompt_pwd_dir_length 100
 # Editor used in various programs
 set -x EDITOR vim
 
-# Enable iex history
+# Enable iex history and Erlang docs
 set -x ERL_AFLAGS "-kernel shell_history enabled"
+set -x KERL_BUILD_DOCS "yes"
 
 # Add .local/bin to PATH. This is typically where pip installs to
 set -x PATH "$HOME/.local/bin" $PATH
