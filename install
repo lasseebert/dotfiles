@@ -9,9 +9,6 @@ run()
   echo
 
   cd `dirname $0`
-  install_essentials
-  git_pull
-  switch_to_fish
   symlink_files
   install_vim_plug
 
@@ -79,57 +76,6 @@ symlink() {
       mv $link_path $link_path.bak
     fi
     ln -sv $file_path $link_path
-  fi
-}
-
-switch_to_fish() {
-  echo "Checking if fish is used"
-  result=$(cat /etc/passwd | grep `whoami` | grep `which fish`)
-  if [ "$result" = "" ]
-  then
-    echo " [ NO ]"
-    chsh -s `which fish`
-    echo " Changed shell to `which fish`. Log out and in for changes to take effect"
-  else
-    echo " [ OK ] `which fish`"
-  fi
-  echo
-}
-
-git_pull()
-{
-  echo "Updating repo..."
-
-  echo " git pull"
-  git pull
-
-  echo
-}
-
-
-install_essentials()
-{
-  echo "Checking for essential packages..."
-
-  packages=( git fish curl )
-
-  for package in "${packages[@]}"
-  do
-    install_package $package
-  done
-  echo
-}
-
-install_package()
-{
-  package=$1
-  echo "Install $package"
-  PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $package|grep "install ok installed")
-  if [ "" == "$PKG_OK" ]; then
-    echo "$package not installed. Installing now."
-    sudo apt-get --force-yes --yes install $package
-  else
-    echo " [ OK ] $package"
   fi
 }
 
