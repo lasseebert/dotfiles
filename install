@@ -31,6 +31,7 @@ symlink_files() {
   vim/config
   vimrc
   xbindkeysrc
+  zshrc
   )
   for file in "${files[@]}"
   do
