@@ -22,17 +22,10 @@ symlink_files() {
   files=(
   XCompose
   Xmodmap
-  aprc
-  config/awesome/rc.lua
-  config/youtube-dl/config
   config/fish
-  gemrc
   gitconfig
   iex.exs
-  irbrc
   profile
-  pryrc
-  tmux.conf
   tool-versions
   vim/autoload/plug.vim
   vim/config
