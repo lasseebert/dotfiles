@@ -8,7 +8,9 @@ export ZSH="/home/pulver/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# Default theme:
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="candy"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -106,3 +108,10 @@ source $ZSH/oh-my-zsh.sh
 alias :q="exit"
 alias cat="batcat"
 alias o="gio open"
+
+# Use this trick to add a newline before the prompt, but not before the first prompt
+precmd() {
+  precmd() {
+    echo
+  }
+}
