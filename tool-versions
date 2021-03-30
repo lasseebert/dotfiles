@@ -1,4 +1,2 @@
-elixir 1.10.4-otp-23
-erlang 23.0.3
-java openjdk-11.0.1
-ruby 2.7.0
+elixir 1.11.4-otp-23
+erlang 23.3
