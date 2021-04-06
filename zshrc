@@ -73,10 +73,18 @@ ZSH_THEME="candy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #
+# git: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
 # fzf: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/fzf
 # mix: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/mix
 # timer: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/timer
-plugins=(git fzf mix timer)
+# asdf: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/asdf
+plugins=(
+  git
+  fzf
+  mix
+  timer
+  asdf
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -87,12 +95,7 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+ export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
