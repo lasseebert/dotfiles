@@ -95,6 +95,10 @@ source $ZSH/oh-my-zsh.sh
 
  export EDITOR='vim'
 
+# Enable iex history and Erlang docs
+export ERL_AFLAGS="-kernel shell_history enabled"
+export KERL_BUILD_DOCS="yes"
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
