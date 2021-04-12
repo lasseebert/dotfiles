@@ -25,6 +25,7 @@ symlink_files() {
   config/fish
   gitconfig
   iex.exs
+  oh-my-zsh/themes/lasseebert.zsh-theme
   profile
   tool-versions
   vim/autoload/plug.vim
