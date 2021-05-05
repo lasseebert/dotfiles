@@ -115,10 +115,3 @@ export KERL_BUILD_DOCS="yes"
 alias :q="exit"
 alias cat="batcat"
 alias o="gio open"
-
-# Use this trick to add a newline before the prompt, but not before the first prompt
-precmd() {
-  precmd() {
-    echo
-  }
-}
