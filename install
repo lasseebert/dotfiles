@@ -26,6 +26,7 @@ symlink_files() {
   gitconfig
   iex.exs
   oh-my-zsh/themes/lasseebert.zsh-theme
+  oh-my-zsh/plugins/lasseebert/lasseebert.plugin.zsh
   profile
   tool-versions
   vim/autoload/plug.vim

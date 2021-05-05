@@ -76,12 +76,14 @@ ZSH_THEME="lasseebert"
 # mix: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/mix
 # timer: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/timer
 # asdf: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/asdf
+# lasseebert: Custom functions
 plugins=(
   git
   fzf
   mix
   timer
   asdf
+  lasseebert
 )
 
 source $ZSH/oh-my-zsh.sh
