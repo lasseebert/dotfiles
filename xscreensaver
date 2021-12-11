@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.45 for pulver on Fri Dec 10 21:17:49 2021.
+# Written by xscreensaver-demo 5.45 for pulver on Sat Dec 11 19:54:53 2021.
 # https://www.jwz.org/xscreensaver/
 
 timeout:	0:10:00
@@ -35,7 +35,7 @@ chooseRandomImages: False
 imageDirectory:	
 
 mode:		blank
-selected:	-1
+selected:	82
 
 textMode:	url
 textLiteral:	XScreenSaver
