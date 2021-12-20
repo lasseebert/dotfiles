@@ -1,0 +1,6 @@
+# Needed for the Compose key
+export GTK_IM_MODULE=xim
+export XMODIFIERS="@im=none"
+
+# Set up Compose key and disable Caps Lock
+setxkbmap -option ctrl:nocaps -option compose:ralt
