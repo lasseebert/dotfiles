@@ -350,7 +350,15 @@ globalkeys = gears.table.join(
     -- Custom shortcuts
     -- These should probably be moved to another file that is imported in this file
     awful.key({ modkey }, "b", function() awful.util.spawn("xscreensaver-command -lock") end,
-            {descripion = "lock the screen", group = "launcher"})
+            {descripion = "lock the screen", group = "launcher"}),
+
+        awful.key({ modkey, "Control"}, "F9", function () awful.util.spawn("setup-displays laptop") end,
+            {description = "set display to laptop"}),
+        awful.key({ modkey, "Control"}, "F10", function () awful.util.spawn("setup-displays home-dual") end,
+            {description = "set display to laptop and external screen"}),
+        awful.key({ modkey, "Control"}, "F11", function () awful.util.spawn("setup-displays home-single") end,
+            {description = "set display to external screen"})
+
 )
 
 clientkeys = gears.table.join(
