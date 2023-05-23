@@ -4,6 +4,12 @@ export PATH=$HOME/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="/home/pulver/.oh-my-zsh"
 
+# Downgrade openssl for Ruby
+# export PATH=$HOME/openssl1/bin:$PATH
+# export LD_LIBRARY_PATH=$HOME/openssl1/lib
+# export LC_ALL="en_US.UTF-8"
+# export LDFLAGS="-L /home/pulver/openssl1/lib -Wl,-rpath,/home/pulver/openssl1/lib"
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -84,6 +90,7 @@ plugins=(
   timer
   asdf
   lasseebert
+  alias-tips
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -115,3 +122,8 @@ export KERL_BUILD_DOCS="yes"
 alias :q="exit"
 alias cat="batcat"
 alias o="gio open"
+alias copy="xclip -selection clipboard"
+. "/home/pulver/.acme.sh/acme.sh.env"
+
+# Rubocop options for ruby development
+export RUBOCOP_OPTS="--server"

@@ -125,6 +125,9 @@ nnoremap <PageDown> :echo "No PageDown for you!"<CR>
 vnoremap <PageDown> :<C-u>echo "No PageDown for you!"<CR>
 inoremap <PageDown> <C-o>:echo "No PageDown for you!"<CR>
 
+" Lint at landfolk API
+nmap <leader>l :!make lint-single -C apps/api file=%:p<CR>
+
 " Autoreload files when changing buffer of coming back to Vim.
 " This does two things:
 " - Load newest file if it was updated on disk
