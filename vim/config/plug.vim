@@ -41,7 +41,6 @@ Plug 'AndrewRadev/linediff.vim'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 
-" Games
-Plug 'johngrib/vim-game-code-break'
+Plug 'github/copilot.vim'
 
 call plug#end()
