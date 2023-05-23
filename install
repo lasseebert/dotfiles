@@ -34,8 +34,6 @@ symlink_files() {
   vim/config
   vimrc
   xbindkeysrc
-  xprofile
-  xscreensaver
   zshrc
   )
   for file in "${files[@]}"
