@@ -13,6 +13,9 @@ Plug 'sheerun/vim-polyglot'
 Plug 'slashmili/alchemist.vim'
 Plug 'sbdchd/neoformat'
 
+" Ruby
+Plug 'vim-ruby/vim-ruby'
+
 " Global find and replace
 Plug 'vim-scripts/greplace.vim'
 
