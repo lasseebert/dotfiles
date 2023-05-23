@@ -71,6 +71,8 @@ set clipboard=unnamedplus
 set wildignore+=*/node_modules/*
 set wildignore+=*/deps/*
 set wildignore+=*/bower_components/*
+set wildignore+=*/tmp/cache/*
+set wildignore+=*/tmp/storage/*
 
 " Linediff (https://github.com/AndrewRadev/linediff.vim)
 vmap <Leader>dd :Linediff<CR>
