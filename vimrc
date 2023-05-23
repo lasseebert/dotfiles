@@ -5,6 +5,9 @@ let mapleader = ","
 " Fast escape from insert mode
 inoremap kj <Esc>
 
+" Do not map Y to y$
+nmap Y Y
+
 " Line numbers
 set number
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=Black guibg=#589A5D
