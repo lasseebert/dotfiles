@@ -10,7 +10,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 
 " Elixir
-Plug 'slashmili/alchemist.vim'
+Plug 'slashmili/alchemist.vim', { 'branch': 'main' }
 Plug 'sbdchd/neoformat'
 
 " Ruby
@@ -30,7 +30,6 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'w0ng/vim-hybrid'
-Plug 'ajh17/Spacegray.vim'
 Plug 'zanloy/vim-colors-sunburst'
 Plug 'christophermca/meta5'
 
@@ -41,6 +40,6 @@ Plug 'AndrewRadev/linediff.vim'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 
-Plug 'github/copilot.vim'
+Plug 'github/copilot.vim', { 'branch': 'release' }
 
 call plug#end()

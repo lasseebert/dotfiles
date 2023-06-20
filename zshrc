@@ -90,7 +90,6 @@ plugins=(
   timer
   asdf
   lasseebert
-  alias-tips
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -123,7 +122,7 @@ alias :q="exit"
 alias cat="batcat"
 alias o="gio open"
 alias copy="xclip -selection clipboard"
-. "/home/pulver/.acme.sh/acme.sh.env"
+# . "/home/pulver/.acme.sh/acme.sh.env"
 
 # Rubocop options for ruby development
 export RUBOCOP_OPTS="--server"
