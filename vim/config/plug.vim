@@ -42,4 +42,7 @@ Plug 'mattn/webapi-vim'
 
 Plug 'github/copilot.vim', { 'branch': 'release' }
 
+" Just (make replacement) syntax highlighting
+Plug 'NoahTheDuke/vim-just'
+
 call plug#end()
