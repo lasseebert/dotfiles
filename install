@@ -10,7 +10,6 @@ run()
 
   cd `dirname $0`
   symlink_files
-  install_vim_plug
 
   echo "********************************"
   echo "* Done with dotfiles installer *"
@@ -24,15 +23,13 @@ symlink_files() {
   Xmodmap
   config/awesome
   config/fish
+  config/nvim
   gitconfig
   iex.exs
   oh-my-zsh/themes/lasseebert.zsh-theme
   oh-my-zsh/plugins/lasseebert/lasseebert.plugin.zsh
   profile
   tool-versions
-  vim/autoload/plug.vim
-  vim/config
-  vimrc
   xbindkeysrc
   zshrc
   )
@@ -40,10 +37,6 @@ symlink_files() {
   do
     symlink "`pwd`/$file" "$HOME/.$file"
   done
-
-  mkdir -p "$HOME/.config"
-  symlink "$HOME/.vim" "$HOME/.config/nvim"
-  symlink "$HOME/.vimrc" "$HOME/.config/nvim/init.vim"
 
   echo
 }
@@ -74,10 +67,6 @@ symlink() {
     fi
     ln -sv $file_path $link_path
   fi
-}
-
-install_vim_plug() {
-  [ -f vim/autoload/plug.vim ] || curl -fLo vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 }
 
 run
