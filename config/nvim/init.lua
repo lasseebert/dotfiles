@@ -34,4 +34,3 @@ vim.opt.softtabstop = 2
 vim.opt.cindent = true
 vim.opt.smartindent = true
 vim.opt.autoindent = true
-vim.opt.cinkeys = "0{,0},:,0#,!^F"
