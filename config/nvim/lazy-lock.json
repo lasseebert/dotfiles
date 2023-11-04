@@ -1,5 +1,6 @@
 {
   "catppuccin": { "branch": "main", "commit": "d7521f6050b94cb0e23067f63829d86886f870fe" },
+  "elixir-tools.nvim": { "branch": "main", "commit": "4b3c1c23a83361559676981575083436cf9b7245" },
   "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
   "nvim-tree.lua": { "branch": "master", "commit": "7e3c0bee7b246ca835d5f7453db6fa19de359bab" },
   "nvim-treesitter": { "branch": "master", "commit": "bef2c24e23d0da62a8542b1f08b1ac87ec43e93f" },
