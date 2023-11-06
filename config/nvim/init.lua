@@ -42,3 +42,6 @@ vim.opt.autoindent = true
 -- Move tabs
 vim.keymap.set("n", "<C-H>", ":tabmove -1<CR>")
 vim.keymap.set("n", "<C-L>", ":tabmove +1<CR>")
+
+-- Show 5 lines of context around the cursor.
+vim.opt.scrolloff = 5
