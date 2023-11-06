@@ -14,10 +14,15 @@ return {
             vim.fn["vsnip#anonymous"](args.body)
           end,
         },
+        completion = {
+          autocomplete = false,
+        },
         mapping = cmp.mapping.preset.insert({
           ['<C-b>'] = cmp.mapping.scroll_docs(-4),
           ['<C-f>'] = cmp.mapping.scroll_docs(4),
-          ['<C-Space>'] = cmp.mapping.complete(),
+          ['<C-space>'] = cmp.mapping {
+            i = cmp.mapping.complete(),
+          },
           ['<C-e>'] = cmp.mapping.abort(),
           ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
         }),
