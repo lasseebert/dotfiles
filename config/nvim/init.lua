@@ -38,3 +38,7 @@ vim.opt.smartindent = true
 vim.opt.autoindent = true
 -- vim.opt.cindent = true
 -- vim.opt.cinkeys = "0{,0},:,0#,!^F"
+
+-- Move tabs
+vim.keymap.set("n", "<C-H>", ":tabmove -1<CR>")
+vim.keymap.set("n", "<C-L>", ":tabmove +1<CR>")
