@@ -9,6 +9,9 @@ return {
         enable = true,
         disable = { },
       },
+      indent = {
+        enable = true
+      }
     }
   end
 }

@@ -5,6 +5,9 @@ vim.g.loaded_netrwPlugin = 1
 vim.g.mapleader = " "
 require("config.lazy")
 
+-- Do not have compatibility with vi
+vim.opt.compatible = false
+
 -- Use system clipboard
 vim.opt.clipboard = 'unnamedplus'
 
@@ -31,7 +34,7 @@ vim.wo.wrap = false
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
-vim.opt.cindent = true
 vim.opt.smartindent = true
 vim.opt.autoindent = true
-vim.opt.cinkeys = "0{,0},:,0#,!^F"
+-- vim.opt.cindent = true
+-- vim.opt.cinkeys = "0{,0},:,0#,!^F"
