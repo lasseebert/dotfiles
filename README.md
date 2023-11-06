@@ -4,12 +4,8 @@
 
 ## What?
 
-Will do a lot of good stuff:
-
-* Essential libs like git, fish and vim
-* Switch to fish shell
-* Symlink all dotfiles
+All my config files for e.g. my editor, shell, terminal
 
 ## How
 
-Just run the `install` bash script
+Just run the `install` bash script to symlink files
