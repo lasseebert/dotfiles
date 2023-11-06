@@ -24,6 +24,7 @@ symlink_files() {
   config/awesome
   config/fish
   config/nvim
+  config/kitty
   gitconfig
   iex.exs
   oh-my-zsh/themes/lasseebert.zsh-theme
