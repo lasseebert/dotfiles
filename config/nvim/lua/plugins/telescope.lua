@@ -9,6 +9,7 @@ return {
 
     local telescope = require('telescope')
     local builtin = require('telescope.builtin')
+    local actions = require('telescope.actions')
 
     -- NOTE: live_grep requires ripgrep to be installed on the system
     vim.keymap.set('n', '<C-p>', builtin.find_files, {})
@@ -19,6 +20,8 @@ return {
 
     telescope.setup{
       defaults = {
+        -- Prefer this vertical setup, since I usually run Vim in a terminal that is already tiled left-right.
+        -- This gives more horizontal space for the preview window and long file names.
         layout_strategy = "vertical",
         layout_config = {
           vertical = {
@@ -26,15 +29,33 @@ return {
             height = 0.95,
           },
         },
+
+        -- Be able to cycle through search history
+        mappings = {
+          i = {
+            ['<C-j>'] = actions.cycle_history_next,
+            ['<C-k>'] = actions.cycle_history_prev
+          }
+        }
       },
+
+      -- Also search in hidden files and folders
       pickers = {
         find_files = {
           hidden = true,
+
+          -- Use C-p (in addition to the default) to find previous history, since I'm used to it from CtrlP
+          mappings = {
+            i = {
+              ['<C-p>'] = actions.cycle_history_prev
+            }
+          }
         },
         live_grep = {
           hidden = true,
         },
       },
+
       extensions = {
       }
     }
