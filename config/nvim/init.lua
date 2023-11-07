@@ -39,9 +39,14 @@ vim.opt.autoindent = true
 -- vim.opt.cindent = true
 -- vim.opt.cinkeys = "0{,0},:,0#,!^F"
 
--- Move tabs
+-- Move tabs left and right
 vim.keymap.set("n", "<C-H>", ":tabmove -1<CR>")
 vim.keymap.set("n", "<C-L>", ":tabmove +1<CR>")
 
 -- Show 5 lines of context around the cursor.
 vim.opt.scrolloff = 5
+
+-- Folding
+vim.opt.foldmethod = "indent" -- Fold based on indent level.
+vim.opt.foldenable = false -- Disable folding at startup.
+vim.opt.foldlevelstart = 99 -- Open all folds by default.
