@@ -50,6 +50,3 @@ vim.opt.scrolloff = 5
 vim.opt.foldmethod = "indent" -- Fold based on indent level.
 vim.opt.foldenable = false -- Disable folding at startup.
 vim.opt.foldlevelstart = 99 -- Open all folds by default.
-
--- Text width when formatting with :gq
-vim.opt.textwidth = 120
