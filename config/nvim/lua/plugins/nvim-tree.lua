@@ -21,7 +21,8 @@ return {
         group_empty = true,
       },
       filters = {
-        dotfiles = true,
+        -- Setting this to false will show hidden files (dotfiles)
+        dotfiles = false,
       },
     })
   end,
