@@ -13,7 +13,8 @@ return {
           disable = { },
         },
         indent = {
-          enable = true
+          -- This does not work with Ruby
+          enable = false
         }
       }
     end
