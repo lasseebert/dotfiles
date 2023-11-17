@@ -2,5 +2,5 @@
 
 ## Vim
 
-* Indent not correct for some Ruby code lines
 * Ruby LSP
+* Vim is slow on startup for git messages
