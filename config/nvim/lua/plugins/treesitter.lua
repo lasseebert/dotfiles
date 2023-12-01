@@ -9,12 +9,13 @@ return {
         sync_install = false,
         ignore_install = { },
         highlight = {
-          enable = false,
+          enable = true,
           disable = { },
         },
         indent = {
           -- This does not work with Ruby
-          enable = false
+          enable = true,
+          disable = { "ruby" },
         }
       }
     end
