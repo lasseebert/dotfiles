@@ -10,12 +10,13 @@ return {
         ignore_install = { },
         highlight = {
           enable = true,
-          disable = { },
+          -- I use vim-elixir
+          disable = { "elixir" },
         },
         indent = {
-          -- This does not work with Ruby
-          enable = true,
-          disable = { "ruby" },
+          -- This does not work with Ruby and Elixir
+          -- For Elixir, I use vim-elixir instead
+          disable = { "ruby", "elixir" },
         }
       }
     end
