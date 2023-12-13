@@ -126,3 +126,6 @@ alias copy="xclip -selection clipboard"
 
 # Rubocop options for ruby development
 export RUBOCOP_OPTS="--server"
+
+# Make GPG work in TTY
+export GPG_TTY=$(tty)
