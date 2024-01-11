@@ -34,10 +34,10 @@ vim.wo.wrap = false
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
-vim.opt.smartindent = true
-vim.opt.autoindent = true
-vim.opt.cindent = true
--- vim.opt.cinkeys = "0{,0},:,0#,!^F"
+--vim.opt.smartindent = true
+--vim.opt.autoindent = true
+--vim.opt.cindent = true
+--vim.opt.cinkeys = "0{,0},:,0#,!^F"
 
 -- Move tabs left and right
 vim.keymap.set("n", "<C-H>", ":tabmove -1<CR>")
