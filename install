@@ -28,6 +28,7 @@ symlink_files() {
   config/nvim
   config/kitty
   gitconfig
+  gnupg/gpg-agent.conf
   iex.exs
   oh-my-zsh/themes/lasseebert.zsh-theme
   oh-my-zsh/plugins/lasseebert/lasseebert.plugin.zsh
