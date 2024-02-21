@@ -59,6 +59,12 @@ sudo apt install gnome-tweaks -y
 # * Caps Lock behaviour
 # * Caps Lock is disabled (different from the "Disabled" option)
 
+# Install asdf:
+# Install asdf base dependencies
+# Install asdf base
+# Install deps for erlang
+# Install plugins
+# asdf install
 
 # -------
 
