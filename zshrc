@@ -122,10 +122,14 @@ alias :q="exit"
 alias cat="batcat"
 alias o="gio open"
 alias copy="xclip -selection clipboard"
+alias gh="git_home.sh"
 # . "/home/pulver/.acme.sh/acme.sh.env"
 
 # Rubocop options for ruby development
 export RUBOCOP_OPTS="--server"
+
+# Ruby executables
+export PATH=$HOME/.local/share/gem/ruby/3.3.0/bin:$PATH
 
 # Make GPG work in TTY
 export GPG_TTY=$(tty)
