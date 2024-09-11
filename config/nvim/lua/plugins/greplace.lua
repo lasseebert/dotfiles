@@ -1,1 +1,0 @@
-return { "skwp/greplace.vim" }
