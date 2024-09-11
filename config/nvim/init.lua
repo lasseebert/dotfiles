@@ -1,5 +1,5 @@
--- Set leader key
-vim.g.mapleader = ' '
+require 'core.options'
+require 'core.keymaps'
 
 -- Set up the Lazy plugin manager
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
