@@ -16,4 +16,5 @@ require('lazy').setup({
   require 'plugins.colorscheme',
   require 'plugins.neotree',
   require 'plugins.treesitter',
+  require 'plugins.telescope',
 })
