@@ -17,4 +17,5 @@ require('lazy').setup({
   require 'plugins.neotree',
   require 'plugins.treesitter',
   require 'plugins.telescope',
+  require 'plugins.copilot',
 })
