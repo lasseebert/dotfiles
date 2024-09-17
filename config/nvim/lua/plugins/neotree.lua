@@ -302,9 +302,9 @@ return {
     }
 
     -- Show current file in Neotree
-    vim.cmd [[nnoremap \ :Neotree reveal<cr>]]
+    vim.keymap.set('n', '<S-F2>', ':Neotree reveal<CR>', { noremap = true, silent = true })
     -- Show Neotree
-    vim.keymap.set('n', '<leader>e', ':Neotree toggle position=left<CR>', { noremap = true, silent = true })
+    vim.keymap.set('n', '<F2>', ':Neotree toggle position=left<CR>', { noremap = true, silent = true })
     -- Open git status window
     vim.keymap.set('n', '<leader>ngs', ':Neotree float git_status<CR>', { noremap = true, silent = true })
   end,
