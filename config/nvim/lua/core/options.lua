@@ -136,3 +136,6 @@ vim.keymap.set('n', 'N', 'Nzzzv', opts)
 
 -- Keep last yanked when pasting
 vim.keymap.set('v', 'p', '"_dP', opts)
+
+-- Open file in Chrome
+vim.keymap.set('n', '<Leader>oc', ':silent !google-chrome %<CR>:redraw!<CR>', opts)
