@@ -136,3 +136,6 @@ export GPG_TTY=$(tty)
 
 # Kitty
 export PATH=$HOME/.local/kitty.app/bin:$PATH
+
+# There are a few scripts in the dotfiles
+export PATH=$HOME/dotfiles/bin:$PATH
