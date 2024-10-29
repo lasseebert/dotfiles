@@ -28,6 +28,8 @@ gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-9 "['<Super><Sh
 
 # Set volume shortcuts
 
+# Set compose key
+
 # Install fzf
 sudo apt install fzf -y
 
@@ -89,6 +91,15 @@ asdf install
 # Install Kitty
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 # Make Kitty the shell that starts when pressing Super+T
+
+# Install fonts from https://www.nerdfonts.com/font-downloads
+# This is for showing cool icons in Neovim in Kitty
+cd ~/Downloads
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/RobotoMono.zip
+unzip RobotoMono.zip
+sudo mkdir /usr/local/share/fonts/roboto_mono_nerd
+sudo cp RobotoMonoNerdFont*.ttf /usr/local/share/fonts/roboto_mono_nerd -v
+sudo fc-cache -fv
 
 # Install just
 
