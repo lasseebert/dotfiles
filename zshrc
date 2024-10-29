@@ -133,3 +133,6 @@ export PATH=$HOME/.local/share/gem/ruby/3.3.0/bin:$PATH
 
 # Make GPG work in TTY
 export GPG_TTY=$(tty)
+
+# Kitty
+export PATH=$HOME/.local/kitty.app/bin:$PATH
