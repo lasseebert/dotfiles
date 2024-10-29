@@ -91,4 +91,5 @@ curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 # Make Kitty the shell that starts when pressing Super+T
 
 # Install just
+
 # Restart to make zsh default shell
