@@ -76,9 +76,12 @@ sudo apt install gnome-tweaks -y
 sudo apt install curl git
 # Install asdf base
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.1
-# Install deps for erlang
+# Install deps for Erlang
 sudo apt-get -y install build-essential autoconf m4 libncurses5-dev libgl1-mesa-dev libglu1-mesa-dev libpng-dev libssh-dev unixodbc-dev xsltproc fop libxml2-utils libncurses-dev openjdk-11-jdk
 # Should also install libwxgtk3.2-dev libwxgtk-webview3.2-dev, but that package does not exist
+# Install deps for Ruby
+# https://github.com/rbenv/ruby-build/wiki#ubuntudebianmint
+sudo apt-get -y install autoconf patch build-essential rustc libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libgmp-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev uuid-dev
 # Install plugins
 asdf plugin-add erlang
 asdf plugin-add elixir
