@@ -6,6 +6,7 @@
 
 
 # Use the default, then extend
+# See defaults in /usr/share/X11/locale/en_US.UTF-8/Compose
 include "%L"
 
 <Multi_key> <a> <e>: "æ" ae # LATIN SMALL LETTER AE
