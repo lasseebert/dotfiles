@@ -42,6 +42,9 @@ sudo apt install bat -y
 # Install zsh
 sudo apt install zsh -y
 
+# Install ag
+sudo apt install silversearcher-ag -y
+
 # Install oh-my-zsh
 # https://ohmyz.sh/#install
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
