@@ -18,4 +18,5 @@ require('lazy').setup({
   require 'plugins.treesitter',
   require 'plugins.telescope',
   require 'plugins.copilot',
+  require 'plugins.which-key',
 })
