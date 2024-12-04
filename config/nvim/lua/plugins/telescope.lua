@@ -57,7 +57,6 @@ return {
             ['<C-l>'] = actions.select_default, -- open file
             ['<C-p>'] = actions.cycle_history_prev, -- previous search
             ['<C-n>'] = actions.cycle_history_next, -- next search
-            ['<C-q>'] = actions.close, -- close telescope
             ['<C-u>'] = actions.preview_scrolling_up, -- scroll preview up
             ['<C-d>'] = actions.preview_scrolling_down, -- scroll preview down
           },
