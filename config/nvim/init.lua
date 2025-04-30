@@ -19,5 +19,6 @@ require('lazy').setup({
   require 'plugins.treesitter',
   require 'plugins.telescope',
   require 'plugins.copilot',
+  require 'plugins.copilot-chat',
   require 'plugins.which-key',
 })
