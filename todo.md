@@ -11,7 +11,7 @@
 
 ## Astronvim
 
-* Should not search case-insensitive
 * Enable or remove all config files
 * 5 lines around cursor
 * Make goto-definition and other things work in Ruby
+* Copilot in git commits
