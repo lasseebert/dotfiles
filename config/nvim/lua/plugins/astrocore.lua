@@ -44,7 +44,11 @@ return {
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = false, -- sets vim.opt.wrap
-        ignorecase = false, -- Search case insensitive
+        -- Search case insensitive
+        ignorecase = false,
+        -- show lines and rows around cursor
+        scrolloff = 5,
+        sidescrolloff = 8,
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)

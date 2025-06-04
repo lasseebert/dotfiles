@@ -12,7 +12,6 @@
 ## Astronvim
 
 * Enable or remove all config files
-* 5 lines around cursor
 * Make goto-definition and other things work in Ruby
 * Other keybinding for moving buffer tabs
 * Better folds
