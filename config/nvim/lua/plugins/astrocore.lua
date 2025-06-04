@@ -71,6 +71,10 @@ return {
         ["<C-h>"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
         ["<C-l>"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
 
+        -- Move buffers with M-h and M-l
+        ["<M-h>"] = { function() require("astrocore.buffer").move(-vim.v.count1) end, desc = "Move buffer left" },
+        ["<M-l>"] = { function() require("astrocore.buffer").move(vim.v.count1) end, desc = "Move buffer right" },
+
         -- mappings seen under group name "Buffer"
         ["<Leader>bd"] = {
           function()

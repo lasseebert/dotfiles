@@ -13,7 +13,6 @@
 
 * Enable or remove all config files
 * Make goto-definition and other things work in Ruby
-* Other keybinding for moving buffer tabs
 * Better folds
 * Full path in footer instead of git branch
 * Fast shortcut for opening new files
