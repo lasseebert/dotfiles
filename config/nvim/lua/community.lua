@@ -5,5 +5,6 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
+  -- Copilot is configured in `plugins/copilot.lua`
   { import = "astrocommunity.completion.copilot-lua-cmp" },
 }
