@@ -67,9 +67,9 @@ return {
         ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
         ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
 
-        -- same functionality as above, but with different keybindings
-        ["<C-h>"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
-        ["<C-l>"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
+        -- Same functionality as above, but with <TAB> and <S-TAB>
+        ["<Tab>"] = { function() require("astrocore.buffer").nav(1) end, desc = "Next buffer" },
+        ["<S-Tab>"] = { function() require("astrocore.buffer").nav(-1) end, desc = "Previous buffer" },
 
         -- Move buffers with M-h and M-l
         ["<M-h>"] = { function() require("astrocore.buffer").move(-vim.v.count1) end, desc = "Move buffer left" },
@@ -86,7 +86,7 @@ return {
         },
 
         -- map Y to the same as yy (yank line including newline)
-        ["Y"] = { 'yy', desc = "Yank line" },
+        ["Y"] = { "yy", desc = "Yank line" },
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
