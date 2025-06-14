@@ -301,11 +301,12 @@ return {
       },
     }
 
-    -- Show current file in Neotree
-    vim.keymap.set('n', '<S-F2>', ':Neotree reveal<CR>', { noremap = true, silent = true })
-    -- Show Neotree
-    vim.keymap.set('n', '<F2>', ':Neotree toggle position=left<CR>', { noremap = true, silent = true })
-    -- Open git status window
-    vim.keymap.set('n', '<leader>ngs', ':Neotree float git_status<CR>', { noremap = true, silent = true })
+    -- Toggle Neo-tree on current open file
+    vim.keymap.set(
+      'n',
+      '<leader>e',
+      '<Cmd>Neotree filesystem reveal toggle<CR>',   -- ← reveal + toggle in one go
+      { desc = 'Neo‑tree – close if open, otherwise open & reveal current file' }
+    )
   end,
 }
