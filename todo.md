@@ -8,3 +8,4 @@
 * Elixir LSP
 * Ruby LSP
 * Greplace or similar
+* Live grep and narrow down results by dir
