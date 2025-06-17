@@ -9,3 +9,7 @@
 * Ruby LSP
 * Greplace or similar
 * Live grep and narrow down results by dir
+
+## Terminal
+
+* Tmux setup
