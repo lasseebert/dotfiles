@@ -21,6 +21,12 @@ return {
 
     -- Useful for getting pretty icons, but requires a Nerd Font.
     { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
+
+    -- Telescope file browser extension, used for the ts_select_dir_for_grep function below
+    {
+        "nvim-telescope/telescope-file-browser.nvim",
+        dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+    },
   },
   config = function()
     -- Telescope is a fuzzy finder that comes with a lot of different things that
@@ -45,6 +51,35 @@ return {
     -- [[ Configure Telescope ]]
     -- See `:help telescope` and `:help telescope.setup()`
     actions = require('telescope.actions')
+
+    -- Narrow down the search results for live_grep by selecting a directory
+    local ts_select_dir_for_grep = function(prompt_bufnr)
+      local action_state = require("telescope.actions.state")
+      local fb = require("telescope").extensions.file_browser
+      local live_grep = require("telescope.builtin").live_grep
+      local current_line = action_state.get_current_line()
+
+      fb.file_browser({
+        files = false,
+        depth = false,
+        attach_mappings = function(prompt_bufnr)
+          require("telescope.actions").select_default:replace(function()
+            local entry_path = action_state.get_selected_entry().Path
+            local dir = entry_path:is_dir() and entry_path or entry_path:parent()
+            local relative = dir:make_relative(vim.fn.getcwd())
+            local absolute = dir:absolute()
+
+            live_grep({
+              results_title = relative .. "/",
+              cwd = absolute,
+              default_text = current_line,
+            })
+          end)
+
+          return true
+        end,
+      })
+    end
 
     require('telescope').setup {
       -- You can put your default mappings / updates / etc. in here
@@ -77,12 +112,20 @@ return {
           file_ignore_patterns = { 'node_modules', '^.git/', '.venv' },
           hidden = true,
         },
-      },
-      live_grep = {
-        file_ignore_patterns = { 'node_modules', '^.git/', '.venv' },
-        additional_args = function(_)
-          return { '--hidden' }
-        end,
+        live_grep = {
+          mappings = {
+            i = {
+              ["<C-f>"] = ts_select_dir_for_grep, -- Select directory for live grep
+            },
+            n = {
+              ["<C-f>"] = ts_select_dir_for_grep, -- Select directory for live grep
+            },
+          },
+          file_ignore_patterns = { 'node_modules', '^.git/', '.venv' },
+          additional_args = function(_)
+            return { '--hidden' }
+          end,
+        },
       },
       extensions = {
         ['ui-select'] = {
