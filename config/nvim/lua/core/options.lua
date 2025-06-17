@@ -2,45 +2,6 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- Disable the spacebar key's default behavior in Normal and Visual modes
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
-
--- For conciseness
-local opts = { noremap = true, silent = true }
-
--- delete single character without copying into register
-vim.keymap.set('n', 'x', '"_x', opts)
-
--- Vertical scroll and center
-vim.keymap.set('n', '<C-d>', '<C-d>zz', opts)
-vim.keymap.set('n', '<C-u>', '<C-u>zz', opts)
-
--- Find and center
-vim.keymap.set('n', 'n', 'nzzzv', opts)
-vim.keymap.set('n', 'N', 'Nzzzv', opts)
-
--- Tabs
-vim.keymap.set('n', '<leader>to', ':tabnew<CR>', opts) -- open new tab
-vim.keymap.set('n', '<leader>tx', ':tabclose<CR>', opts) -- close current tab
-vim.keymap.set('n', '<Tab>', ':tabn<CR>', opts) --  go to next tab
-vim.keymap.set('n', '<S-Tab>', ':tabp<CR>', opts) --  go to previous tab
-
--- Toggle line wrapping
-vim.keymap.set('n', '<leader>lw', '<cmd>set wrap!<CR>', opts)
-
--- Stay in indent mode
-vim.keymap.set('v', '<', '<gv', opts)
-vim.keymap.set('v', '>', '>gv', opts)
-
--- Keep last yanked when pasting
-vim.keymap.set('v', 'p', '"_dP', opts)
-
--- Diagnostic keymaps
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
-vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
-
 vim.o.linebreak = true -- Companion to wrap, don't split words (default: false)
 vim.o.mouse = 'a' -- Enable mouse mode (default: '')
 vim.o.cursorline = true -- Highlight the current line (default: false)
@@ -74,15 +35,8 @@ vim.opt.compatible = false
 -- Use system clipboard
 vim.opt.clipboard = 'unnamedplus'
 
--- Fast escape from insert mode
-vim.keymap.set("i", "kj", "<Esc>")
-
--- Do not map Y to y$
-vim.keymap.set("n", "Y", "Y")
-
--- Hide incsearch highlight
+-- Highlight search results
 vim.o.hlsearch = true
-vim.keymap.set("n", "//", ":nohlsearch<CR>")
 
 -- Line numbers
 vim.wo.number = true -- Show line numbers
@@ -106,10 +60,6 @@ vim.opt.showtabline = 2
 --vim.opt.cindent = true
 --vim.opt.cinkeys = "0{,0},:,0#,!^F"
 
--- Move tabs left and right
-vim.keymap.set("n", "<C-H>", ":tabmove -1<CR>")
-vim.keymap.set("n", "<C-L>", ":tabmove +1<CR>")
-
 -- Show lines and rows around cursor
 vim.opt.scrolloff = 5
 vim.o.sidescrolloff = 8
@@ -118,24 +68,3 @@ vim.o.sidescrolloff = 8
 vim.opt.foldmethod = "indent" -- Fold based on indent level.
 vim.opt.foldenable = false -- Disable folding at startup.
 vim.opt.foldlevelstart = 99 -- Open all folds by default.
-
--- Stay in indent mode
-vim.keymap.set('v', '<', '<gv', opts)
-vim.keymap.set('v', '>', '>gv', opts)
-
--- Delete single character without copying into register
-vim.keymap.set('n', 'x', '"_x', opts)
-
--- Vertical scroll and center
-vim.keymap.set('n', '<C-d>', '<C-d>zz', opts)
-vim.keymap.set('n', '<C-u>', '<C-u>zz', opts)
-
--- Find and center
-vim.keymap.set('n', 'n', 'nzzzv', opts)
-vim.keymap.set('n', 'N', 'Nzzzv', opts)
-
--- Keep last yanked when pasting
-vim.keymap.set('v', 'p', '"_dP', opts)
-
--- Open file in Chrome
-vim.keymap.set('n', '<Leader>oc', ':silent !google-chrome %<CR>:redraw!<CR>', opts)
