@@ -12,3 +12,4 @@
 ## Terminal
 
 * Tmux setup
+* Learn kitty
