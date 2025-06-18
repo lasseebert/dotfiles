@@ -8,8 +8,9 @@
 * Elixir LSP
 * Ruby LSP
 * Greplace or similar
+* Quickly swicth between code and test files
+* Learn how to use copilot chat
 
 ## Terminal
 
 * Tmux setup
-* Learn kitty
