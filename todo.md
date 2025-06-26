@@ -10,6 +10,7 @@
 * Greplace or similar
 * Quickly swicth between code and test files
 * Learn how to use copilot chat
+* Use "very magic" regex mode by default
 
 ## Terminal
 
