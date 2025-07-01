@@ -46,6 +46,14 @@ vim.keymap.set("n", "Y", "Y")
 -- Hide incsearch highlight
 vim.keymap.set("n", "//", ":nohlsearch<CR>")
 
+-- Search with "very magic" mode
+vim.keymap.set("n", "/", "/\\v")
+vim.keymap.set("v", "/", "/\\v")
+vim.keymap.set("c", "%s/", "%smagic/")
+vim.keymap.set("c", "\\>s/", "\\>smagic/")
+vim.keymap.set("n", ":g/", ":g/\\v")
+vim.keymap.set("n", ":g//", ":g//\\v")
+
 -- Stay in indent mode
 vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
