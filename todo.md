@@ -8,7 +8,7 @@
 * Elixir LSP
 * Ruby LSP
 * Greplace or similar
-* Quickly swicth between code and test files
+* Quickly switch between code and test files
 * Learn how to use copilot chat
 * Chris: Til alle jer vim folk der ikke kan få LSP til at virke – prøv evt. med https://github.com/neoclide/coc.nvim: https://landfolk.slack.com/archives/C03J00A1P3M/p1749812573719649
 * Open telescope file in tab to the left of the current one. Also add keymap for :-1tabnew

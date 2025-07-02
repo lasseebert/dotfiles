@@ -81,6 +81,28 @@ return {
       })
     end
 
+    local custom_file_sorter = function(opts)
+      local sorters = require("telescope.sorters")
+      local default_sorter = sorters.get_fzy_sorter(opts)
+      local Sorter = sorters.Sorter
+
+      return Sorter:new({
+        scoring_function = function(sorter, prompt, line)
+          local score = default_sorter.scoring_function(sorter, prompt, line)
+
+          if line:match('%_spec.rb$') then
+            -- Give some penalty to files we don't want sortet first
+            -- We should probably return early on negative scores.
+            -- score = score + 1000
+          end
+
+          return score
+        end,
+        discard = true,
+        highlighter = default_sorter.highlighter,
+      })
+    end
+
     require('telescope').setup {
       -- You can put your default mappings / updates / etc. in here
       --  All the info you're looking for is in `:help telescope.setup()`
@@ -111,6 +133,7 @@ return {
         find_files = {
           file_ignore_patterns = { 'node_modules', '^.git/', '.venv' },
           hidden = true,
+          sorter = custom_file_sorter({}),
         },
         live_grep = {
           mappings = {
