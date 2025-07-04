@@ -22,4 +22,5 @@ require('lazy').setup({
   require 'plugins.copilot',
   require 'plugins.copilot-chat',
   require 'plugins.which-key',
+  require 'plugins.other',
 })
