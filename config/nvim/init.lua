@@ -23,4 +23,5 @@ require('lazy').setup({
   require 'plugins.copilot-chat',
   require 'plugins.which-key',
   require 'plugins.other',
+  require 'plugins.indent-object',
 })
