@@ -24,4 +24,5 @@ require('lazy').setup({
   require 'plugins.which-key',
   require 'plugins.other',
   require 'plugins.indent-object',
+  require 'plugins.mason',
 })
