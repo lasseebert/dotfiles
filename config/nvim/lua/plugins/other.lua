@@ -8,19 +8,24 @@ return {
         -- "livewire",
         -- "angular",
         -- "laravel",
-        "rails",
+        -- "rails",
         -- "golang",
         -- "python",
         "react",
         -- "rust",
         "elixir",
         -- "clojure",
-        -- Custom mapping example
-        -- {
-        --   pattern = "/path/to/file/src/app/(.*)/.*.ext$",
-        --   target = "/path/to/file/src/view/%1/",
-        --   transformer = "lowercase"
-        -- }
+        -- Custom mapping for Rails and RSpec
+        {
+          pattern = "/app/(.*)/(.*).rb$",
+          target = "/spec/%1/%2_spec.rb",
+          context = "test",
+        },
+        {
+          pattern = "/spec/(.*)/(.*)_spec.rb$",
+          target = "/app/%1/%2.rb",
+          context = "source",
+        }
       },
       transformers = {
         -- defining a custom transformer
