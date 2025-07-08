@@ -5,6 +5,11 @@ vim.g.maplocalleader = ' '
 -- Don't wrap lines
 vim.o.wrap = false
 
+-- Folding
+vim.o.foldmethod = "indent" -- Fold based on indent level.
+vim.o.foldenable = false -- Disable folding at startup.
+vim.o.foldlevelstart = 99 -- Open all folds by default.
+
 -- vim.o.linebreak = true -- Companion to wrap, don't split words (default: false)
 -- vim.o.mouse = 'a' -- Enable mouse mode (default: '')
 -- vim.o.cursorline = true -- Highlight the current line (default: false)
@@ -63,8 +68,3 @@ vim.o.wrap = false
 -- -- Show lines and rows around cursor
 -- vim.opt.scrolloff = 5
 -- vim.o.sidescrolloff = 8
---
--- -- Folding
--- vim.opt.foldmethod = "indent" -- Fold based on indent level.
--- vim.opt.foldenable = false -- Disable folding at startup.
--- vim.opt.foldlevelstart = 99 -- Open all folds by default.
