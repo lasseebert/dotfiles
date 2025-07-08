@@ -2,6 +2,9 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- Don't wrap lines
+vim.o.wrap = false
+
 -- vim.o.linebreak = true -- Companion to wrap, don't split words (default: false)
 -- vim.o.mouse = 'a' -- Enable mouse mode (default: '')
 -- vim.o.cursorline = true -- Highlight the current line (default: false)
@@ -45,9 +48,6 @@ vim.g.maplocalleader = ' '
 -- -- Show invisible chars
 -- vim.wo.listchars = "tab:▷⋅,trail:·"
 -- vim.wo.list = true
---
--- -- Don't wrap lines
--- vim.wo.wrap = false
 --
 -- -- Use two spaces instead of tab
 -- vim.opt.expandtab = true
