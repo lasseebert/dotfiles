@@ -35,6 +35,10 @@ vim.schedule(function()
   vim.o.clipboard = 'unnamedplus'
 end)
 
+-- Show lines and rows around cursor
+vim.o.scrolloff = 10
+vim.o.sidescrolloff = 12
+
 -- vim.o.cursorline = true -- Highlight the current line (default: false)
 -- vim.o.splitbelow = true -- Force all horizontal splits to go below current window (default: false)
 -- vim.o.splitright = true -- Force all vertical splits to go to the right of current window (default: false)
@@ -68,7 +72,3 @@ end)
 -- -- Show invisible chars
 -- vim.wo.listchars = "tab:▷⋅,trail:·"
 -- vim.wo.list = true
---
--- -- Show lines and rows around cursor
--- vim.opt.scrolloff = 5
--- vim.o.sidescrolloff = 8
