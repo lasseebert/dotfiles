@@ -90,15 +90,19 @@ return {
         scoring_function = function(sorter, prompt, line)
           local score = default_sorter.scoring_function(sorter, prompt, line)
 
+          if score < 0 then
+            return score
+          end
+
           if line:match('%_spec.rb$') then
             -- Give some penalty to files we don't want sortet first
             -- We should probably return early on negative scores.
-            -- score = score + 1000
+            -- score = score * 2
           end
 
           return score
         end,
-        discard = true,
+        discard = default_sorter.discard,
         highlighter = default_sorter.highlighter,
       })
     end
