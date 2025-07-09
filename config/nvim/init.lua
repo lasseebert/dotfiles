@@ -9,9 +9,6 @@ require 'core.filetypes'
 -- Don't show the mode, since it's already in the status line
 vim.o.showmode = false
 
--- Keep signcolumn on by default
-vim.o.signcolumn = 'yes'
-
 -- Decrease update time
 vim.o.updatetime = 250
 
