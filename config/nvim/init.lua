@@ -2,7 +2,7 @@
 --
 require 'core.options'
 require 'core.keymaps'
--- require 'core.filetypes'
+require 'core.filetypes'
 --
 -- -- Set up the Lazy plugin manager
 -- local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
