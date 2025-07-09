@@ -19,7 +19,6 @@ require 'core.keymaps'
 -- require('lazy').setup({
 --   require 'plugins.colorscheme',
 --   require 'plugins.treesitter',
---   require 'plugins.copilot',
 --   require 'plugins.copilot-chat',
 --   require 'plugins.which-key',
 --   require 'plugins.indent-object',
@@ -885,6 +884,7 @@ require('lazy').setup({
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
   require 'plugins.neotree',
   require 'plugins.other',
+  require 'plugins.copilot',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
