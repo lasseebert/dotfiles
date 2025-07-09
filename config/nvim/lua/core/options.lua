@@ -4,6 +4,9 @@ vim.g.maplocalleader = ' '
 
 -- Don't wrap lines
 vim.o.wrap = false
+-- If wrap is enabled in a buffer, use these settings:
+vim.o.linebreak = true -- Companion to wrap, don't split words (default: false)
+vim.o.whichwrap = 'bs<>[]hl' -- Which "horizontal" keys are allowed to travel to prev/next line (default: 'b,s')
 
 -- Folding
 vim.o.foldmethod = "indent" -- Fold based on indent level.
@@ -19,14 +22,24 @@ vim.o.smartindent = true
 vim.o.autoindent = true
 vim.o.showtabline = 2
 
--- vim.o.linebreak = true -- Companion to wrap, don't split words (default: false)
--- vim.o.mouse = 'a' -- Enable mouse mode (default: '')
+-- Line numbers
+vim.o.number = true -- Show line numbers
+vim.o.relativenumber = true -- Set relative numbered lines
+
+-- Enable mouse mode, can be useful for resizing splits for example!
+vim.o.mouse = 'a'
+
+-- Use system clipboard
+-- Schedule the setting after `UiEnter` because it can increase startup-time.
+vim.schedule(function()
+  vim.o.clipboard = 'unnamedplus'
+end)
+
 -- vim.o.cursorline = true -- Highlight the current line (default: false)
 -- vim.o.splitbelow = true -- Force all horizontal splits to go below current window (default: false)
 -- vim.o.splitright = true -- Force all vertical splits to go to the right of current window (default: false)
 -- vim.o.showmode = false -- We don't need to see things like -- INSERT -- anymore (default: true)
 -- vim.opt.termguicolors = true -- Set termguicolors to enable highlight groups (default: false)
--- vim.o.whichwrap = 'bs<>[]hl' -- Which "horizontal" keys are allowed to travel to prev/next line (default: 'b,s')
 -- vim.o.numberwidth = 4 -- Set number column width to 2 {default 4} (default: 4)
 -- vim.o.swapfile = false -- Creates a swapfile (default: true)
 -- vim.o.backspace = 'indent,eol,start' -- Allow backspace on (default: 'indent,eol,start')
@@ -43,21 +56,14 @@ vim.o.showtabline = 2
 -- vim.o.completeopt = 'menuone,noselect' -- Set completeopt to have a better completion experience (default: 'menu,preview')
 -- vim.opt.shortmess:append 'c' -- Don't give |ins-completion-menu| messages (default: does not include 'c')
 -- vim.opt.iskeyword:append '-' -- Hyphenated words recognized by searches (default: does not include '-')
--- vim.opt.formatoptions:remove { 'c', 'r', 'o' } -- Don't insert the current comment leader automatically for auto-wrapping comments using 'textwidth', hitting <Enter> in insert mode, or hitting 'o' or 'O' in normal mode. (default: 'croql')
 -- vim.opt.runtimepath:remove '/usr/share/vim/vimfiles' -- Separate Vim plugins from Neovim in case Vim still in use (default: includes this path if Vim is installed)
 --
 -- -- Do not have compatibility with vi
 -- vim.opt.compatible = false
 --
--- -- Use system clipboard
--- vim.opt.clipboard = 'unnamedplus'
 --
 -- -- Highlight search results
 -- vim.o.hlsearch = true
---
--- -- Line numbers
--- vim.wo.number = true -- Show line numbers
--- vim.o.relativenumber = true -- Set relative numbered lines
 --
 -- -- Show invisible chars
 -- vim.wo.listchars = "tab:▷⋅,trail:·"
