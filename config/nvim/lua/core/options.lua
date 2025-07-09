@@ -10,6 +10,15 @@ vim.o.foldmethod = "indent" -- Fold based on indent level.
 vim.o.foldenable = false -- Disable folding at startup.
 vim.o.foldlevelstart = 99 -- Open all folds by default.
 
+-- Use two spaces instead of tab
+vim.o.expandtab = true
+vim.o.shiftwidth = 2
+vim.o.tabstop = 2
+vim.o.softtabstop = 2
+vim.o.smartindent = true
+vim.o.autoindent = true
+vim.o.showtabline = 2
+
 -- vim.o.linebreak = true -- Companion to wrap, don't split words (default: false)
 -- vim.o.mouse = 'a' -- Enable mouse mode (default: '')
 -- vim.o.cursorline = true -- Highlight the current line (default: false)
@@ -53,17 +62,6 @@ vim.o.foldlevelstart = 99 -- Open all folds by default.
 -- -- Show invisible chars
 -- vim.wo.listchars = "tab:▷⋅,trail:·"
 -- vim.wo.list = true
---
--- -- Use two spaces instead of tab
--- vim.opt.expandtab = true
--- vim.opt.shiftwidth = 2
--- vim.opt.tabstop = 2
--- vim.opt.softtabstop = 2
--- vim.opt.smartindent = true
--- vim.opt.autoindent = true
--- vim.opt.showtabline = 2
--- --vim.opt.cindent = true
--- --vim.opt.cinkeys = "0{,0},:,0#,!^F"
 --
 -- -- Show lines and rows around cursor
 -- vim.opt.scrolloff = 5
