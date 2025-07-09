@@ -40,6 +40,9 @@ end)
 vim.o.scrolloff = 10
 vim.o.sidescrolloff = 12
 
+-- Search case-sensitive
+vim.o.ignorecase = false
+
 -- vim.o.cursorline = true -- Highlight the current line (default: false)
 -- vim.o.splitbelow = true -- Force all horizontal splits to go below current window (default: false)
 -- vim.o.splitright = true -- Force all vertical splits to go to the right of current window (default: false)

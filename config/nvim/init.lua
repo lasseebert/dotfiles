@@ -9,10 +9,6 @@ require 'core.filetypes'
 -- Don't show the mode, since it's already in the status line
 vim.o.showmode = false
 
--- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
-vim.o.ignorecase = true
-vim.o.smartcase = true
-
 -- Keep signcolumn on by default
 vim.o.signcolumn = 'yes'
 
