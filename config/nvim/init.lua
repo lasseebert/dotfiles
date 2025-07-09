@@ -1,7 +1,7 @@
 -- This is my old config. My intention is to merge Kickstart.nvim with this
 --
 require 'core.options'
--- require 'core.keymaps'
+require 'core.keymaps'
 -- require 'core.filetypes'
 --
 -- -- Set up the Lazy plugin manager
