@@ -22,7 +22,6 @@ require 'core.keymaps'
 --   require 'plugins.copilot',
 --   require 'plugins.copilot-chat',
 --   require 'plugins.which-key',
---   require 'plugins.other',
 --   require 'plugins.indent-object',
 --   require 'plugins.mason',
 -- })
@@ -883,8 +882,9 @@ require('lazy').setup({
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
   -- require 'kickstart.plugins.autopairs',
-  require 'plugins.neotree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
+  require 'plugins.neotree',
+  require 'plugins.other',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
