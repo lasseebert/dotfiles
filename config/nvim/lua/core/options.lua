@@ -7,6 +7,7 @@ vim.o.wrap = false
 -- If wrap is enabled in a buffer, use these settings:
 vim.o.linebreak = true -- Companion to wrap, don't split words (default: false)
 vim.o.whichwrap = 'bs<>[]hl' -- Which "horizontal" keys are allowed to travel to prev/next line (default: 'b,s')
+vim.o.breakindent = true -- Keep indent on wrapped lines (default: false)
 
 -- Folding
 vim.o.foldmethod = "indent" -- Fold based on indent level.

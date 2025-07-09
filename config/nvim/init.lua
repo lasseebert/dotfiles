@@ -9,9 +9,6 @@ require 'core.filetypes'
 -- Don't show the mode, since it's already in the status line
 vim.o.showmode = false
 
--- Enable break indent
-vim.o.breakindent = true
-
 -- Save undo history
 vim.o.undofile = true
 
