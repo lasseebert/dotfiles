@@ -15,9 +15,6 @@ vim.o.updatetime = 250
 -- Decrease mapped sequence wait time
 vim.o.timeoutlen = 300
 
--- Show which line your cursor is on
-vim.o.cursorline = true
-
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 

@@ -54,7 +54,9 @@ vim.o.splitbelow = true
 vim.o.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
--- vim.o.cursorline = true -- Highlight the current line (default: false)
+-- Show which line your cursor is on
+vim.o.cursorline = true
+
 -- vim.o.showmode = false -- We don't need to see things like -- INSERT -- anymore (default: true)
 -- vim.opt.termguicolors = true -- Set termguicolors to enable highlight groups (default: false)
 -- vim.o.numberwidth = 4 -- Set number column width to 2 {default 4} (default: 4)
