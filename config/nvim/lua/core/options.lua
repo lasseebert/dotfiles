@@ -50,6 +50,10 @@ vim.o.signcolumn = 'yes'
 vim.o.splitright = true
 vim.o.splitbelow = true
 
+-- Show certain whitespace characters
+vim.o.list = true
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+
 -- vim.o.cursorline = true -- Highlight the current line (default: false)
 -- vim.o.showmode = false -- We don't need to see things like -- INSERT -- anymore (default: true)
 -- vim.opt.termguicolors = true -- Set termguicolors to enable highlight groups (default: false)
@@ -75,7 +79,3 @@ vim.o.splitbelow = true
 --
 -- -- Highlight search results
 -- vim.o.hlsearch = true
---
--- -- Show invisible chars
--- vim.wo.listchars = "tab:▷⋅,trail:·"
--- vim.wo.list = true
