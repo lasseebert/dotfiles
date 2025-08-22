@@ -18,8 +18,8 @@ vim.keymap.set('n', '<leader>tx', ':tabclose<CR>', { desc = 'Close current tab' 
 vim.keymap.set('n', '<leader>tc', ':tabonly<CR>', { desc = 'Close all other tabs' })
 vim.keymap.set('n', '<Tab>', ':tabn<CR>', { desc = 'Go to next tab' })
 vim.keymap.set('n', '<S-Tab>', ':tabp<CR>', { desc = 'Go to previous tab' })
-vim.keymap.set("n", "<C-H>", ":tabmove -1<CR>", { desc = 'Move current tab to the left' })
-vim.keymap.set("n", "<C-L>", ":tabmove +1<CR>", { desc = 'Move current tab to the right' })
+vim.keymap.set("n", "<leader>th", ":tabmove -1<CR>", { desc = 'Move current tab to the left' })
+vim.keymap.set("n", "<leader>tl", ":tabmove +1<CR>", { desc = 'Move current tab to the right' })
 
 -- Stay in indent mode
 vim.keymap.set('v', '<', '<gv')
