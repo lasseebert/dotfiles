@@ -2,7 +2,11 @@
 return {
   'epwalsh/pomo.nvim',
   dependencies = {
+    -- For in-editor notifications
     "rcarriga/nvim-notify",
+
+    -- Used below to group keymaps
+    "folke/which-key.nvim",
   },
   version = "*",
   config = function()
