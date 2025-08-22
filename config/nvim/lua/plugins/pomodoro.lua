@@ -29,5 +29,10 @@ return {
     vim.keymap.set("n", "<leader>ps", ":TimerShow<cr>", { desc = "Show Pomodoro Status" })
     vim.keymap.set("n", "<leader>ph", ":TimerHide<cr>", { desc = "Hide Pomodoro Status" })
     vim.keymap.set("n", "<leader>pq", ":TimerStop<cr>", { desc = "Quit Pomodoro" })
+
+    -- Add the key group to which-key.nvim
+    require("which-key").add({
+      { "<leader>p", group = "[P]omodoro" },
+    })
   end
 }
