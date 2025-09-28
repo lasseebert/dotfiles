@@ -2,7 +2,6 @@
 
 ## Neovim
 
-* Fold should ignore comments
 * Support elixir syntax on newlines
 * Format elixir with command
 * Elixir LSP
@@ -14,6 +13,7 @@
 * Custom sorter in Telescope to sort e.g. test files last
 * Copilot CTRL+N conflict with text completion
 * Better shortcuts for moving tabs
+* Fold should ignore comments (might be easier with a working LSP)
 
 ## Terminal
 
