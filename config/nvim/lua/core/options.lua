@@ -40,6 +40,9 @@ end)
 vim.o.scrolloff = 10
 vim.o.sidescrolloff = 12
 
+-- Scroll 10 lines with Ctrl-D / Ctrl-U
+vim.o.scroll = 10
+
 -- Search case-sensitive
 vim.o.ignorecase = false
 
