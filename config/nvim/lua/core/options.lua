@@ -41,7 +41,14 @@ vim.o.scrolloff = 10
 vim.o.sidescrolloff = 12
 
 -- Scroll 10 lines with Ctrl-D / Ctrl-U
+-- We must also set it each time window resizes, since it is normally
+-- auto-recalculated based on window height.
 vim.o.scroll = 10
+vim.api.nvim_create_autocmd({"WinEnter", "WinNew", "WinResized"}, {
+  callback = function()
+    vim.o.scroll = 10
+  end,
+})
 
 -- Search case-sensitive
 vim.o.ignorecase = false
