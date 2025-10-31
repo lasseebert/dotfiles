@@ -52,7 +52,7 @@ vim.keymap.set("n", ":g/", ":g/\\v")
 vim.keymap.set("n", ":g//", ":g//\\v")
 
 -- Open file in Chrome
-vim.keymap.set('n', '<Leader>oc', ':silent !google-chrome %<CR>:redraw!<CR>')
+vim.keymap.set('n', '<Leader>oc', ':silent !google-chrome %<CR>:redraw!<CR>', { desc = 'Open current file in Chrome' })
 
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
