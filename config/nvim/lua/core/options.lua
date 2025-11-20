@@ -67,6 +67,23 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 -- Show which line your cursor is on
 vim.o.cursorline = true
 
+-- Decrease update time, default is 4000 ms
+vim.o.updatetime = 250
+
+-- Decrease mapped sequence wait time, default is 1000 ms
+vim.o.timeoutlen = 300
+
+-- Highlight when yanking (copying) text
+--  Try it with `yap` in normal mode
+--  See `:help vim.hl.on_yank()`
+vim.api.nvim_create_autocmd('TextYankPost', {
+  desc = 'Highlight when yanking (copying) text',
+  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
+  callback = function()
+    vim.hl.on_yank()
+  end,
+})
+
 -- vim.o.showmode = false -- We don't need to see things like -- INSERT -- anymore (default: true)
 -- vim.opt.termguicolors = true -- Set termguicolors to enable highlight groups (default: false)
 -- vim.o.numberwidth = 4 -- Set number column width to 2 {default 4} (default: 4)
@@ -76,8 +93,6 @@ vim.o.cursorline = true
 -- vim.o.conceallevel = 0 -- So that `` is visible in markdown files (default: 1)
 -- vim.o.fileencoding = 'utf-8' -- The encoding written to a file (default: 'utf-8')
 -- vim.o.cmdheight = 1 -- More space in the Neovim command line for displaying messages (default: 1)
--- vim.o.updatetime = 250 -- Decrease update time (default: 4000)
--- vim.o.timeoutlen = 300 -- Time to wait for a mapped sequence to complete (in milliseconds) (default: 1000)
 -- vim.o.backup = false -- Creates a backup file (default: false)
 -- vim.o.writebackup = false -- If a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited (default: true)
 -- vim.o.completeopt = 'menuone,noselect' -- Set completeopt to have a better completion experience (default: 'menu,preview')
