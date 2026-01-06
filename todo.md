@@ -14,6 +14,7 @@
 * Copilot CTRL+N conflict with text completion
 * Better shortcuts for moving tabs
 * Fold should ignore comments (might be easier with a working LSP)
+* Add plugin that can create gists
 
 ## Terminal
 
