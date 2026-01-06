@@ -70,3 +70,4 @@ vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
 -- Open scratchpad files
 vim.keymap.set('n', '<Leader>or', ':e ~/tmp/scratchpad.rb<CR>', { desc = 'Open Ruby scratchpad' })
 vim.keymap.set('n', '<Leader>oe', ':e ~/tmp/scratchpad.ex<CR>', { desc = 'Open Elixir scratchpad' })
+vim.keymap.set('n', '<Leader>ot', ':e ~/tmp/todo.md<CR>', { desc = 'Open Todo scratchpad' })
