@@ -15,6 +15,7 @@
 * Better shortcuts for moving tabs
 * Fold should ignore comments (might be easier with a working LSP)
 * Add plugin that can create gists
+* Make copilot work in files outside project dir
 
 ## Terminal
 
