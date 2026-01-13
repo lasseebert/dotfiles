@@ -4,9 +4,6 @@ require 'core.options'
 require 'core.keymaps'
 require 'core.filetypes'
 
--- Don't show the mode, since it's already in the status line
-vim.o.showmode = false
-
 -- Install Lazy
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then

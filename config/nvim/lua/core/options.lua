@@ -84,7 +84,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
--- vim.o.showmode = false -- We don't need to see things like -- INSERT -- anymore (default: true)
+-- Don't show the mode, since it's already in the status line
+vim.o.showmode = false
+
 -- vim.opt.termguicolors = true -- Set termguicolors to enable highlight groups (default: false)
 -- vim.o.numberwidth = 4 -- Set number column width to 2 {default 4} (default: 4)
 -- vim.o.swapfile = false -- Creates a swapfile (default: true)

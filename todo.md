@@ -2,9 +2,7 @@
 
 ## Neovim
 
-* Support elixir syntax on newlines
-* Format elixir with command
-* Elixir LSP
+* Clean up kickstart
 * Ruby LSP
 * Greplace or similar
 * Learn how to use copilot chat
@@ -16,6 +14,9 @@
 * Fold should ignore comments (might be easier with a working LSP)
 * Add plugin that can create gists
 * Make copilot work in files outside project dir
+* Support elixir syntax on newlines
+* Format elixir with command
+* Elixir LSP
 
 ## Terminal
 
