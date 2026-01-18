@@ -246,7 +246,6 @@ return {
       },
     })
 
-    -- Run Oil in a left-split with width 45
-    vim.keymap.set("n", "-", ":leftabove vertical 45vs | Oil<CR>", { desc = "Open Oil file explorer" })
+    vim.keymap.set("n", "-", ":Oil<CR>", { desc = "Open Oil file explorer" })
   end,
 }

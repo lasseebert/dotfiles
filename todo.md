@@ -2,7 +2,6 @@
 
 ## Neovim
 
-* Oil plugin for file management: https://github.com/stevearc/oil.nvim
 * Ruby LSP
 * Greplace or similar
 * Learn how to use copilot chat
