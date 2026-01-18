@@ -26,7 +26,6 @@ require('lazy').setup({
   require 'plugins.mini',
   require 'plugins.colorscheme',
   require 'plugins.treesitter',
-  require 'plugins.neotree',
   require 'plugins.which-key',
   require 'plugins.other',
   require 'plugins.indent-object',
@@ -34,5 +33,6 @@ require('lazy').setup({
   require 'plugins.pomodoro',
   require 'plugins.hardtime',
   require 'plugins.golf',
+  require 'plugins.oil',
 }, {
 })
