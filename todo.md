@@ -2,6 +2,7 @@
 
 ## Neovim
 
+* Change keymap for Oil preview, since it conflicts with open file
 * Ruby LSP
 * Greplace or similar
 * Learn how to use copilot chat
