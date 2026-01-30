@@ -18,8 +18,8 @@ vim.keymap.set('n', '<leader>tx', ':tabclose<CR>', { desc = 'Close current tab' 
 vim.keymap.set('n', '<leader>tc', ':tabonly<CR>', { desc = 'Close all other tabs' })
 vim.keymap.set('n', '<Tab>', ':tabn<CR>', { desc = 'Go to next tab' })
 vim.keymap.set('n', '<S-Tab>', ':tabp<CR>', { desc = 'Go to previous tab' })
-vim.keymap.set("n", "<leader>th", ":tabmove -1<CR>", { desc = 'Move current tab to the left' })
-vim.keymap.set("n", "<leader>tl", ":tabmove +1<CR>", { desc = 'Move current tab to the right' })
+vim.keymap.set("n", "<C-h>", ":tabmove -1<CR>", { desc = 'Move current tab to the left' })
+vim.keymap.set("n", "<C-l>", ":tabmove +1<CR>", { desc = 'Move current tab to the right' })
 
 -- Stay in indent mode
 vim.keymap.set('v', '<', '<gv')
@@ -27,12 +27,6 @@ vim.keymap.set('v', '>', '>gv')
 
 -- Keep last yanked when pasting
 vim.keymap.set('v', 'p', '"_dP')
-
--- Diagnostic keymaps
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
-vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 -- Fast escape from insert mode
 vim.keymap.set("i", "kj", "<Esc>")
@@ -53,19 +47,6 @@ vim.keymap.set("n", ":g//", ":g//\\v")
 
 -- Open file in Chrome
 vim.keymap.set('n', '<Leader>oc', ':silent !google-chrome %<CR>:redraw!<CR>', { desc = 'Open current file in Chrome' })
-
--- Keybinds to make split navigation easier.
---  Use CTRL+<hjkl> to switch between windows
---  Use CTRL+SHIFT+<hjkl> to move windows around
---  See `:help wincmd` for a list of all window commands
-vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
-vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
-vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
-vim.keymap.set("n", "<C-S-j>", "<C-w>J", { desc = "Move window to the lower" })
-vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
 
 -- Open scratchpad files
 vim.keymap.set('n', '<Leader>or', ':e ~/tmp/scratchpad.rb<CR>', { desc = 'Open Ruby scratchpad' })

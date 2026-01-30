@@ -9,7 +9,6 @@
 * Open telescope file in tab to the left of the current one. Also add keymap for :-1tabnew
 * Custom sorter in Telescope to sort e.g. test files last
 * Copilot CTRL+N conflict with text completion
-* Better shortcuts for moving tabs
 * Fold should ignore comments (might be easier with a working LSP)
 * Add plugin that can create gists
 * Make copilot work in files outside project dir
