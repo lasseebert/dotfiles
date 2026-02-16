@@ -15,6 +15,11 @@
 * Support elixir syntax on newlines
 * Format elixir with command
 * Elixir LSP
+* Plugins to check out:
+  * File manager: https://github.com/sxyazi/yazi
+  * Theme: https://github.com/folke/tokyonight.nvim
+  * AI integration: https://github.com/olimorris/codecompanion.nvim
+  * Multi cursor: https://github.com/mg979/vim-visual-multi
 
 ## Terminal
 
