@@ -32,7 +32,6 @@ require('lazy').setup({
   require 'plugins.copilot',
   require 'plugins.pomodoro',
   require 'plugins.hardtime',
-  require 'plugins.golf',
   require 'plugins.oil',
 }, {
 })
