@@ -142,3 +142,6 @@ export PATH=$HOME/dotfiles/bin:$PATH
 
 # Install in .local/bin
 export PATH=$HOME/.local/bin:$PATH
+
+# Direnv
+eval "$(direnv hook zsh)"
