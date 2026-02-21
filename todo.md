@@ -23,5 +23,4 @@
 
 ## Terminal
 
-* Zoxide (better cd)
 * Tmux setup

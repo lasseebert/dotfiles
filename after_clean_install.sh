@@ -109,4 +109,10 @@ sudo fc-cache -fv
 
 # Install just
 
+# Install zoxide
+# https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation
+curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+# zoxide uses fzf
+sudo apt install fzf -y
+
 # Restart to make zsh default shell

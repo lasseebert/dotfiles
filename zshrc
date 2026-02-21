@@ -144,4 +144,9 @@ export PATH=$HOME/dotfiles/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 
 # Direnv
-eval "$(direnv hook zsh)"
+if which direnv > /dev/null; then
+  eval "$(direnv hook zsh)"
+fi
+
+# Zoxide
+eval "$(zoxide init zsh)"
