@@ -19,19 +19,49 @@ local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
 require('lazy').setup({
+  -- Fuzzy finder and more
   require 'plugins.telescope',
+
+  -- Git signs in the gutter
   require 'plugins.gitsigns',
+
+  -- Autocompletion framework
   require 'plugins.blink-cmp',
+
+  -- Highlight TODO, NOTE, etc. in comments
   require 'plugins.todo-comments',
+
+  -- A collection of small useful plugins
   require 'plugins.mini',
+
+  -- Colorscheme
   require 'plugins.colorscheme',
+
+  -- Syntax highlighting and code parsing
   require 'plugins.treesitter',
+
+  -- Keymap preview and discovery
   require 'plugins.which-key',
+
+  -- Switch between alternate files
   require 'plugins.other',
+
+  -- Adds new indent text objects
   require 'plugins.indent-object',
+
+  -- Copilot completions
   require 'plugins.copilot',
+
+  -- Pomodoro timer
   require 'plugins.pomodoro',
+
+  -- Vim practice
   require 'plugins.hardtime',
+
+  -- File explorer
   require 'plugins.oil',
+
+  -- Typing practice
+  require 'plugins.typr',
 }, {
 })

@@ -15,6 +15,7 @@
 * Support elixir syntax on newlines
 * Format elixir with command
 * Elixir LSP
+* Look for a better typing practice plugin
 * Plugins to check out:
   * File manager: https://github.com/sxyazi/yazi
   * Theme: https://github.com/folke/tokyonight.nvim
