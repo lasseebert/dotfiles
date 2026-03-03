@@ -5,45 +5,27 @@ set -e
 # Set alt+tab to Switch Windows Directly in shortcut settings
 
 # Set shortcuts for moving between desktops
-gsettings set org.gnome.mutter dynamic-workspaces false
-gsettings set org.gnome.desktop.wm.preferences num-workspaces 9
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-1 "['<Super>1']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-1 "['<Super><Shift>1']"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-2 "['<Super>2']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-2 "['<Super><Shift>2']"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-3 "['<Super>3']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-3 "['<Super><Shift>3']"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-4 "['<Super>4']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-4 "['<Super><Shift>4']"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-5 "['<Super>5']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-5 "['<Super><Shift>5']"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-6 "['<Super>6']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-6 "['<Super><Shift>6']"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-7 "['<Super>7']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-7 "['<Super><Shift>7']"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-8 "['<Super>8']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-8 "['<Super><Shift>8']"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-9 "['<Super>9']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-9 "['<Super><Shift>9']"
+for i in {1..9}; do
+  gsettings set org.gnome.shell.keybindings switch-to-application-$i "[]"
+  gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-$i "['<Super>$i']"
+  gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-$i "['<Super><Shift>$i']"
+done
 
 # Set volume shortcuts
 
 # Set compose key
 
 # Install fzf
-sudo apt install fzf -y
-
-# Install podman
-sudo apt install podman -y
+sudo dnf install fzf -y
 
 # Install batcat
-sudo apt install bat -y
+sudo dnf install bat -y
 
 # Install zsh
-sudo apt install zsh -y
+sudo dnf install zsh -y
 
 # Install ag
-sudo apt install silversearcher-ag -y
+sudo dnf install the_silver_searcher -y
 
 # Install oh-my-zsh
 # https://ohmyz.sh/#install
@@ -53,12 +35,13 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ~/dotfiles/install
 
 # Install neovim
-# Already in bin. Download latest from https://github.com/neovim/neovim/releases
+sudo dnf install neovim -y
+
 # Auth Copilot
 
 # Install duplicity for backup
-sudo apt install duplicity
-sudo apt install python3-pip python3-dev build-essential
+sudo dnf install duplicity
+sudo dnf install python3-pip -y
 sudo pip install --upgrade pip
 sudo pip install boto
 
@@ -67,52 +50,45 @@ sudo pip install boto
 crontab -e # Paste content
 
 # Disable Caps Lock
-sudo apt install gnome-tweaks -y
+sudo dnf install gnome-tweaks -y
 # * Gnome Tweaks
-# * Keyboard and Mouse
+# * Keyboard
 # * Additional Layout Options
 # * Caps Lock behaviour
-# * Caps Lock is disabled (different from the "Disabled" option)
+# * Caps Lock is disabled
 
-# Install asdf:
-# Install asdf base dependencies
-sudo apt install curl git
-# Install asdf base
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.1
+# Install asdf: https://asdf-vm.com/guide/getting-started.html#_1-install-asdf
+
 # Install deps for Erlang
-sudo apt-get -y install build-essential autoconf m4 libncurses5-dev libgl1-mesa-dev libglu1-mesa-dev libpng-dev libssh-dev unixodbc-dev xsltproc fop libxml2-utils libncurses-dev openjdk-11-jdk
-# Should also install libwxgtk3.2-dev libwxgtk-webview3.2-dev, but that package does not exist
+# https://github.com/asdf-vm/asdf-erlang?tab=readme-ov-file#centos--fedora
+# Build tools
+sudo dnf install -y git gcc g++ automake autoconf 
+# Terminal handling
+sudo dnf install -y ncurses-devel
+# Observer
+sudo dnf install -y wxGTK-devel wxBase
+# SSL
+sudo dnf install -y openssl-devel
+
 # Install deps for Ruby
-# https://github.com/rbenv/ruby-build/wiki#ubuntudebianmint
-sudo apt-get -y install autoconf patch build-essential rustc libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libgmp-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev uuid-dev
+# https://github.com/rbenv/ruby-build/wiki#fedora
+sudo dnf install -y autoconf gcc rust patch make bzip2 openssl-devel libyaml-devel libffi-devel readline-devel gdbm-devel ncurses-devel perl-FindBin zlib-ng-compat-devel
+
 # Install plugins
-asdf plugin-add erlang
-asdf plugin-add elixir
-asdf plugin-add nodejs
-asdf plugin-add ruby
-asdf plugin-add python
+asdf plugin add erlang
+asdf plugin add elixir
+asdf plugin add nodejs
+asdf plugin add ruby
+asdf plugin add python
+
 # Install
 asdf install
 
 # Install Kitty
-curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+sudo dnf install kitty -y
+
 # Make Kitty the shell that starts when pressing Super+T
-
-# Install fonts from https://www.nerdfonts.com/font-downloads
-# This is for showing cool icons in Neovim in Kitty
-cd ~/Downloads
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/RobotoMono.zip
-unzip RobotoMono.zip
-sudo mkdir /usr/local/share/fonts/roboto_mono_nerd
-sudo cp RobotoMonoNerdFont*.ttf /usr/local/share/fonts/roboto_mono_nerd -v
-sudo fc-cache -fv
-
-# Install just
 
 # Install zoxide
 # https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation
-curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
-# zoxide uses fzf
-sudo apt install fzf -y
-
-# Restart to make zsh default shell
+sudo dnf install zoxide fzf -y

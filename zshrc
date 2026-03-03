@@ -101,7 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
- export EDITOR='vim'
+ export EDITOR='nvim'
 
 # Enable iex history and Erlang docs
 export ERL_AFLAGS="-kernel shell_history enabled"
@@ -123,6 +123,7 @@ alias cat="batcat"
 alias o="gio open"
 alias copy="xclip -selection clipboard"
 alias gh="git_home.sh"
+alias vim="nvim"
 # . "/home/pulver/.acme.sh/acme.sh.env"
 
 # Rubocop options for ruby development
@@ -143,8 +144,11 @@ export PATH=$HOME/dotfiles/bin:$PATH
 # Install in .local/bin
 export PATH=$HOME/.local/bin:$PATH
 
+# Home bin golder
+export PATH=$HOME/bin:$PATH
+
 # Direnv
-if which direnv > /dev/null; then
+if which direnv > /dev/null 2>&1; then
   eval "$(direnv hook zsh)"
 fi
 
