@@ -40,6 +40,9 @@ require('lazy').setup({
   -- Syntax highlighting and code parsing
   require 'plugins.treesitter',
 
+  -- Elixir support
+  require 'plugins.elixir',
+
   -- Keymap preview and discovery
   require 'plugins.which-key',
 
