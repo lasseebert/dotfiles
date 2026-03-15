@@ -66,5 +66,8 @@ require('lazy').setup({
 
   -- Typing practice
   require 'plugins.typr',
+
+  -- Statusline
+  require 'plugins.lualine',
 }, {
 })
