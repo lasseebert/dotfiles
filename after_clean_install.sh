@@ -92,3 +92,5 @@ sudo dnf install kitty -y
 # Install zoxide
 # https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation
 sudo dnf install zoxide fzf -y
+
+# Install flameshot and add a keybinding for it using PrtSc
