@@ -126,6 +126,9 @@ alias gh="git_home.sh"
 alias vim="nvim"
 # . "/home/pulver/.acme.sh/acme.sh.env"
 
+# Hidden files are included in globs
+setopt GLOB_DOTS
+
 # Rubocop options for ruby development
 export RUBOCOP_OPTS="--server"
 
