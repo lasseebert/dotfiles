@@ -40,7 +40,7 @@ sudo dnf install neovim -y
 # Auth Copilot
 
 # Install duplicity for backup
-sudo dnf install duplicity
+sudo dnf install duplicity -y
 sudo dnf install python3-pip -y
 sudo pip install --upgrade pip
 sudo pip install boto
@@ -94,3 +94,9 @@ sudo dnf install kitty -y
 sudo dnf install zoxide fzf -y
 
 # Install flameshot and add a keybinding for it using PrtSc
+sudo dnf install flameshot -y
+
+# Install Pop Shell
+sudo dnf install gnome-shell-extension-pop-shell -y
+# Log out and in again
+# Enable pop shell GNOME extension using GNOME Extensions app
