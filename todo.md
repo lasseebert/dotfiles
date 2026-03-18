@@ -1,5 +1,9 @@
 # TODO
 
+## System
+
+* Make flameshot work with GNOME shortcut in Wayland
+
 ## Neovim
 
 * Ruby LSP
