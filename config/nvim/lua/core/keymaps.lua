@@ -52,6 +52,7 @@ vim.keymap.set('n', '<Leader>oc', ':silent !google-chrome %<CR>:redraw!<CR>', { 
 vim.keymap.set('n', '<Leader>or', ':e ~/tmp/scratchpad.rb<CR>', { desc = 'Open Ruby scratchpad' })
 vim.keymap.set('n', '<Leader>oe', ':e ~/tmp/scratchpad.ex<CR>', { desc = 'Open Elixir scratchpad' })
 vim.keymap.set('n', '<Leader>ot', ':e ~/tmp/todo.md<CR>', { desc = 'Open Todo scratchpad' })
+vim.keymap.set('n', '<Leader>on', ':e ~/tmp/notes.md<CR>', { desc = 'Open Notes scratchpad' })
 
 -- Copy current relative file path to clipboard
 vim.keymap.set('n', '<Leader>cp', ':let @+ = expand("%")<CR>:echo "Copied file path: " . @+<CR>', { desc = 'Copy current file path to clipboard' })
