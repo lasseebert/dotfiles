@@ -58,9 +58,6 @@ require('lazy').setup({
   -- Pomodoro timer
   require 'plugins.pomodoro',
 
-  -- Vim practice
-  require 'plugins.hardtime',
-
   -- File explorer
   require 'plugins.oil',
 
