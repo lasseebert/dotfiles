@@ -58,9 +58,6 @@ require('lazy').setup({
   -- Pomodoro timer
   require 'plugins.pomodoro',
 
-  -- Typing practice
-  require 'plugins.typr',
-
   -- Statusline
   require 'plugins.lualine',
 }, {
