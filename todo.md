@@ -6,6 +6,7 @@
 
 ## Neovim
 
+* Migrate everything from Lazy to vim.pack
 * Ruby LSP
 * Greplace or similar
 * Learn how to use copilot chat
