@@ -43,9 +43,6 @@ require('lazy').setup({
   -- Elixir support
   require 'plugins.elixir',
 
-  -- Keymap preview and discovery
-  require 'plugins.which-key',
-
   -- Switch between alternate files
   require 'plugins.other',
 
@@ -72,5 +69,8 @@ end
 -- File explorer (vim.pack)
 require 'plugins.oil'
 
-  -- Statusline
-  require 'plugins.lualine'
+-- Statusline
+require 'plugins.lualine'
+
+-- Keymap preview and discovery
+require 'plugins.which-key'

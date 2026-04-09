@@ -1,8 +1,7 @@
--- Useful plugin to show you pending keybinds.
--- https://github.com/folke/which-key.nvim
-return {
-  'folke/which-key.nvim',
-  event = 'VimEnter', -- Sets the loading event to 'VimEnter'
+-- Useful plugin to show pending keybinds.
+vim.pack.add({'https://github.com/folke/which-key.nvim'})
+
+require('which-key').setup({
   opts = {
     icons = {
       -- set icon mappings to true if you have a Nerd Font
@@ -46,4 +45,4 @@ return {
       { '<leader>s', group = '[S]earch' },
     },
   },
-}
+})
