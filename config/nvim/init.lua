@@ -57,9 +57,6 @@ require('lazy').setup({
 
   -- Pomodoro timer
   require 'plugins.pomodoro',
-
-  -- Statusline
-  require 'plugins.lualine',
 }, {
 })
 
@@ -74,3 +71,6 @@ end
 
 -- File explorer (vim.pack)
 require 'plugins.oil'
+
+  -- Statusline
+  require 'plugins.lualine'
