@@ -24,3 +24,4 @@
   * File manager: https://github.com/sxyazi/yazi
   * AI integration: https://github.com/olimorris/codecompanion.nvim
   * Multi cursor: https://github.com/mg979/vim-visual-multi
+  * Smooth scrolling: NeoScroll: https://github.com/karb94/neoscroll.nvim
