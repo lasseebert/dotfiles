@@ -22,9 +22,6 @@ require('lazy').setup({
   -- Fuzzy finder and more
   require 'plugins.telescope',
 
-  -- Git signs in the gutter
-  require 'plugins.gitsigns',
-
   -- Autocompletion framework
   require 'plugins.blink-cmp',
 
@@ -74,3 +71,6 @@ require 'plugins.lualine'
 
 -- Keymap preview and discovery
 require 'plugins.which-key'
+
+-- Git signs in the gutter
+require 'plugins.gitsigns'
