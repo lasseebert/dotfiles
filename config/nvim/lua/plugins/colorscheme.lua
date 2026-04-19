@@ -1,8 +1,5 @@
-return {
-  "catppuccin/nvim",
-  name = "catppuccin",
-  priority = 1000,
-  config = function()
-    vim.cmd.colorscheme("catppuccin")
-  end
-}
+vim.pack.add({'https://github.com/catppuccin/nvim.git'})
+
+require('catppuccin').setup({})
+
+vim.cmd.colorscheme("catppuccin")

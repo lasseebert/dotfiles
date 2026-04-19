@@ -31,9 +31,6 @@ require('lazy').setup({
   -- A collection of small useful plugins
   require 'plugins.mini',
 
-  -- Colorscheme
-  require 'plugins.colorscheme',
-
   -- Syntax highlighting and code parsing
   require 'plugins.treesitter',
 
@@ -74,3 +71,6 @@ require 'plugins.which-key'
 
 -- Git signs in the gutter
 require 'plugins.gitsigns'
+
+-- Colorscheme
+require 'plugins.colorscheme'
