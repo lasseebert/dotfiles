@@ -56,3 +56,10 @@ vim.keymap.set('n', '<Leader>on', ':e ~/tmp/notes.md<CR>', { desc = 'Open Notes 
 
 -- Copy current relative file path to clipboard
 vim.keymap.set('n', '<Leader>cp', ':let @+ = expand("%")<CR>:echo "Copied file path: " . @+<CR>', { desc = 'Copy current file path to clipboard' })
+
+-- Restart Neovim while preserving the current session
+vim.keymap.set('n', '<leader>r', function()
+  local session = vim.fn.stdpath('state') .. '/restart_session.vim'
+  vim.cmd('mksession! ' .. vim.fn.fnameescape(session))
+  vim.cmd('restart source ' .. vim.fn.fnameescape(session))
+end, { desc = 'Restart Neovim' })
