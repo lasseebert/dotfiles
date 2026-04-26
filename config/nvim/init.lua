@@ -19,9 +19,6 @@ local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
 require('lazy').setup({
-  -- Autocompletion framework
-  require 'plugins.blink-cmp',
-
   -- Highlight TODO, NOTE, etc. in comments
   require 'plugins.todo-comments',
 
@@ -68,6 +65,9 @@ require 'plugins.which-key'
 
 -- Git signs in the gutter
 require 'plugins.gitsigns'
+
+-- Autocompletion framework
+require 'plugins.blink-cmp'
 
 -- Fuzzy finder and more
 require 'plugins.telescope'
