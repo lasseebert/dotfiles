@@ -22,9 +22,6 @@ require('lazy').setup({
   -- Syntax highlighting and code parsing
   require 'plugins.treesitter',
 
-  -- Copilot completions
-  require 'plugins.copilot',
-
   -- Pomodoro timer
   require 'plugins.pomodoro',
 }, {
@@ -65,6 +62,9 @@ require 'plugins.other'
 
 -- Adds new indent text objects
 require 'plugins.indent-object'
+
+-- Copilot completions
+require 'plugins.copilot'
 
 -- Autocompletion framework
 require 'plugins.blink-cmp'
