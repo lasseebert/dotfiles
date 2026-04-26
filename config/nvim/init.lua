@@ -22,9 +22,6 @@ require('lazy').setup({
   -- Syntax highlighting and code parsing
   require 'plugins.treesitter',
 
-  -- Elixir support
-  require 'plugins.elixir',
-
   -- Switch between alternate files
   require 'plugins.other',
 
@@ -65,6 +62,9 @@ require 'plugins.mini'
 
 -- Highlight TODO, NOTE, etc. in comments
 require 'plugins.todo-comments'
+
+-- Elixir support
+require 'plugins.elixir'
 
 -- Autocompletion framework
 require 'plugins.blink-cmp'

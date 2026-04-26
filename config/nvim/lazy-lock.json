@@ -5,7 +5,6 @@
   "nvim-treesitter": { "branch": "main", "commit": "42fc28ba918343ebfd5565147a42a26580579482" },
   "other.nvim": { "branch": "main", "commit": "1d48e090f6d1d53dda9fb5094af3f2006ebbb858" },
   "pomo.nvim": { "branch": "main", "commit": "7e06e5221d8d1e596a0ab29dd4d7fcee5f3cd05a" },
-  "vim-elixir": { "branch": "master", "commit": "6dff29176eb35e025bc94b262bf6d4e517e11f7d" },
   "vim-indent-object": { "branch": "master", "commit": "8ab36d5ec2a3a60468437a95e142ce994df598c6" },
   "which-key.nvim": { "branch": "main", "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a" }
 }
