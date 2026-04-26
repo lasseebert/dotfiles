@@ -19,9 +19,6 @@ local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
 require('lazy').setup({
-  -- A collection of small useful plugins
-  require 'plugins.mini',
-
   -- Syntax highlighting and code parsing
   require 'plugins.treesitter',
 
@@ -62,6 +59,9 @@ require 'plugins.which-key'
 
 -- Git signs in the gutter
 require 'plugins.gitsigns'
+
+-- A collection of small useful plugins
+require 'plugins.mini'
 
 -- Highlight TODO, NOTE, etc. in comments
 require 'plugins.todo-comments'
