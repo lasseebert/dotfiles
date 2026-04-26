@@ -1,17 +1,6 @@
--- This is my old config. My intention is to merge Kickstart.nvim with this
---
 require 'core.options'
 require 'core.keymaps'
 require 'core.filetypes'
-
--- Ensure vim.pack install dir is on packpath
--- This can probably be removed after Lazy is fully migrated to vim.pack
-do
-  local data_site = vim.fn.stdpath('data') .. '/site'
-  if not vim.o.packpath:find(data_site, 1, true) then
-    vim.opt.packpath:prepend(data_site)
-  end
-end
 
 -- File explorer (vim.pack)
 require 'plugins.oil'
