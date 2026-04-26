@@ -21,9 +21,6 @@ rtp:prepend(lazypath)
 require('lazy').setup({
   -- Syntax highlighting and code parsing
   require 'plugins.treesitter',
-
-  -- Pomodoro timer
-  require 'plugins.pomodoro',
 }, {
 })
 
@@ -65,6 +62,9 @@ require 'plugins.indent-object'
 
 -- Copilot completions
 require 'plugins.copilot'
+
+-- Pomodoro timer
+require 'plugins.pomodoro'
 
 -- Autocompletion framework
 require 'plugins.blink-cmp'

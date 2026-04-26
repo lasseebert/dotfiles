@@ -29,6 +29,10 @@
       "rev": "426dbebe06b5c69fd846ceb17b42e12f890aedf1",
       "src": "https://github.com/catppuccin/nvim.git"
     },
+    "nvim-notify": {
+      "rev": "8701bece920b38ea289b457f902e2ad184131a5d",
+      "src": "https://github.com/rcarriga/nvim-notify"
+    },
     "nvim-web-devicons": {
       "rev": "6e76c5e47e957fbf080b1fdac165c66dbd2e7cfb",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
@@ -44,6 +48,10 @@
     "plenary.nvim": {
       "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
       "src": "https://github.com/nvim-lua/plenary.nvim"
+    },
+    "pomo.nvim": {
+      "rev": "aa8decc421d89be0f10b1fc6a602cdd269f350ff",
+      "src": "https://github.com/epwalsh/pomo.nvim"
     },
     "telescope-file-browser.nvim": {
       "rev": "3610dc7dc91f06aa98b11dca5cc30dfa98626b7e",
