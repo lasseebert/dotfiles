@@ -22,9 +22,6 @@ require('lazy').setup({
   -- Syntax highlighting and code parsing
   require 'plugins.treesitter',
 
-  -- Switch between alternate files
-  require 'plugins.other',
-
   -- Adds new indent text objects
   require 'plugins.indent-object',
 
@@ -65,6 +62,9 @@ require 'plugins.todo-comments'
 
 -- Elixir support
 require 'plugins.elixir'
+
+-- Switch between alternate files
+require 'plugins.other'
 
 -- Autocompletion framework
 require 'plugins.blink-cmp'
