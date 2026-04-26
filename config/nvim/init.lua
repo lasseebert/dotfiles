@@ -19,8 +19,6 @@ local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
 require('lazy').setup({
-  -- Syntax highlighting and code parsing
-  require 'plugins.treesitter',
 }, {
 })
 
@@ -44,6 +42,9 @@ require 'plugins.which-key'
 
 -- Git signs in the gutter
 require 'plugins.gitsigns'
+
+-- Syntax highlighting and code parsing
+require 'plugins.treesitter'
 
 -- A collection of small useful plugins
 require 'plugins.mini'
