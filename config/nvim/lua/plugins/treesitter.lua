@@ -32,6 +32,15 @@ local parsers = {
   'yaml',
 }
 
+local disable_treesitter_indent = {
+  elixir = true,
+  ruby = true,
+}
+
+local additional_vim_regex_highlighting = {
+  ruby = true,
+}
+
 treesitter.setup({
   install_dir = vim.fn.stdpath('data') .. '/site',
 })
@@ -40,10 +49,14 @@ treesitter.install(parsers)
 
 vim.api.nvim_create_autocmd('FileType', {
   callback = function(args)
-    pcall(vim.treesitter.start)
+    pcall(vim.treesitter.start, args.buf)
 
-    if not vim.list_contains({ 'elixir', 'ruby' }, args.match) then
-      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    if additional_vim_regex_highlighting[args.match] then
+      vim.bo[args.buf].syntax = 'ON'
+    end
+
+    if not disable_treesitter_indent[args.match] then
+      vim.bo[args.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
     end
   end,
 })
