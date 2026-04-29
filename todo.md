@@ -6,6 +6,7 @@
 
 ## Neovim
 
+* Be able to toggle if gitignored files should appear in Telescope pickers
 * Ruby LSP
 * Greplace or similar
 * Learn how to use copilot chat
