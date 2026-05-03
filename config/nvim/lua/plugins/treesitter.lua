@@ -11,6 +11,7 @@ local parsers = {
   'elixir',
   'gitignore',
   'graphql',
+  'heex',
   'html',
   'javascript',
   'json',
