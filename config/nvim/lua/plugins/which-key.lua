@@ -12,10 +12,10 @@ require('which-key').setup({
       Down = '<Down> ',
       Left = '<Left> ',
       Right = '<Right> ',
-      C = '<C-…> ',
-      M = '<M-…> ',
-      D = '<D-…> ',
-      S = '<S-…> ',
+      C = '<C-...> ',
+      M = '<M-...> ',
+      D = '<D-...> ',
+      S = '<S-...> ',
       CR = '<CR> ',
       Esc = '<Esc> ',
       ScrollWheelDown = '<ScrollWheelDown> ',
@@ -37,6 +37,10 @@ require('which-key').setup({
       F11 = '<F11>',
       F12 = '<F12>',
     },
+  },
+
+  plugins = {
+    registers = false,
   },
 
   -- Document existing key chains
