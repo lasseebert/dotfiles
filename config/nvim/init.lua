@@ -42,6 +42,9 @@ require 'plugins.pomodoro'
 -- Autocompletion framework
 require 'plugins.blink-cmp'
 
+-- Language Server Protocol
+require 'plugins.lsp'
+
 -- Fuzzy finder and more
 require 'plugins.telescope'
 
