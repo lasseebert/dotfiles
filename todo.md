@@ -6,8 +6,8 @@
 
 ## Neovim
 
+* Test Ruby LSP
 * Be able to toggle if gitignored files should appear in Telescope pickers
-* Ruby LSP
 * Greplace or similar
 * Learn how to use copilot chat
 * Chris: Til alle jer vim folk der ikke kan få LSP til at virke – prøv evt. med https://github.com/neoclide/coc.nvim: https://landfolk.slack.com/archives/C03J00A1P3M/p1749812573719649
@@ -18,7 +18,6 @@
 * Add plugin that can create gists
 * Make copilot work in files outside project dir
 * Format elixir with command
-* Elixir LSP
 * Look for a better typing practice plugin
 * Plugins to check out:
   * File manager: https://github.com/sxyazi/yazi
