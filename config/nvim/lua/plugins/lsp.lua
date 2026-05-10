@@ -8,7 +8,7 @@ vim.pack.add({
 
 require('mason').setup()
 require('mason-lspconfig').setup({
-  ensure_installed = { 'expert' },
+  ensure_installed = { 'expert', 'ruby_lsp' },
   automatic_enable = false,
 })
 
@@ -61,4 +61,4 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
-vim.lsp.enable('expert')
+vim.lsp.enable({ 'expert', 'ruby_lsp' })
