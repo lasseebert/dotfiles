@@ -8,7 +8,7 @@ vim.pack.add({
 
 require('mason').setup()
 require('mason-lspconfig').setup({
-  ensure_installed = { 'expert', 'ruby_lsp' },
+  ensure_installed = { 'expert' },
   automatic_enable = false,
 })
 
@@ -26,6 +26,32 @@ vim.diagnostic.config({
 
 vim.lsp.config('*', {
   capabilities = require('blink.cmp').get_lsp_capabilities(),
+})
+
+vim.lsp.config('ruby_lsp', {
+  cmd = {
+    'nix',
+    'develop',
+    '/home/pulver/code/landfolk#api',
+    '-c',
+    'bash',
+    '-c',
+    'cd /home/pulver/code/landfolk/apps/api && env -u GEM_PATH BUNDLE_GEMFILE=.ruby-lsp/Gemfile bundle exec ruby-lsp',
+  },
+  root_markers = { 'Gemfile.lock', 'Gemfile' },
+})
+
+vim.lsp.config('sorbet', {
+  cmd = {
+    'nix',
+    'develop',
+    '/home/pulver/code/landfolk#api',
+    '-c',
+    'bash',
+    '-c',
+    'cd /home/pulver/code/landfolk/apps/api && env -u GEM_PATH bundle exec srb tc --lsp --disable-watchman',
+  },
+  root_markers = { 'Gemfile.lock', 'Gemfile' },
 })
 
 vim.api.nvim_create_autocmd('LspAttach', {
@@ -61,4 +87,4 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
-vim.lsp.enable({ 'expert', 'ruby_lsp' })
+vim.lsp.enable({ 'expert', 'ruby_lsp', 'sorbet' })
