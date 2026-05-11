@@ -122,7 +122,7 @@ alias :q="exit"
 alias cat="bat"
 alias o="gio open"
 alias copy="xclip -selection clipboard"
-alias gh="git_home.sh"
+alias main="git_home.sh"
 alias vim="nvim"
 # . "/home/pulver/.acme.sh/acme.sh.env"
 
