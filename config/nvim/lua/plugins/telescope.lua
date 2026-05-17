@@ -117,6 +117,39 @@ do
     })
   end
 
+  -- Toggle if gitignored files are shown
+  local include_gitignored_files = false
+  local toggle_find_files_gitignored = function(prompt_bufnr)
+    local action_state = require('telescope.actions.state')
+    local current_picker = action_state.get_current_picker(prompt_bufnr)
+    local current_line = action_state.get_current_line()
+    local cwd = current_picker.cwd
+
+    local find_files = function(opts)
+      opts = opts or {}
+
+      if include_gitignored_files then
+        opts = vim.tbl_extend('force', {
+          no_ignore = true,
+          prompt_title = 'Find Files (including gitignored)',
+        }, opts)
+      end
+
+      require('telescope.builtin').find_files(opts)
+    end
+
+    require('telescope.actions').close(prompt_bufnr)
+
+    include_gitignored_files = not include_gitignored_files
+
+    vim.schedule(function()
+      find_files({
+        cwd = cwd,
+        default_text = current_line,
+      })
+    end)
+  end
+
   require('telescope').setup {
     -- You can put your default mappings / updates / etc. in here
     --  All the info you're looking for is in `:help telescope.setup()`
@@ -148,6 +181,14 @@ do
         file_ignore_patterns = { 'node_modules', '^.git/', '.venv' },
         hidden = true,
         sorter = custom_file_sorter({}),
+        mappings = {
+          i = {
+            ['<C-g>'] = toggle_find_files_gitignored,
+          },
+          n = {
+            ['<C-g>'] = toggle_find_files_gitignored,
+          },
+        },
       },
       live_grep = {
         mappings = {
