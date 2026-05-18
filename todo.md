@@ -6,6 +6,7 @@
 
 ## Neovim
 
+* Fix gitignore toggle in Telescope when closed with toggle set to `true`
 * Greplace or similar
 * Open telescope file in tab to the left of the current one. Also add keymap for :-1tabnew
 * Custom sorter in Telescope to sort e.g. test files last
