@@ -9,6 +9,10 @@
       "rev": "3b95c93d804077dd409d62a6da53a8c92ac8f415",
       "src": "https://github.com/zbirenbaum/copilot.lua"
     },
+    "fff.nvim": {
+      "rev": "5c3a615e76157c091268a8ac249dd220d73ed56a",
+      "src": "https://github.com/dmtrKovalenko/fff.nvim"
+    },
     "gitsigns.nvim": {
       "rev": "6d808f99bd63303646794406e270bd553ad7792e",
       "src": "https://github.com/lewis6991/gitsigns.nvim"

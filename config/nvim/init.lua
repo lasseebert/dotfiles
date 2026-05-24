@@ -45,6 +45,9 @@ require 'plugins.blink-cmp'
 -- Language Server Protocol
 require 'plugins.lsp'
 
+-- Fast file and content search
+require 'plugins.fff'
+
 -- Fuzzy finder and more
 require 'plugins.telescope'
 
