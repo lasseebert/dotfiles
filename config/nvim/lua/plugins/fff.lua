@@ -14,6 +14,14 @@ vim.api.nvim_create_autocmd('PackChanged', {
 
 vim.pack.add({ 'https://github.com/dmtrKovalenko/fff.nvim' })
 
+local fff_download = require('fff.download')
+local fff_binary = fff_download.get_binary_path()
+local fff_binary_stat = vim.uv.fs_stat(fff_binary)
+
+if not fff_binary_stat or fff_binary_stat.type ~= 'file' then
+  fff_download.download_or_build_binary()
+end
+
 require('fff').setup({
   layout = {
     height = 0.95,
