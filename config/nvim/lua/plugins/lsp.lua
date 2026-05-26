@@ -54,12 +54,32 @@ vim.lsp.config('sorbet', {
   root_markers = { 'Gemfile.lock', 'Gemfile' },
 })
 
+local function definition_in_tab()
+  -- Use a custom list handler so the tab is only created after LSP returns
+  -- at least one definition location.
+  vim.lsp.buf.definition({
+    on_list = function(options)
+      -- Reuse Neovim's quickfix navigation for the returned LSP locations.
+      vim.fn.setqflist({}, ' ', options)
+      vim.cmd.tabnew()
+      vim.cmd.cfirst()
+
+      -- If there are several possible definitions, leave the list visible so
+      -- the other locations are easy to inspect.
+      if #options.items > 1 then
+        vim.cmd('botright copen')
+      end
+    end,
+  })
+end
+
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('lsp-keymaps', { clear = true }),
   callback = function(event)
     local opts = { buffer = event.buf }
 
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, vim.tbl_extend('force', opts, { desc = 'Go to definition' }))
+    vim.keymap.set('n', '<leader>gd', definition_in_tab, vim.tbl_extend('force', opts, { desc = 'Go to definition in tab' }))
     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, vim.tbl_extend('force', opts, { desc = 'Go to declaration' }))
     vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, vim.tbl_extend('force', opts, { desc = 'Go to implementation' }))
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, vim.tbl_extend('force', opts, { desc = 'Find references' }))
