@@ -93,8 +93,10 @@ sudo dnf install kitty -y
 # https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation
 sudo dnf install zoxide fzf -y
 
-# Install flameshot and add a keybinding for it using PrtSc
-sudo dnf install flameshot -y
+# Install gradia (screenshot tool) and add a keybind for it
+flatpak install gradia -y
+# Add keybind for gradia in keyboard settings
+# command: flatpak run be.alexandervanhee.gradia --screenshot=INTERACTIVE
 
 # Install Pop Shell
 sudo dnf install gnome-shell-extension-pop-shell -y
