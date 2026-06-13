@@ -62,94 +62,6 @@ do
   -- See `:help telescope` and `:help telescope.setup()`
   actions = require('telescope.actions')
 
-  -- Narrow down the search results for live_grep by selecting a directory
-  local ts_select_dir_for_grep = function(prompt_bufnr)
-    local action_state = require("telescope.actions.state")
-    local fb = require("telescope").extensions.file_browser
-    local live_grep = require("telescope.builtin").live_grep
-    local current_line = action_state.get_current_line()
-
-    fb.file_browser({
-      files = false,
-      depth = false,
-      attach_mappings = function(prompt_bufnr)
-        require("telescope.actions").select_default:replace(function()
-          local entry_path = action_state.get_selected_entry().Path
-          local dir = entry_path:is_dir() and entry_path or entry_path:parent()
-          local relative = dir:make_relative(vim.fn.getcwd())
-          local absolute = dir:absolute()
-
-          live_grep({
-            results_title = relative .. "/",
-            cwd = absolute,
-            default_text = current_line,
-          })
-        end)
-
-        return true
-      end,
-    })
-  end
-
-  local custom_file_sorter = function(opts)
-    local sorters = require("telescope.sorters")
-    local default_sorter = sorters.get_fzy_sorter(opts)
-    local Sorter = sorters.Sorter
-
-    return Sorter:new({
-      scoring_function = function(sorter, prompt, line)
-        local score = default_sorter.scoring_function(sorter, prompt, line)
-
-        if score < 0 then
-          return score
-        end
-
-        if line:match('%_spec.rb$') then
-          -- Give some penalty to files we don't want sortet first
-          -- We should probably return early on negative scores.
-          -- score = score * 2
-        end
-
-        return score
-      end,
-      discard = default_sorter.discard,
-      highlighter = default_sorter.highlighter,
-    })
-  end
-
-  -- Toggle if gitignored files are shown
-  local include_gitignored_files = false
-  local toggle_find_files_gitignored = function(prompt_bufnr)
-    local action_state = require('telescope.actions.state')
-    local current_picker = action_state.get_current_picker(prompt_bufnr)
-    local current_line = action_state.get_current_line()
-    local cwd = current_picker.cwd
-
-    local find_files = function(opts)
-      opts = opts or {}
-
-      if include_gitignored_files then
-        opts = vim.tbl_extend('force', {
-          no_ignore = true,
-          prompt_title = 'Find Files (including gitignored)',
-        }, opts)
-      end
-
-      require('telescope.builtin').find_files(opts)
-    end
-
-    require('telescope.actions').close(prompt_bufnr)
-
-    include_gitignored_files = not include_gitignored_files
-
-    vim.schedule(function()
-      find_files({
-        cwd = cwd,
-        default_text = current_line,
-      })
-    end)
-  end
-
   require('telescope').setup {
     -- You can put your default mappings / updates / etc. in here
     --  All the info you're looking for is in `:help telescope.setup()`
@@ -176,35 +88,6 @@ do
       },
 
     },
-    pickers = {
-      find_files = {
-        file_ignore_patterns = { 'node_modules', '^.git/', '.venv' },
-        hidden = true,
-        sorter = custom_file_sorter({}),
-        mappings = {
-          i = {
-            ['<C-g>'] = toggle_find_files_gitignored,
-          },
-          n = {
-            ['<C-g>'] = toggle_find_files_gitignored,
-          },
-        },
-      },
-      live_grep = {
-        mappings = {
-          i = {
-            ["<C-f>"] = ts_select_dir_for_grep, -- Select directory for live grep
-          },
-          n = {
-            ["<C-f>"] = ts_select_dir_for_grep, -- Select directory for live grep
-          },
-        },
-        file_ignore_patterns = { 'node_modules', '^.git/', '.venv' },
-        additional_args = function(_)
-          return { '--hidden' }
-        end,
-      },
-    },
     extensions = {
       ['ui-select'] = {
         require('telescope.themes').get_dropdown(),
@@ -216,42 +99,12 @@ do
   pcall(require('telescope').load_extension, 'fzf')
   pcall(require('telescope').load_extension, 'ui-select')
 
-  -- NOTE: I have replaced some of these with fff and just added a `t` in the keybind.
-  -- These will be removed soon if fff is good
-
   -- See `:help telescope.builtin`
   local builtin = require 'telescope.builtin'
   vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
   vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
-  vim.keymap.set('n', '<leader>tsf', builtin.find_files, { desc = '[T]elescope [S]earch [F]iles' })
   vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[S]earch [S]elect Telescope' })
-  vim.keymap.set('n', '<leader>tsw', builtin.grep_string, { desc = '[T]elescope [S]earch current [W]ord' })
-  vim.keymap.set('n', '<leader>tsg', builtin.live_grep, { desc = '[T]elescope [S]earch by [G]rep' })
   vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
   vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
-  vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
   vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = '[S]earch [B]uffers' })
-
-  -- Slightly advanced example of overriding default behavior and theme
-  vim.keymap.set('n', '<leader>/', function()
-    -- You can pass additional configuration to Telescope to change the theme, layout, etc.
-    builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-      winblend = 10,
-      previewer = false,
-    })
-  end, { desc = '[/] Fuzzily search in current buffer' })
-
-  -- It's also possible to pass additional configuration options.
-  --  See `:help telescope.builtin.live_grep()` for information about particular keys
-  vim.keymap.set('n', '<leader>s/', function()
-    builtin.live_grep {
-      grep_open_files = true,
-      prompt_title = 'Live Grep in Open Files',
-    }
-  end, { desc = '[S]earch [/] in Open Files' })
-
-  -- Shortcut for searching your Neovim configuration files
-  vim.keymap.set('n', '<leader>tsn', function()
-    builtin.find_files { cwd = vim.fn.stdpath 'config' }
-  end, { desc = '[T]elescope [S]earch [N]eovim files' })
 end
