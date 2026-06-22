@@ -2,6 +2,7 @@
 
 ## Neovim
 
+* Investigate Ruby LSP crashes
 * Greplace or similar
 * Fold should ignore comments (might be easier with a working LSP)
 * Add plugin that can create gists
