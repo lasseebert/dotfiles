@@ -2,6 +2,7 @@
 
 ## Neovim
 
+* Disable swap files
 * Investigate Ruby LSP crashes
 * Greplace or similar
 * Fold should ignore comments (might be easier with a working LSP)
