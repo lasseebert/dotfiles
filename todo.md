@@ -2,6 +2,8 @@
 
 ## Neovim
 
+* Toggle hidden files in fff
+* Make indent in Elixir work better
 * Disable swap files
 * Investigate Ruby LSP crashes
 * Greplace or similar
