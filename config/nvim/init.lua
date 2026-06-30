@@ -54,5 +54,8 @@ require 'plugins.fff'
 -- Fuzzy finder and more
 require 'plugins.telescope'
 
+-- Search and replace across files
+require 'plugins.grug-far'
+
 -- Colorscheme
 require 'plugins.colorscheme'

@@ -17,6 +17,10 @@
       "rev": "2038c666bd9d8a0b7349a0b6ee00dc83104b9ecf",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
+    "grug-far.nvim": {
+      "rev": "c69859c1d5427ab5fc7ed12380ab521b4e336691",
+      "src": "https://github.com/MagicDuck/grug-far.nvim"
+    },
     "kitty-scrollback.nvim": {
       "rev": "53fd294658941719d7622471f28e70179d6737a6",
       "src": "https://github.com/mikesmithgh/kitty-scrollback.nvim"
