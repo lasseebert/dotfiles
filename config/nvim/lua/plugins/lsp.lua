@@ -49,7 +49,7 @@ vim.lsp.config('sorbet', {
     '-c',
     'bash',
     '-c',
-    'cd /home/pulver/code/landfolk/apps/api && env -u GEM_PATH bundle exec srb tc --lsp --disable-watchman',
+    'cd /home/pulver/code/landfolk/apps/api && bundle exec srb tc --lsp --disable-watchman',
   },
   root_markers = { 'Gemfile.lock', 'Gemfile' },
 })
