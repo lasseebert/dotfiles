@@ -3,6 +3,34 @@ vim.pack.add({
   'https://github.com/nvim-tree/nvim-web-devicons'
 })
 
+local function lsp_status()
+  local clients = vim.lsp.get_clients({ bufnr = 0 })
+  local ready = {}
+  local starting = {}
+
+  for _, client in ipairs(clients) do
+    -- Copilot is technically an LSP client, but it does not make navigation
+    -- features like go-to-definition ready.
+    if client.name ~= 'copilot' then
+      if client.initialized then
+        table.insert(ready, client.name)
+      else
+        table.insert(starting, client.name)
+      end
+    end
+  end
+
+  if #ready > 0 then
+    return 'LSP: ' .. table.concat(ready, ', ')
+  end
+
+  if #starting > 0 then
+    return 'LSP: starting ' .. table.concat(starting, ', ')
+  end
+
+  return ''
+end
+
 require('lualine').setup {
   options = {
     icons_enabled = true,
@@ -23,7 +51,7 @@ require('lualine').setup {
     lualine_a = { 'mode' },
     lualine_b = { 'diagnostics' },
     lualine_c = { { 'filename', path = 1 } },
-    lualine_x = { 'encoding', 'fileformat', 'filetype' },
+    lualine_x = { lsp_status, 'encoding', 'fileformat', 'filetype' },
     lualine_y = { 'progress' },
     lualine_z = { 'location' },
   },
