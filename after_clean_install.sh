@@ -49,20 +49,27 @@ sudo pip install boto
 # Copy content of crontab in home dir
 crontab -e # Paste content
 
-# Disable Caps Lock
-sudo dnf install gnome-tweaks -y
-# * Gnome Tweaks
-# * Keyboard
-# * Additional Layout Options
-# * Caps Lock behaviour
-# * Caps Lock is disabled
+# Map CapsLock as Escape when pressed alone and Control when held down as modifier key
+sudo dnf install -y dnf-plugins-core
+sudo dnf copr enable -y alternateved/keyd
+sudo dnf install -y keyd
+sudo systemctl enable --now keyd
+sudo mkdir -p /etc/keyd
+sudo tee /etc/keyd/default.conf >/dev/null <<'EOF'
+[ids]
+*
+
+[main]
+capslock = overload(control, esc)
+EOF
+sudo keyd reload
 
 # Install asdf: https://asdf-vm.com/guide/getting-started.html#_1-install-asdf
 
 # Install deps for Erlang
 # https://github.com/asdf-vm/asdf-erlang?tab=readme-ov-file#centos--fedora
 # Build tools
-sudo dnf install -y git gcc g++ automake autoconf 
+sudo dnf install -y git gcc g++ automake autoconf
 # Terminal handling
 sudo dnf install -y ncurses-devel
 # Observer
