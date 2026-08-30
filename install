@@ -25,8 +25,10 @@ symlink_files() {
   Xmodmap
   config/awesome
   config/fish
-  config/nvim
   config/kitty
+  config/nvim
+  config/tmux
+
   gitconfig
   gnupg/gpg-agent.conf
   iex.exs
