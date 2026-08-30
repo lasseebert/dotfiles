@@ -34,6 +34,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 # Install dotfiles
 ~/dotfiles/install
 
+# Install TPM - Tmux Plugin Manager
+mkdir -p ~/.config/tmux/plugins
+if [ ! -d ~/.config/tmux/plugins/tpm ]; then
+  git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+fi
+
 # Install neovim
 sudo dnf install neovim -y
 

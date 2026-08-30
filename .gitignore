@@ -1,2 +1,3 @@
 /vim/autoload/
 /config/fish/fishd.*
+/config/tmux/plugins/
