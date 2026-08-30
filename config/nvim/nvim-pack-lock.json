@@ -81,6 +81,10 @@
       "rev": "aa8decc421d89be0f10b1fc6a602cdd269f350ff",
       "src": "https://github.com/epwalsh/pomo.nvim"
     },
+    "smart-splits.nvim": {
+      "rev": "0ab2e4928dc867dfea3ff1da186e69f289d8a532",
+      "src": "https://github.com/mrjones2014/smart-splits.nvim"
+    },
     "telescope-file-browser.nvim": {
       "rev": "3610dc7dc91f06aa98b11dca5cc30dfa98626b7e",
       "src": "https://github.com/nvim-telescope/telescope-file-browser.nvim"

@@ -36,6 +36,9 @@ require 'plugins.other'
 -- Adds new indent text objects
 require 'plugins.indent-object'
 
+-- Seamless split navigation with tmux
+require 'plugins.smart-splits'
+
 -- Copilot completions
 require 'plugins.copilot'
 
