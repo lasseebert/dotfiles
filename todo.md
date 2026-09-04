@@ -3,7 +3,6 @@
 ## Neovim
 
 * Make indent in Elixir work better
-* Greplace or similar
 * Fold should ignore comments (might be easier with a working LSP)
 * Add plugin that can create gists
 * Format elixir with command
@@ -15,5 +14,4 @@
 
 ## Other
 
-* Make paste from system clipboard work in tmux
 * Inspiration for tooling https://www.youtube.com/@devopstoolbox
