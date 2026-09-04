@@ -15,5 +15,5 @@
 
 ## Other
 
-* Tmux setup
+* Make paste from system clipboard work in tmux
 * Inspiration for tooling https://www.youtube.com/@devopstoolbox
