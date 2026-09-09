@@ -70,3 +70,7 @@ end, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sn', function()
   require('fff').find_files_in_dir(vim.fn.stdpath('config'))
 end, { desc = '[S]earch [N]eovim files' })
+
+vim.keymap.set('n', '<leader>sd', function()
+  require('fff').find_files_in_dir(vim.fn.expand '~/dotfiles')
+end, { desc = '[S]earch [D]otfiles' })
