@@ -159,6 +159,27 @@ fi
 eval "$(zoxide init zsh)"
 
 # Taskfile
-if which task > /dev/null 2>&1; then
-  eval "$(task --completion zsh)"
-fi
+function {
+  # This setup is a bit advanced to make it work with nix and direnv that can
+  # change if `task` is available or not.
+  load_task_completion() {
+    # No-op if task is not installed
+    (( $+commands[task] )) || return
+
+    # No-op if task auto-completion is already loaded
+    [[ -n ${_comps[task]-} ]] && return
+
+    # Load auto-completion for task
+    eval "$(task --completion zsh)"
+  }
+
+  # Make zsh hooks available for use
+  autoload -Uz add-zsh-hook
+
+  # Attempt to load auto-completion on directory change
+  add-zsh-hook -Uz chpwd load_task_completion
+  # Attempt to load auto-completion before each prompt
+  add-zsh-hook -Uz precmd load_task_completion
+  # Attempt to load auto-completion now
+  load_task_completion
+}
