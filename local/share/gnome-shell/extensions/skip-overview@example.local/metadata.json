@@ -1,0 +1,6 @@
+{
+  "uuid": "skip-overview@example.local",
+  "name": "Skip Overview",
+  "description": "Closes the GNOME overview shortly after login.",
+  "shell-version": ["50"]
+}

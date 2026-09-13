@@ -115,3 +115,6 @@ flatpak install gradia -y
 sudo dnf install gnome-shell-extension-pop-shell -y
 # Log out and in again
 # Enable pop shell GNOME extension using GNOME Extensions app
+
+# Enable local GNOME extension that skips Activities Overview on login
+gnome-extensions enable skip-overview@example.local
