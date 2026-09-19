@@ -20,9 +20,6 @@ require 'plugins.treesitter'
 -- A collection of small useful plugins
 require 'plugins.mini'
 
--- Browse Kitty scrollback in Neovim
-require 'plugins.kitty-scrollback'
-
 -- Highlight TODO, NOTE, etc. in comments
 require 'plugins.todo-comments'
 
