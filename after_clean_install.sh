@@ -97,8 +97,8 @@ asdf plugin add python
 # Install
 asdf install
 
-# Install foot terminal emulator
-sudo dnf install foot -y
+# Install foot terminal emulator and Wayland clipboard utilities
+sudo dnf install foot wl-clipboard -y
 
 # Make foot the shell that starts when pressing Super+T
 
