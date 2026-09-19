@@ -30,7 +30,6 @@ symlink_files() {
   config/tmux
 
   gitconfig
-  gnupg/gpg-agent.conf
   iex.exs
   local/share/gnome-shell/extensions
   oh-my-zsh/themes/lasseebert.zsh-theme
