@@ -26,7 +26,6 @@ symlink_files() {
   config/awesome
   config/fish
   config/foot
-  config/kitty
   config/nvim
   config/tmux
 
