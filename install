@@ -25,6 +25,7 @@ symlink_files() {
   Xmodmap
   config/awesome
   config/fish
+  config/foot
   config/kitty
   config/nvim
   config/tmux
