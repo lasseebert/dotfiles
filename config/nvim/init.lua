@@ -1,4 +1,3 @@
-require 'core.clipboard'
 require 'core.options'
 require 'core.keymaps'
 require 'core.filetypes'
