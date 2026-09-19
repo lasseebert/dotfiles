@@ -111,10 +111,5 @@ flatpak install gradia -y
 # Add keybind for gradia in keyboard settings
 # command: flatpak run be.alexandervanhee.gradia --screenshot=INTERACTIVE
 
-# Install Pop Shell
-sudo dnf install gnome-shell-extension-pop-shell -y
-# Log out and in again
-# Enable pop shell GNOME extension using GNOME Extensions app
-
 # Enable local GNOME extension that skips Activities Overview on login
 gnome-extensions enable skip-overview@example.local
