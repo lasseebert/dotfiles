@@ -97,8 +97,8 @@ asdf plugin add python
 # Install
 asdf install
 
-# Install foot terminal emulator and Wayland clipboard utilities
-sudo dnf install foot wl-clipboard -y
+# Install foot terminal emulator, Wayland clipboard utilities, and terminal fonts
+sudo dnf install foot wl-clipboard jetbrains-mono-fonts cascadia-mono-nf-fonts -y
 
 # Make foot the terminal that starts when pressing Super+T
 
