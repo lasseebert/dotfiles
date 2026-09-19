@@ -97,10 +97,10 @@ asdf plugin add python
 # Install
 asdf install
 
-# Install Kitty
-sudo dnf install kitty -y
+# Install foot terminal emulator
+sudo dnf install foot -y
 
-# Make Kitty the shell that starts when pressing Super+T
+# Make foot the shell that starts when pressing Super+T
 
 # Install zoxide
 # https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation
