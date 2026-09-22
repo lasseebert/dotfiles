@@ -58,3 +58,7 @@ require 'plugins.grug-far'
 
 -- Colorscheme
 require 'plugins.colorscheme'
+
+-- Automatically delete plugins that was removed in the git repo.
+-- This must be called after all vim.pack.add() calls (all the plugin require() calls)
+require 'delete-removed-plugins'
