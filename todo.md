@@ -12,6 +12,11 @@
   * Multi cursor: https://github.com/mg979/vim-visual-multi
   * Smooth scrolling: NeoScroll: https://github.com/karb94/neoscroll.nvim
 
+## Tmux
+
+* The `:` place is hidden by the theme
+
 ## Other
 
+* Start feet in maximized state
 * Inspiration for tooling https://www.youtube.com/@devopstoolbox
