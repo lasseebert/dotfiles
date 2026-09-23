@@ -11,6 +11,9 @@ for i in {1..9}; do
   gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-$i "['<Super><Shift>$i']"
 done
 
+# Disable GNOME's display switcher shortcut.
+/usr/bin/gsettings set org.gnome.mutter.keybindings switch-monitor "['']"
+
 # Set volume shortcuts
 
 # Set compose key
