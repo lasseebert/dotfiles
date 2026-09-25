@@ -6,18 +6,25 @@ vim.pack.add({
 local function lsp_status()
   local clients = vim.lsp.get_clients({ bufnr = 0 })
   local ready = {}
+  local loading = {}
   local starting = {}
 
   for _, client in ipairs(clients) do
     -- Copilot is technically an LSP client, but it does not make navigation
     -- features like go-to-definition ready.
     if client.name ~= 'copilot' then
-      if client.initialized then
-        table.insert(ready, client.name)
-      else
+      if not client.initialized then
         table.insert(starting, client.name)
+      elseif next(client.progress.pending) ~= nil then
+        table.insert(loading, client.name)
+      else
+        table.insert(ready, client.name)
       end
     end
+  end
+
+  if #loading > 0 then
+    return 'LSP: loading ' .. table.concat(loading, ', ')
   end
 
   if #ready > 0 then
@@ -30,6 +37,16 @@ local function lsp_status()
 
   return ''
 end
+
+-- LSP initialization can finish before a server has built/indexed the
+-- project. Redraw as its work-done progress changes so lsp_status reflects
+-- that second phase immediately.
+vim.api.nvim_create_autocmd('LspProgress', {
+  group = vim.api.nvim_create_augroup('lualine-lsp-progress', { clear = true }),
+  callback = function()
+    vim.cmd.redrawstatus()
+  end,
+})
 
 require('lualine').setup {
   options = {
