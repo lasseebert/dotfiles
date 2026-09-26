@@ -107,4 +107,4 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
-vim.lsp.enable({ 'expert', 'ruby_lsp', 'sorbet' })
+vim.lsp.enable({ 'expert', 'ruby_lsp', 'sorbet', 'gdscript' })
