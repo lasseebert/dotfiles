@@ -124,6 +124,7 @@ alias o="gio open"
 alias copy="wl-copy"
 alias main="git_home.sh"
 alias vim="nvim"
+alias vlc="flatpak run org.videolan.VLC"
 # . "/home/pulver/.acme.sh/acme.sh.env"
 
 # Hidden files are included in globs
