@@ -9,6 +9,7 @@ local parsers = {
   'diff',
   'dockerfile',
   'elixir',
+  'gdscript',
   'gitignore',
   'graphql',
   'heex',
