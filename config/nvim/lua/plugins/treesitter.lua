@@ -37,6 +37,7 @@ local parsers = {
 local disable_treesitter_indent = {
   elixir = true,
   ruby = true,
+  typescriptreact = true,
 }
 
 local additional_vim_regex_highlighting = {
