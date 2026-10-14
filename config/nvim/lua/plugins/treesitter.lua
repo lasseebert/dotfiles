@@ -37,6 +37,7 @@ local parsers = {
 local disable_treesitter_indent = {
   elixir = true,
   ruby = true,
+  typescript = true,
   typescriptreact = true,
 }
 
