@@ -11,6 +11,6 @@ git pull
 git remote prune origin
 git branch -vv \
   | grep ': gone]' \
-  | grep -v "\*" \
+  | grep -vE '^[*+]' \
   | awk '{ print $1; }' \
   | xargs -r git branch -d
