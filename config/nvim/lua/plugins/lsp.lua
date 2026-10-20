@@ -28,29 +28,25 @@ vim.lsp.config('*', {
   capabilities = require('blink.cmp').get_lsp_capabilities(),
 })
 
-vim.lsp.config('ruby_lsp', {
-  cmd = {
-    'nix',
-    'develop',
-    '/home/pulver/code/landfolk#api',
-    '-c',
-    'bash',
-    '-c',
-    'cd /home/pulver/code/landfolk/apps/api && env -u GEM_PATH BUNDLE_GEMFILE=.ruby-lsp/Gemfile bundle exec ruby-lsp',
-  },
+-- Resolve the shell from the buffer's project so worktrees use their own bundle.
+local function ruby_command(command)
+  return function(dispatchers, config)
+    local repo_root = assert(vim.fs.root(config.root_dir, 'flake.nix'), 'Ruby LSP requires an API Nix shell')
+    return vim.lsp.rpc.start(
+      { 'nix', 'develop', repo_root .. '#api', '-c', 'bash', '-c', command },
+      dispatchers,
+      { cwd = config.root_dir }
+    )
+  end
+end
+
+vim.lsp.config('ruby-lsp', {
+  cmd = ruby_command('env -u GEM_PATH BUNDLE_GEMFILE=.ruby-lsp/Gemfile bundle exec ruby-lsp'),
   root_markers = { 'Gemfile.lock', 'Gemfile' },
 })
 
 vim.lsp.config('sorbet', {
-  cmd = {
-    'nix',
-    'develop',
-    '/home/pulver/code/landfolk#api',
-    '-c',
-    'bash',
-    '-c',
-    'cd /home/pulver/code/landfolk/apps/api && bundle exec srb tc --lsp --disable-watchman',
-  },
+  cmd = ruby_command('bundle exec srb tc --lsp --disable-watchman'),
   root_markers = { 'Gemfile.lock', 'Gemfile' },
 })
 
