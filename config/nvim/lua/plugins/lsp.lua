@@ -104,3 +104,4 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 vim.lsp.enable({ 'expert', 'ruby_lsp', 'sorbet', 'gdscript' })
+require('core.lsp-idle').setup()
