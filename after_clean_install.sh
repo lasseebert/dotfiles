@@ -58,7 +58,7 @@ sudo pip install boto
 # Copy content of crontab in home dir
 crontab -e # Paste content
 
-# Map CapsLock as Escape when pressed alone and Control when held down as modifier key
+# Map CapsLock to Control
 sudo dnf install -y dnf-plugins-core
 sudo dnf copr enable -y alternateved/keyd
 sudo dnf install -y keyd
@@ -69,7 +69,7 @@ sudo tee /etc/keyd/default.conf >/dev/null <<'EOF'
 *
 
 [main]
-capslock = overload(control, esc)
+capslock = layer(control)
 EOF
 sudo keyd reload
 
