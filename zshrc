@@ -139,6 +139,14 @@ export PATH=$HOME/.local/share/gem/ruby/3.3.0/bin:$PATH
 # Make GPG work in TTY
 export GPG_TTY=$(tty)
 
+# Keep long-running tmux shells on a stable socket whose target is refreshed
+# whenever a tmux client attaches.
+if [[ -n ${TMUX-} ]]; then
+  tmux_ssh_auth_sock=$($HOME/dotfiles/bin/tmux-refresh-ssh-agent) &&
+    export SSH_AUTH_SOCK=$tmux_ssh_auth_sock
+  unset tmux_ssh_auth_sock
+fi
+
 # There are a few scripts in the dotfiles
 export PATH=$HOME/dotfiles/bin:$PATH
 

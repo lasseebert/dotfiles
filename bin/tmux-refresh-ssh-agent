@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+# Long-running shells retain a stale SSH_AUTH_SOCK when tmux is reattached
+# from a session with a new SSH agent. Point a stable socket path at tmux's
+# current agent so every existing pane keeps working without restarting.
+
+set -euo pipefail
+
+tmux_environment=$(tmux show-environment -g SSH_AUTH_SOCK 2>/dev/null) ||
+  tmux_environment=
+
+if [[ $tmux_environment == SSH_AUTH_SOCK=* ]]; then
+  agent_socket=${tmux_environment#SSH_AUTH_SOCK=}
+elif [[ -n ${SSH_AUTH_SOCK-} ]]; then
+  # Bootstrap an existing server whose environment predates this setup.
+  agent_socket=$SSH_AUTH_SOCK
+else
+  exit 1
+fi
+runtime_dir=${XDG_RUNTIME_DIR:-/run/user/$(id -u)}
+stable_socket=$runtime_dir/tmux-ssh-agent.sock
+
+# A client launched from tmux may already carry the stable path.
+if [[ $agent_socket == "$stable_socket" ]]; then
+  [[ -S $stable_socket ]] || exit 1
+  printf '%s\n' "$stable_socket"
+  exit 0
+fi
+
+[[ -S $agent_socket && -d $runtime_dir && -w $runtime_dir ]] || exit 1
+[[ ! -e $stable_socket || -L $stable_socket ]] || exit 1
+
+# Replace the link atomically so concurrent panes never observe a missing path.
+temporary_link=$stable_socket.$$
+trap 'rm -f -- "$temporary_link"' EXIT
+ln -s -- "$agent_socket" "$temporary_link"
+mv -Tf -- "$temporary_link" "$stable_socket"
+trap - EXIT
+
+printf '%s\n' "$stable_socket"
