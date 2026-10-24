@@ -8,17 +8,23 @@ set -euo pipefail
 
 tmux_environment=$(tmux show-environment -g SSH_AUTH_SOCK 2>/dev/null) ||
   tmux_environment=
+runtime_dir=${XDG_RUNTIME_DIR:-/run/user/$(id -u)}
+stable_socket=$runtime_dir/tmux-ssh-agent.sock
 
 if [[ $tmux_environment == SSH_AUTH_SOCK=* ]]; then
   agent_socket=${tmux_environment#SSH_AUTH_SOCK=}
 elif [[ -n ${SSH_AUTH_SOCK-} ]]; then
   # Bootstrap an existing server whose environment predates this setup.
   agent_socket=$SSH_AUTH_SOCK
+elif [[ -S $stable_socket ]]; then
+  # tmux may have been started or attached from a process without an agent in
+  # its environment. Keep using an already-working stable socket so new panes
+  # do not lose SSH_AUTH_SOCK merely because there is nothing to refresh.
+  printf '%s\n' "$stable_socket"
+  exit 0
 else
   exit 1
 fi
-runtime_dir=${XDG_RUNTIME_DIR:-/run/user/$(id -u)}
-stable_socket=$runtime_dir/tmux-ssh-agent.sock
 
 # A client launched from tmux may already carry the stable path.
 if [[ $agent_socket == "$stable_socket" ]]; then
