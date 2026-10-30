@@ -27,6 +27,7 @@ symlink_files() {
   config/fish
   config/foot
   config/nvim
+  config/pipewire
   config/tmux
 
   gitconfig
