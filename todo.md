@@ -2,7 +2,6 @@
 
 ## Neovim
 
-* Make indent in Elixir work better
 * Fold should ignore comments (might be easier with a working LSP)
 * Add plugin that can create gists
 * Format elixir with command
@@ -14,9 +13,8 @@
 
 ## Tmux
 
-* The `:` place is hidden by the theme
+* See if ssh-config can prevent the SSH agent thing fixed in tmux
 
 ## Other
 
-* Start feet in maximized state
 * Inspiration for tooling https://www.youtube.com/@devopstoolbox
