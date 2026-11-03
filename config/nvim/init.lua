@@ -36,8 +36,7 @@ require 'plugins.indent-object'
 require 'plugins.smart-splits'
 
 -- Copilot completions
--- Disabled, since I have no subscription
---require 'plugins.copilot'
+require 'plugins.copilot'
 
 -- Pomodoro timer
 require 'plugins.pomodoro'
