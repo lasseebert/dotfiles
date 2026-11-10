@@ -23,9 +23,6 @@ require 'plugins.mini'
 -- Highlight TODO, NOTE, etc. in comments
 require 'plugins.todo-comments'
 
--- Elixir support
-require 'plugins.elixir'
-
 -- Switch between alternate files
 require 'plugins.other'
 

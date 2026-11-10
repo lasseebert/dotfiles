@@ -35,7 +35,6 @@ local parsers = {
 }
 
 local disable_treesitter_indent = {
-  elixir = true,
   ruby = true,
   typescript = true,
   typescriptreact = true,
@@ -59,7 +58,9 @@ vim.api.nvim_create_autocmd('FileType', {
       vim.bo[args.buf].syntax = 'ON'
     end
 
-    if not disable_treesitter_indent[args.match] then
+    if args.match == 'elixir' then
+      vim.bo[args.buf].indentexpr = "v:lua.require'core.elixir_indent'.indentexpr()"
+    elseif not disable_treesitter_indent[args.match] then
       vim.bo[args.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
     end
   end,
