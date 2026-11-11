@@ -4,6 +4,12 @@ vim.g.maplocalleader = ' '
 
 -- Don't wrap lines
 vim.o.wrap = false
+-- Unless it is markdown
+vim.api.nvim_create_autocmd({ 'FileType' }, {
+  callback = function()
+    vim.wo.wrap = vim.bo.filetype == 'markdown'
+  end,
+})
 -- If wrap is enabled in a buffer, use these settings:
 vim.o.linebreak = true -- Companion to wrap, don't split words (default: false)
 vim.o.whichwrap = 'bs<>[]hl' -- Which "horizontal" keys are allowed to travel to prev/next line (default: 'b,s')
