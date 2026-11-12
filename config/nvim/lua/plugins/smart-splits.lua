@@ -1,8 +1,13 @@
-vim.pack.add({ 'https://github.com/mrjones2014/smart-splits.nvim' })
+vim.pack.add({
+  'https://github.com/mrjones2014/smart-splits.nvim',
+  'https://github.com/smart-splits-nvim/backend-tmux',
+})
 
 local smart_splits = require('smart-splits')
 
-smart_splits.setup()
+smart_splits.setup({
+  mux = { backend = 'smart-splits-backend-tmux' },
+})
 
 -- Resize splits.
 vim.keymap.set('n', '<M-h>', smart_splits.resize_left, { desc = 'Resize split left' })
