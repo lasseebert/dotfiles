@@ -40,7 +40,7 @@ local function ruby_command(command)
   end
 end
 
-vim.lsp.config('ruby-lsp', {
+vim.lsp.config('ruby_lsp', {
   cmd = ruby_command('env -u GEM_PATH BUNDLE_GEMFILE=.ruby-lsp/Gemfile bundle exec ruby-lsp'),
   root_markers = { 'Gemfile.lock', 'Gemfile' },
 })
