@@ -41,7 +41,12 @@ local function ruby_command(command)
 end
 
 vim.lsp.config('ruby_lsp', {
-  cmd = ruby_command('env -u GEM_PATH BUNDLE_GEMFILE=.ruby-lsp/Gemfile bundle exec ruby-lsp'),
+  cmd = ruby_command([[
+    set -e
+    export BUNDLE_GEMFILE=.ruby-lsp/Gemfile
+    (bundle check || bundle install) >&2
+    exec bundle exec ruby-lsp
+  ]]),
   root_markers = { 'Gemfile.lock', 'Gemfile' },
 })
 
