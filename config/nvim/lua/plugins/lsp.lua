@@ -43,6 +43,17 @@ end
 vim.lsp.config('ruby_lsp', {
   cmd = ruby_command([[
     set -e
+    mkdir -p .ruby-lsp
+    if [ ! -f .ruby-lsp/Gemfile ]; then
+      printf '%s\n' \
+        'eval_gemfile(File.expand_path("../Gemfile", __dir__))' \
+        'gem "ruby-lsp", require: false, group: :development' \
+        'gem "ruby-lsp-rails", require: false, group: :development' \
+        'gem "debug", require: false, group: :development' > .ruby-lsp/Gemfile
+    fi
+    if [ ! -f .ruby-lsp/.gitignore ]; then
+      printf '*\n' > .ruby-lsp/.gitignore
+    fi
     export BUNDLE_GEMFILE=.ruby-lsp/Gemfile
     (bundle check || bundle install) >&2
     exec bundle exec ruby-lsp
